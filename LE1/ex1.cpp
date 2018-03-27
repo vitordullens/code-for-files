@@ -5,13 +5,12 @@
         Organizacao de Arquivos 1/2018
 */
 
-#include <stdio.h>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <map>
+#include <stdio.h> 
+#include <iostream> //comandos de E/S (cin, cout)
+#include <fstream> //ler arquivos externos
+#include <string> //trabalhar com strings
 
-//define para limpar a tela
+//define, para limpar a tela em diferentes sistemas operacionais
 #ifdef WIN32
     #define CLEAR "cls"
 #else
@@ -44,7 +43,7 @@ int type(){ //como que o usuario deseja concatenar os arquivos
     scanf("%d", &type);
     getchar();
 
-    while(type < 0 or type > 4){
+    while(type < 0 or type > 4){ //tratamento de erro
         printf("--- opcao inválida, escreva uma opcao válida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
@@ -53,7 +52,7 @@ int type(){ //como que o usuario deseja concatenar os arquivos
     return type; 
 }
 
-string readFile(fstream file, int mode){
+string readFile(fstream file, int mode){ //ler arquivo dependendo do comando escolhido na funcao type()
     int n;
     if(mode == 1){
         printf("Ler quantas linhas?\n");
@@ -84,7 +83,7 @@ string readFile(fstream file, int mode){
         int i = 0;
         while(i < n){
             file >> line;
-            r += line;
+            r += line+" ";
             i++;
         }
     }
@@ -97,10 +96,10 @@ string readFile(fstream file, int mode){
     return r;
 }
 
-// arquivo de leitura
-fstream openFile(string file){
+
+fstream openFile(string file){ // abrir arquivo
     fstream arquivo (file, ios::in);
-    if(!arquivo){
+    if(!arquivo){ //tratamento de erro
         cout << "Failed to open\n";
         return (fstream) NULL;
     }
@@ -110,13 +109,13 @@ fstream openFile(string file){
 
 }
 
-string fileOP(){
+string fileOP(){ //manuseio de arquivo
     string file;
     system(CLEAR);
     printf("Qual o nome do arquivo?\n");
     cin >> file;
     fstream ini = openFile(file);
-    if(!ini){
+    if(!ini){ //tratamento de erro
         string again;
         printf("Tentar novamente? [Y/n]\n");
         cin >> again;
@@ -130,7 +129,7 @@ string fileOP(){
     return readFile(openFile(file), t);
 }
 
-int continua(){
+int continua(){ //segundo menu de opcoes
     printf("\nO que voce quer fazer agora?\n");
     printf("\t(1) - Adicionar outro arquivo\n");
     printf("\t(2) - Mostrar resultados\n");
@@ -139,7 +138,7 @@ int continua(){
     int type;
     scanf("%d", &type);
     getchar();
-    while(type < 0 or type > 3){
+    while(type < 0 or type > 3){ //tratamento de erro
         printf("--- opcao inválida, escreva uma opcao válida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
