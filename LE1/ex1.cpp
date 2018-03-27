@@ -90,7 +90,7 @@ string readFile(fstream file, int mode){
     }
     else{
         char read[n+1];
-        file.get(read, n);
+        file.get(read, n+1);
         r += string(read);
     }
     
