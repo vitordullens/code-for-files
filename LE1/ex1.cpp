@@ -34,6 +34,7 @@ int qnt() { //funcao para escolher quantidade de arquivos a serem concatenados
     system(CLEAR);
     printf("Quantos arquivos para concatenar?  ");
     scanf("%d", &qnt);
+    return qnt;
 }
 
 int type(){ //como que o usuario deseja concatenar os arquivos
@@ -48,14 +49,34 @@ int type(){ //como que o usuario deseja concatenar os arquivos
         printf("--- opcao inválida, escreva uma opcao válida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
+    }
+    return type; 
+}
+
+bool open_files(vector<string> files, int qnt){
+    fstream arquivos;
+    while(qnt){
+        printf("rola\n");
+        qnt--;
     } 
+        
+
 }
 
 int main(){
+    vector <string> files;
+    string file;
     int t; 
     int q;
 
     menu();
     q = qnt();
     t = type();
+    for(int i=0; i<q; i++) {
+        printf("Digite o nome do arquivo: ");
+        cin >> file;
+        files.push_back(file);
+    
+    }
+    open_files(files, q);
 }
