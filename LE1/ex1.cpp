@@ -53,10 +53,10 @@ int type(){ //como que o usuario deseja concatenar os arquivos
     return type; 
 }
 
-bool open_files(vector<string> files, int qnt){
+void open_files(vector<string> files, int qnt){ //funcao para abrir os arquivos
     fstream arquivos;
     while(qnt){
-        printf("rola\n");
+        printf("blah\n"); //ler arquivo
         qnt--;
     } 
         
