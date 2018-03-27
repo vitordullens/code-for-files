@@ -42,11 +42,13 @@ int type(){ //como que o usuario deseja concatenar os arquivos
     printf("\t4 - arquivo por arquivo\n");
     printf("opcao: ");
     scanf("%d", &type);
+    getchar();
 
     while(type < 0 or type > 4){
         printf("--- opcao inválida, escreva uma opcao válida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
+        getchar();
     }
     return type; 
 }
@@ -136,10 +138,12 @@ int continua(){
 
     int type;
     scanf("%d", &type);
+    getchar();
     while(type < 0 or type > 3){
         printf("--- opcao inválida, escreva uma opcao válida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
+        getchar();
     }
     return type; 
 }
