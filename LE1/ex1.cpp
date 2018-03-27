@@ -44,7 +44,7 @@ int type(){ //como que o usuario deseja concatenar os arquivos
     getchar();
 
     while(type < 0 or type > 4){ //tratamento de erro
-        printf("--- opcao inválida, escreva uma opcao válida ---\n");
+        printf("--- opcao invalida, escreva uma opcao valida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
         getchar();
@@ -133,13 +133,13 @@ int continua(){ //segundo menu de opcoes
     printf("\nO que voce quer fazer agora?\n");
     printf("\t(1) - Adicionar outro arquivo\n");
     printf("\t(2) - Mostrar resultados\n");
-    printf("\t(3) - Finalizar operação\n");
+    printf("\t(3) - Finalizar operacao\n");
 
     int type;
     scanf("%d", &type);
     getchar();
     while(type < 0 or type > 3){ //tratamento de erro
-        printf("--- opcao inválida, escreva uma opcao válida ---\n");
+        printf("--- opcao invalida, escreva uma opcao valida ---\n");
         printf("opcao: ");
         scanf("%d", &type);
         getchar();
@@ -154,7 +154,7 @@ int main(){
     // arquivo inicial
     content += fileOP();
     
-    // menu das operações
+    // menu das operacoes
     int go = continua();
     while(go != 3){
         if(go == 1){
