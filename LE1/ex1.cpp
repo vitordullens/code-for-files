@@ -89,7 +89,7 @@ string readFile(fstream file, int mode){
         int i = 0;
         while(i < n){
             file >> line;
-            r += line;
+            r += line + " ";
             i++;
         }
     }
