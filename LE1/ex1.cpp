@@ -1,8 +1,12 @@
 /* Estudantes: 
         Giovanni Guidini    16/0122660;
         Vitor Fernandes Dullens 16/0148260; 
-  Disciplina: 
+   Disciplina: 
         Organizacao de Arquivos 1/2018
+        
+   Compiled using g++ (GCC) 7.3.1 20180312
+   with flags -std=c++11 -Wall
+   in Linux 4.14.30-1-MANJARO
 */
 
 #include <stdio.h>
@@ -11,13 +15,14 @@
 #include <string>
 #include <map>
 
-//define para limpar a tela
+//define para limpar a tela em multiplos OS
 #ifdef WIN32
     #define CLEAR "cls"
 #else
     #define CLEAR "clear"
 #endif
 
+// define utilizacao do namespace
 using namespace std;
 
 void menu() { //menu inicial
@@ -76,7 +81,7 @@ string readFile(fstream file, int mode){
     if(mode == 1 || mode == 4){
         int i = 0;
         while(getline(file, line) && i < n){
-            r += line;
+            r += line + "\n"; // getline function removes \n from line
             i++;
         }
     }
@@ -106,8 +111,6 @@ fstream openFile(string file){
     }
 
     return arquivo;
-    
-
 }
 
 string fileOP(){
