@@ -34,8 +34,6 @@ void menu() { //menu inicial
     getchar();
 }
 
-
-
 int type(){ //como que o usuario deseja concatenar os arquivos
     int type;
 
@@ -100,7 +98,6 @@ string readFile(fstream file, int mode){ //ler arquivo dependendo do comando esc
     
     return r;
 }
-
 
 fstream openFile(string file){ // abrir arquivo
     fstream arquivo (file, ios::in);
