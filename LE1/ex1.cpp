@@ -14,11 +14,7 @@
 #include <fstream> //ler arquivos externos
 #include <string> //trabalhar com strings
 
-<<<<<<< HEAD
-//define para limpar a tela em multiplos OS
-=======
 //define, para limpar a tela em diferentes sistemas operacionais
->>>>>>> 77cf81c3f4daf4ca5cce181b466aa6da9c7eb410
 #ifdef WIN32
     #define CLEAR "cls"
 #else
@@ -92,11 +88,7 @@ string readFile(fstream file, int mode){ //ler arquivo dependendo do comando esc
         int i = 0;
         while(i < n){
             file >> line;
-<<<<<<< HEAD
             r += line + " ";
-=======
-            r += line+" ";
->>>>>>> 77cf81c3f4daf4ca5cce181b466aa6da9c7eb410
             i++;
         }
     }
