@@ -1,8 +1,12 @@
 /* Estudantes: 
         Giovanni Guidini    16/0122660;
         Vitor Fernandes Dullens 16/0148260; 
-  Disciplina: 
+   Disciplina: 
         Organizacao de Arquivos 1/2018
+        
+   Compiled using g++ (GCC) 7.3.1 20180312
+   with flags -std=c++11 -Wall
+   in Linux 4.14.30-1-MANJARO
 */
 
 #include <stdio.h> 
@@ -17,6 +21,7 @@
     #define CLEAR "clear"
 #endif
 
+// define utilizacao do namespace
 using namespace std;
 
 void menu() { //menu inicial
@@ -28,8 +33,6 @@ void menu() { //menu inicial
     printf("\n\n(press ENTER to continue)\n");
     getchar();
 }
-
-
 
 int type(){ //como que o usuario deseja concatenar os arquivos
     int type;
@@ -75,7 +78,7 @@ string readFile(fstream file, int mode){ //ler arquivo dependendo do comando esc
     if(mode == 1 || mode == 4){
         int i = 0;
         while(getline(file, line) && i < n){
-            r += line;
+            r += line + "\n"; // getline function removes \n from line
             i++;
         }
     }
@@ -83,7 +86,7 @@ string readFile(fstream file, int mode){ //ler arquivo dependendo do comando esc
         int i = 0;
         while(i < n){
             file >> line;
-            r += line+" ";
+            r += line + " ";
             i++;
         }
     }
@@ -96,7 +99,6 @@ string readFile(fstream file, int mode){ //ler arquivo dependendo do comando esc
     return r;
 }
 
-
 fstream openFile(string file){ // abrir arquivo
     fstream arquivo (file, ios::in);
     if(!arquivo){ //tratamento de erro
@@ -105,8 +107,6 @@ fstream openFile(string file){ // abrir arquivo
     }
 
     return arquivo;
-    
-
 }
 
 string fileOP(){ //manuseio de arquivo
