@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(int argv, char** argc) {
-    fstream dummy ("dummy.txt", ios::in | ios::binary);
+    fstream dummy ("smile.bmp", ios::in | ios::binary);
     vector<char*> data; 
     int regSize, cluSize;
     if(argv == 3){
@@ -26,13 +26,17 @@ int main(int argv, char** argc) {
     int length = dummy.tellg(), chunks = 0;
     while(chunks < length){
             char* curr_blk = (char*) malloc(regSize);
-            dummy.read(curr_blk, regSize);
+            memset(curr_blk, 0, regSize);
+            if(chunks+regSize <= length)
+                dummy.read(curr_blk, regSize);
+            else
+                dummy.read(curr_blk, length-chunks);
             data.push_back(curr_blk);    // adds data to that block factor
             chunks += regSize;
         }
 
     printf("Reading finished. Total of %d blocks\n", (int) data.size());
-    string filename = "OutWithSpecifics_regSize" + to_string(regSize) + ".txt";
+    string filename = "OutWithSpecifics_regSize" + to_string(regSize) + ".bmp";
     fstream out (filename, ios::out | ios::binary);
 
     for(auto blk : data){

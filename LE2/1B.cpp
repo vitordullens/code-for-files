@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    fstream dummy ("dummy.txt", ios::in | ios::binary);
+    fstream dummy ("smile.bmp", ios::in | ios::binary);
     vector<int> blockFactor = {512, CLUSTER/4, CLUSTER/2, 3*CLUSTER/4, CLUSTER};
     vector<char*> data[5]; // 5 vectors, one for each block factor.
 
@@ -25,7 +25,12 @@ int main() {
         chunks = 0;
         while(chunks < length){
             char* curr_blk = (char*) malloc(bfr);
-            dummy.read(curr_blk, bfr);
+            memset(curr_blk, 0, bfr);
+            
+            if(chunks + bfr <= length)
+                dummy.read(curr_blk, bfr);
+            else
+                dummy.read(curr_blk, length-chunks);
             data[i].push_back(curr_blk);    // adds data to that block factor
             chunks += bfr;
         }
@@ -41,7 +46,7 @@ int main() {
     fstream out;
     for(int i = 0; i < 5; i++){
         int bfr = blockFactor[i];
-        filename = "out_" + to_string(bfr) + ".txt";
+        filename = "out_" + to_string(bfr) + ".bmp";
         out.open(filename, ios::out | ios::binary);
 
         // writed data from blocks to another file
