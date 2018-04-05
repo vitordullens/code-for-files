@@ -39,8 +39,24 @@ void choose(){
     cout << "(3) campos com separados" << endl;
     cout << "(4) campos com atributo = valor" << endl;
     cin >> choice;
+    while (choice < 0 or choice > 4){ //tratamento de erro
+        printf("--- opcao invalida, escreva uma opcao valida ---\n");
+        printf("opcao: ");
+        cin >> choice;
+    }
+}
+void listReg(){
+    if(choice == 1) 
+        cout << "1" << endl;
+    if (choice == 2)
+        cout << "2" << endl;
+    if (choice == 3)
+        cout << "3" << endl;
+    if (choice == 4)
+        cout << "4" << endl;
 }
 int main(){
    question();
    choose();
+   listReg();
 }
