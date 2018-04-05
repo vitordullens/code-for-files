@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    fstream dummy ("smile.bmp", ios::in | ios::binary);
+    fstream dummy ("test.txt", ios::in | ios::binary);
     vector<int> blockFactor = {512, CLUSTER/4, CLUSTER/2, 3*CLUSTER/4, CLUSTER};
     vector<char*> data[5]; // 5 vectors, one for each block factor.
 
@@ -46,7 +46,7 @@ int main() {
     fstream out;
     for(int i = 0; i < 5; i++){
         int bfr = blockFactor[i];
-        filename = "out_" + to_string(bfr) + ".bmp";
+        filename = "testes/out_" + to_string(bfr) + ".txt";
         out.open(filename, ios::out | ios::binary);
 
         // writed data from blocks to another file
