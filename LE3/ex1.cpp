@@ -15,7 +15,7 @@ using namespace std;
 
 char choice;
 string name, last, address, tel, cep;
-fstream arquivo("test.txt", ios::app);
+fstream arquivo("out.txt", ios::app);
 
 void question(){
     system(CLEAR);
@@ -54,6 +54,12 @@ void writeFile(){
 
     if(choice == '1'){
         char nome[15], ultimo[15], end[15], tele[15], zip[15];
+        memset(nome, '-', 16);
+        memset(ultimo, '-', 16);
+        memset(end, '-', 16);
+        memset(tele, '-', 16);
+        memset(zip, '-', 16);
+
         int i;
         strcpy(nome, name.c_str());
         strcpy(ultimo, last.c_str());
