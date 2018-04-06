@@ -57,11 +57,11 @@ void writeFile(){ //escrever no arquivo conforme o metodo escolhido
         char nome[15], ultimo[15], end[15], tele[15], zip[15];
         //setando previamente todos os valores dos char* para '-',
         //para evitar lixo de memoria
-        memset(nome, '-', 16);
-        memset(ultimo, '-', 16);
-        memset(end, '-', 16);
-        memset(tele, '-', 16);
-        memset(zip, '-', 16);
+        memset(nome, ' ', 16);
+        memset(ultimo, ' ', 16);
+        memset(end, ' ', 16);
+        memset(tele, ' ', 16);
+        memset(zip, ' ', 16);
 
         int i;
         //copiando arquivos das striings lidas e transformando-os em char*
