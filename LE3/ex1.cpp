@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <cstdlib>
+#include <vector>
 
 #ifdef WIN32
     #define CLEAR "cls"
@@ -14,26 +15,19 @@
 using namespace std;
 
 char choice; 
-string name, last, address, tel, cep;
+vector<string> data(5);
 fstream arquivo("out.txt", ios::app);
 
 void question(){ //lendo os dados do usuario conforme pedido
-    system(CLEAR);
-    cout << "digite seu primeiro nome: ";
-    cin >> name;
-    system(CLEAR);
-    cout << "digite seu ultimo nome: ";
-    cin >> last;
-    system(CLEAR);
-    cout << "digite seu endereco: ";
-    cin >> address;
-    system(CLEAR);    
-    cout << "digite seu telefone: ";
-    cin >> tel;
-    system(CLEAR);    
-    cout << "digite seu cep: ";
-    cin >> cep;
-    system(CLEAR);
+    for (int i = 0; i < 5; i++){
+        system(CLEAR);
+        if (i == 0) cout << "digite seu primeiro nome: ";
+        else if (i == 1) cout << "digite seu ultimo nome: ";
+        else if (i == 2) cout << "digite endereco: ";
+        else if (i == 3) cout << "digite seu telefone: ";
+        else cout << "digite seu cep: ";
+        cin >> data[i];
+    }
 }
 void choose(){ //escolher atraves de linha de comando o metodo de organizacao
     system(CLEAR);
@@ -51,51 +45,24 @@ void choose(){ //escolher atraves de linha de comando o metodo de organizacao
     }
 }
 void writeFile(){ //escrever no arquivo conforme o metodo escolhido
-    char Char;
-
     if(choice == '1'){
-        char nome[15], ultimo[15], end[15], tele[15], zip[15];
-        //setando previamente todos os valores dos char* para '-',
-        //para evitar lixo de memoria
-        memset(nome, ' ', 16);
-        memset(ultimo, ' ', 16);
-        memset(end, ' ', 16);
-        memset(tele, ' ', 16);
-        memset(zip, ' ', 16);
-
-        int i;
-        //copiando arquivos das striings lidas e transformando-os em char*
-        strcpy(nome, name.c_str());
-        strcpy(ultimo, last.c_str());
-        strcpy(end, address.c_str());
-        strcpy(tele, tel.c_str());
-        strcpy(zip, cep.c_str());
-        for (i = 0; i <= 15; i++) arquivo << nome[i];
-        for (i = 0; i <= 15; i++) arquivo << ultimo[i];
-        for (i = 0; i <= 15; i++) arquivo << end[i];
-        for (i = 0; i <= 15; i++) arquivo << tele[i];
-        for (i = 0; i <= 15; i++) arquivo << zip[i];
+        for (int i = 0; i < 5; i++){
+            arquivo << data[i];
+            for (int j = data[i].size(); j < 15; j++) arquivo << '0';
+        }
     } 
     if (choice == '2'){ //utilizando a funcao size() para achar o tamanho da string
-        arquivo << name.size() << name;
-        arquivo << last.size() << last;
-        arquivo << address.size() << address;
-        arquivo << tel.size() << tel;
-        arquivo << cep.size() << cep;
+        for(int i = 0; i < 5; i++) arquivo << data[i].size() << data[i];
     }
     if (choice == '3'){
+        char Char;
         cout << "qual caracter sera o separador: ";
         //eh possivel escolher qual o caracter separador
         cin >> Char;
-        arquivo << name << Char;
-        arquivo << last << Char;
-        arquivo << address << Char;
-        arquivo << tel << Char;
-        arquivo << cep << Char;
+        for (int i = 0; i < 5; i++) arquivo << Char << data[i];
     }
     if (choice == '4'){
         cout << "waat" << endl;
-
     }
     arquivo << "\n";
 }
