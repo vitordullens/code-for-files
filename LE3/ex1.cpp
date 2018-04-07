@@ -48,7 +48,7 @@ void writeFile(){ //escrever no arquivo conforme o metodo escolhido
     if(choice == '1'){
         for (int i = 0; i < 5; i++){
             arquivo << data[i];
-            for (int j = data[i].size(); j < 15; j++) arquivo << '0';
+            for (int j = data[i].size(); j < 15; j++) arquivo << '-'; // hifen eh melhor para separar visualmente
         }
     } 
     if (choice == '2'){ //utilizando a funcao size() para achar o tamanho da string
@@ -59,6 +59,7 @@ void writeFile(){ //escrever no arquivo conforme o metodo escolhido
         cout << "qual caracter sera o separador: ";
         //eh possivel escolher qual o caracter separador
         cin >> Char;
+        // char escolhido eh o primeiro char do registro para poder ser re-lido corretamente depois
         for (int i = 0; i < 5; i++) arquivo << Char << data[i];
     }
     if (choice == '4'){

@@ -9,7 +9,11 @@
 using namespace std;
 
 int main(int argv, char** argc) {
-    fstream dummy ("smile.bmp", ios::in | ios::binary);
+    fstream dummy ("test.txt", ios::in | ios::binary);
+    if (!dummy.is_open()){
+        printf("Didn't find file\n");
+        return 1;
+    }
     vector<char*> data; 
     int regSize, cluSize;
     if(argv == 3){
@@ -27,6 +31,7 @@ int main(int argv, char** argc) {
     // get length of file:
     dummy.seekg (0, dummy.end);
     int length = dummy.tellg(), chunks = 0;
+    dummy.seekg(0); // returns to begin of file
     while(chunks < length){
             char* curr_blk = (char*) malloc(bfr);
             memset(curr_blk, 0, bfr);
@@ -39,11 +44,10 @@ int main(int argv, char** argc) {
         }
 
     printf("Reading finished. Total of %d blocks\n", (int) data.size());
-    string filename = "OutWithSpecifics_BlockSize" + to_string(blk) + ".bmp";
+    string filename = "OutWithSpecifics_BlockSize" + to_string(blk) + ".txt";
     fstream out (filename, ios::out | ios::binary);
 
     for(auto blk : data){
         out.write(blk, regSize);
     }
-
 }
