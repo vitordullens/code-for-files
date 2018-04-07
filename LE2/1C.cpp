@@ -17,26 +17,29 @@ int main(int argv, char** argc) {
         cluSize = stoi(string(argc[2]));
     }
     else{
-        printf("Usage: ./1C <regSize> <cluSize>\n");
+        printf("Usage: ./1C <registerSize> <clusterSize>\n");
         return 1;
     }
 
+    // Number of registers in the cluster
+    int blk = cluSize/regSize;
+    int bfr = blk*regSize;
     // get length of file:
     dummy.seekg (0, dummy.end);
     int length = dummy.tellg(), chunks = 0;
     while(chunks < length){
-            char* curr_blk = (char*) malloc(regSize);
-            memset(curr_blk, 0, regSize);
-            if(chunks+regSize <= length)
-                dummy.read(curr_blk, regSize);
+            char* curr_blk = (char*) malloc(bfr);
+            memset(curr_blk, 0, bfr);
+            if(chunks+bfr <= length)
+                dummy.read(curr_blk, bfr);
             else
                 dummy.read(curr_blk, length-chunks);
             data.push_back(curr_blk);    // adds data to that block factor
-            chunks += regSize;
+            chunks += bfr;
         }
 
     printf("Reading finished. Total of %d blocks\n", (int) data.size());
-    string filename = "OutWithSpecifics_regSize" + to_string(regSize) + ".bmp";
+    string filename = "OutWithSpecifics_BlockSize" + to_string(blk) + ".bmp";
     fstream out (filename, ios::out | ios::binary);
 
     for(auto blk : data){
