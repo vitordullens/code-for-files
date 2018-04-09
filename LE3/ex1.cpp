@@ -72,13 +72,21 @@ void writeFile(){ //escrever no arquivo conforme o metodo escolhido
     arquivo << "\n";
 }
 void showTxt(){ //mostrar ao usuario o resultado do arquivo texto gerado
-   
+    string content;
+    ifstream openfile("out.txt");
+    if (openfile.is_open()){
+        while (!openfile.eof()){
+            getline(openfile, content);
+            cout << content << endl;
+        }
+    }
 }
 int main(){
    question();
    choose();
    writeFile();
    system(CLEAR);
+   arquivo.close();
    cout << "--- arquivo out.txt ---" << "\n\n";
    showTxt();
 }
