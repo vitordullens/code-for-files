@@ -12,20 +12,23 @@
 using namespace std;
 
 int main() {
+    // opens original file
     fstream dummy ("test.txt", ios::in | ios::binary);
+                                //    0.25       0.5         0.75         1
     vector<int> blockFactor = {512, CLUSTER/4, CLUSTER/2, 3*CLUSTER/4, CLUSTER};
     vector<char*> data[5]; // 5 vectors, one for each block factor.
 
     // get length of file:
     dummy.seekg (0, dummy.end);
     int length = dummy.tellg(), chunks;
+    // reads file creating different sized blocks
     for(int i = 0; i < 5; i++){
         int bfr = blockFactor[i];
         dummy.seekg(0); // returns to begin of file
         chunks = 0;
         while(chunks < length){
             char* curr_blk = (char*) malloc(bfr);
-            memset(curr_blk, 0, bfr);
+            memset(curr_blk, 0, bfr);   // initialize with 0 if not all block will be filled
             
             if(chunks + bfr <= length)
                 dummy.read(curr_blk, bfr);
@@ -42,6 +45,7 @@ int main() {
     printf("CLUSTER/2 : %d blocks\n", (int) data[2].size());
     printf("3*CLUSTER/4 : %d blocks\n", (int) data[3].size());
 
+    // creates file for output
     string filename = "";
     fstream out;
     for(int i = 0; i < 5; i++){
@@ -49,7 +53,7 @@ int main() {
         filename = "testes/out_" + to_string(bfr) + ".txt";
         out.open(filename, ios::out | ios::binary);
 
-        // writed data from blocks to another file
+        // writed data from blocks to out file
         for(auto blk : data[i]){
             out.write(blk, bfr);
         }

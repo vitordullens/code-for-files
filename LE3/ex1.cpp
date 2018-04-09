@@ -63,7 +63,11 @@ void writeFile(){ //escrever no arquivo conforme o metodo escolhido
         for (int i = 0; i < 5; i++) arquivo << Char << data[i];
     }
     if (choice == '4'){
-        cout << "waat" << endl;
+        arquivo << "Nome=" + data[0] + "|";
+        arquivo << "Sobrenome=" + data[1] + "|";
+        arquivo << "Address=" + data[2] + "|";
+        arquivo << "Telefone=" + data[3] + "|";
+        arquivo << "CEP=" + data[4];
     }
     arquivo << "\n";
 }
