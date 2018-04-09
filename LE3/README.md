@@ -3,4 +3,4 @@ Faça um programa que leia os dados sobrenome, nome, endereço, CEP e telefone d
 - [X] - Campos de tamanho fixo
 - [X] - Campos com tamanho no início
 - [X] - Campos com separadores
-- [ ] - Campos com atributo = valor
+- [X] - Campos com atributo = valor
