@@ -1,0 +1,1 @@
+Nome=Batata|Sobrenome=Frita|Address=McDonald's|Telefone=+33 12 2354679834|CEP=2950-394
