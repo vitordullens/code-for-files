@@ -13,7 +13,7 @@ Assim os arquivos podem ser lidos e escritos em um HD.
 
 ##### c) Por que o tamanho real de um arquivo em disco é sempre maior do que o seu tamanho nominal?
 
-No HD o arquivo, além dos bytes do seu conteúdo, também deve armazenar dados relacionados ao arquivo, setores que ocupa, etc. Ou seja, dados para que o SO e o próprio HD consigam recuperar o arquivo futuramente. Daí vem o tamanho extra.
+No HD o arquivo, além dos bytes do seu conteúdo, também deve armazenar dados relacionados ao arquivo, setores que ocupa, etc. Ou seja, dados para que o SO e o próprio HD consigam recuperar o arquivo futuramente. Daí vem o tamanho extra, chamado de Nondata Overhead.
 
 #### 2)  
 ##### a) Quais parâmetros são considerados para calcular o tempo de leitura de um arquivo mantido em disco?
