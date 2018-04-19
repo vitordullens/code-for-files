@@ -42,9 +42,12 @@ _seeking_ * 5 + latência * 5 + (209.715/1229) * 5 =
 ```
 
 #### 4) Refaça a questão anterior supondo agora que o mesmo arquivo está distribuído em 5 extents distintos no mesmo disco, mas considerando um acesso aleatório a um único registro do arquivo, ao invés de acesso sequencial a todo o seu conteúdo
-
-Não entendi
-
+```
+ Tempo médio de Busca + Latência + (Taxa de transferência / qnt extents)
+ 13 ms + 8.3 ms + (16.7 ms/5 extents)
+ 13 + 8.3 + 3.34 = 24.64ms / registro
+ como é apenas 1 registro => 24.64ms 
+```
 #### 5) Explique o que é um cilindro, e a razão para a organização de arquivos em cilindros.
 
 Um cilindro se refere à trilhas com a mesma numeração de pratos diferentes, que estão alinhadas verticalmente. Como todas as cabeças de I/O também estão alinhadas, é possível acessar todas as trilhas em um cilindro sem mover a cabeça de I/O, economizando tempo.
