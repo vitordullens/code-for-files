@@ -11,6 +11,12 @@
 #include <bits/stdc++.h>
 #define lsDcm() std::system("ls *.dcm")
 
+#ifdef WIN32
+    #define CLEAR "cls"
+#else
+    #define CLEAR "clear"
+#endif
+
 using namespace std;
 
 // Some images have preamble followed by prefix DICM before metadata, others don't
@@ -100,9 +106,11 @@ void readNextMeta(ifstream* fd){
 
 int main(){
     string file;
+    system(CLEAR);
     cout << "Choose a file to analyse. Options are:" << endl;
     lsDcm();
     cin >> file;
+    system(CLEAR);
 
     cout << "File chosen: " << file << endl;
     ifstream fd (file, ios::binary);
@@ -115,6 +123,7 @@ int main(){
 
     for(int i = 0; i < 5; i++){
         readNextMeta(&fd);
+        cout << "--------+" << endl;
     }
     
 }
