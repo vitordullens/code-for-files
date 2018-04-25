@@ -5,14 +5,38 @@
 // List of DICOM tags https://www.dicomlibrary.com/dicom/dicom-tags/
 // Thorough explanation on DICOM standard: https://www.leadtools.com/help/leadtools/v19/dh/to/di-topics-basicdicomfilestructure.html
 // Data Element Structure: https://www.leadtools.com/help/leadtools/v19/dh/to/di-topics-dataelementstructure.html
+// All the TAGS http://dicom.nema.org/medical/dicom/current/output/pdf/part06.pdf
 
 // Online viewer for metadata https://www.get-metadata.com/
 
 #include <bits/stdc++.h>
 #define lsDcm() std::system("ls *.dcm")
 
+#ifdef WIN32
+    #define CLEAR "cls"
+#else
+    #define CLEAR "clear"
+#endif
+
 using namespace std;
 
+// Maps tag to its name
+map<pair<int,int>, string> tags;
+
+// Names of all tags
+void makeTag(){
+    ifstream f;
+    // aux file with tag and its name
+    f.open("tags.txt");
+    int a, b;
+    string name;
+    char comma;
+    for(int i = 0; i < 2196; i++){  // file has that many lines
+        f >> a >> comma >> b >> comma >> name >> comma;
+        tags[make_pair(a,b)] = name;
+    }
+    f.close();
+}
 // Some images have preamble followed by prefix DICM before metadata, others don't
 // This functions will skip preamble if it exists.
 void managePreamble(ifstream* fd){
@@ -51,6 +75,14 @@ bool implicitVR(char* vr){
     }
     return false;
 }
+
+
+string readData(string vr, unsigned long len){
+    // vei
+    return "";
+}
+
+// tag for pixel data (7FE0,0010) ?
 void readNextMeta(ifstream* fd){
     char buff[128], vr[10];
     uint16_t tag[2], len;
@@ -91,8 +123,11 @@ void readNextMeta(ifstream* fd){
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
-
-    printf("TAG: (%#x,%#x)\n", tag[0], tag[1]);
+    string name = tags[make_pair(tag[0],tag[1])];
+    if(name == ""){
+        name = "Tag Unknown";
+    }
+    printf("TAG: (%#x,%#x) - %s\n", tag[0], tag[1], name.c_str());
     printf("VR: %c%c\n", vr[0], vr[1]);
     printf("LEN: %#x\n", len);
     printf("DATA: %lu\n", UL);
@@ -103,6 +138,7 @@ int main(){
     cout << "Choose a file to analyse. Options are:" << endl;
     lsDcm();
     cin >> file;
+    system(CLEAR);
 
     cout << "File chosen: " << file << endl;
     ifstream fd (file, ios::binary);
@@ -112,9 +148,10 @@ int main(){
     }
     
     managePreamble(&fd);
-
-    for(int i = 0; i < 5; i++){
+    makeTag();
+    for(int i = 0; i < 20; i++){
         readNextMeta(&fd);
+        cout << "--------+" << endl;
     }
     
 }
