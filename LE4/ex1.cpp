@@ -25,17 +25,16 @@ map<pair<int,int>, string> tags;
 
 // Names of all tags
 void makeTag(){
-    ifstream f;
+    FILE* f;
     // aux file with tag and its name
-    f.open("tags.txt");
+    f = fopen("tags.txt", "r");
     int a, b;
-    string name;
-    char comma;
-    for(int i = 0; i < 2196; i++){  // file has that many lines
-        f >> a >> comma >> b >> comma >> name >> comma;
-        tags[make_pair(a,b)] = name;
+    char name[100];
+    for(int i = 0; i < 1273; i++){  // file has that many lines
+        fscanf(f, "%d,%d,%[^\n]s", &a, &b, name);
+        tags[make_pair(a,b)] = string(name);
     }
-    f.close();
+    fclose(f);
 }
 // Some images have preamble followed by prefix DICM before metadata, others don't
 // This functions will skip preamble if it exists.
@@ -88,8 +87,8 @@ void readNextMeta(ifstream* fd){
     uint16_t tag[2], len;
     unsigned long UL;
     fd->read(buff, 4);
-    tag[0] = (uint16_t) buff[0];
-    tag[1] = (uint16_t) buff[1];
+    tag[0] =  (buff[1] << 8) | buff[0];
+    tag[1] =  (buff[3] << 8) | buff[2];
     fd->read(vr, 2);
 
     // Dealing with cases OB, OW, OF, SQ, UT or UN for explicit VR, which have 2 reserved bytes
@@ -99,7 +98,7 @@ void readNextMeta(ifstream* fd){
         fd->read(buff, 2);
         int len;
         fd->read(buff, 4);  // special values have 4 bytes of length
-        len = (int) buff[0];
+        len = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
@@ -113,13 +112,13 @@ void readNextMeta(ifstream* fd){
 
         int len;
         fd->read(buff, 4);  // special values have 4 bytes of length
-        len = (int) buff[0];
+        len = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
     else{
         fd->read(buff, 2);
-        len = (uint16_t) buff[0];
+        len = (buff[1] << 8) | buff[0];
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
