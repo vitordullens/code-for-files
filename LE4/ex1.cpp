@@ -135,6 +135,7 @@ void readNextMeta(ifstream* fd){
 
 int main(){
     string file;
+    system(CLEAR);
     cout << "Choose a file to analyse. Options are:" << endl;
     lsDcm();
     cin >> file;
