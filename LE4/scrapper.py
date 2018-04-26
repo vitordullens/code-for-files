@@ -1,6 +1,6 @@
 # This file was created specifically to read the tags from DICOM_Tags.html
 # Because there are many tags in DICOM Standard.
-# by Gguidini. Version 3.0
+# by Gguidini. Version 3.2
 
 import re
 
@@ -15,14 +15,14 @@ with open("DICOM_Tags.html") as file:
         m = re.search(cell, line)
         p = re.search(alternativeCell, line)
         if m != None:
-            (a, b) = (m.group(1), m.group(2))
+            (a, b) = (int(m.group(1),16), int(m.group(2),16))
             tag = (a,b)
             VR = m.group(3)
             tagName = m.group(4)
             tagName = tagName.replace(" ", '')
             out[tag] = (VR, tagName)
         elif p != None:
-            (a, b) = (p.group(1), p.group(2))
+            (a, b) = (int(p.group(1),16), int(p.group(2), 16))
             tag = (a,b)
             VR = p.group(3)
             tagName = p.group(4)

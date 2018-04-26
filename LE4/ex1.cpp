@@ -8,8 +8,9 @@
 // All the TAGS http://dicom.nema.org/medical/dicom/current/output/pdf/part06.pdf
 
 // Online viewer for metadata https://www.get-metadata.com/
-
 #include <bits/stdc++.h>
+#include "HeaderElements.h"
+
 #define lsDcm() std::system("ls *.dcm")
 
 #ifdef WIN32
@@ -20,25 +21,6 @@
 
 using namespace std;
 
-// Maps tag to its name
-map<pair<int,int>, pair<string,string>> tags;
-
-// Names of all tags
-void makeTag(){
-    FILE* f;
-    // aux file with tag and its name
-    f = fopen("tags.txt", "r");
-    int a, b;           // tag numbers
-    string vr = "";     
-    char g,e;           // VR values
-    char name[100];     // Tag name
-    for(int i = 0; i < 1274; i++){  // file has that many lines
-        fscanf(f, "%d,%d,%c%c,%[^\n]s", &a, &b, &g, &e, name);
-        vr = a+b;
-        tags[make_pair(a,b)] = make_pair(vr, string(name));
-    }
-    fclose(f);
-}
 // Some images have preamble followed by prefix DICM before metadata, others don't
 // This functions will skip preamble if it exists.
 void managePreamble(ifstream* fd){
@@ -125,12 +107,9 @@ void readNextMeta(ifstream* fd){
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
-    pair<string, string> specs = tags[make_pair(tag[0],tag[1])];
-    string name = specs.second;
-    if(name == ""){
-        name = "Tag Unknown";
-    }
-    printf("TAG: (%#x,%#x) - %s\n", tag[0], tag[1], name.c_str());
+    HE::Element specs = HE::getElement(make_pair(tag[0], tag[1]));
+
+    printf("TAG: (%#x,%#x) - %s\n", tag[0], tag[1], specs.getName().c_str());
     printf("VR: %c%c\n", vr[0], vr[1]);
     printf("LEN: %#x\n", len);
     printf("DATA: %lu\n", UL);
@@ -152,7 +131,7 @@ int main(){
     }
     
     managePreamble(&fd);
-    makeTag();
+    HE::makeTag();
     for(int i = 0; i < 20; i++){
         readNextMeta(&fd);
         cout << "--------+" << endl;
