@@ -21,18 +21,21 @@
 using namespace std;
 
 // Maps tag to its name
-map<pair<int,int>, string> tags;
+map<pair<int,int>, pair<string,string>> tags;
 
 // Names of all tags
 void makeTag(){
     FILE* f;
     // aux file with tag and its name
     f = fopen("tags.txt", "r");
-    int a, b;
-    char name[100];
-    for(int i = 0; i < 1273; i++){  // file has that many lines
-        fscanf(f, "%d,%d,%[^\n]s", &a, &b, name);
-        tags[make_pair(a,b)] = string(name);
+    int a, b;           // tag numbers
+    string vr = "";     
+    char g,e;           // VR values
+    char name[100];     // Tag name
+    for(int i = 0; i < 1274; i++){  // file has that many lines
+        fscanf(f, "%d,%d,%c%c,%[^\n]s", &a, &b, &g, &e, name);
+        vr = a+b;
+        tags[make_pair(a,b)] = make_pair(vr, string(name));
     }
     fclose(f);
 }
@@ -122,7 +125,8 @@ void readNextMeta(ifstream* fd){
         fd->read(buff, len);
         UL = (unsigned long) buff[0];
     }
-    string name = tags[make_pair(tag[0],tag[1])];
+    pair<string, string> specs = tags[make_pair(tag[0],tag[1])];
+    string name = specs.second;
     if(name == ""){
         name = "Tag Unknown";
     }

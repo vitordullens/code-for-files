@@ -1,1273 +1,2525 @@
-2,0,File Meta Information Group Length
-2,1,File Meta Information Version
-2,3,Media Storage SOP Instance UID
-2,12,Implementation Class UID
-2,16,Source Application Entity Title
-2,18,Receiving Application Entity Title
-2,102,Private Information
-4,1200,Offset of the First Directory Record of the Root Directory Entity
-4,1400,Offset of the Next Directory Record
-4,1432,Private Record UID
-4,1511,Referenced SOP Instance UID in File
-8,6,Language Code Sequence
-8,13,Instance Creation Time
-8,15,Instance Coercion DateTime
-8,18,SOP Instance UID
-8,21,Series Date
-8,23,Content Date
-8,30,Study Time
-8,32,Acquisition Time
-8,51,Issuer of Accession Number Sequence
-8,55,Station  AE Title
-8,58,Failed SOP Instance UID List
-8,61,Modalities in Study
-8,64,Conversion Type
-8,70,Manufacturer
-8,81,Institution Address
-8,100,Code Value
-8,102,Coding Scheme Designator
-8,104,Code Meaning
-8,106,Context Group Version
-8,108,Extended Code Meaning
-8,112,Coding Scheme Registry
-8,115,Coding Scheme Name
-8,117,Context UID
-8,119,Long Code Value
-8,121,Equivalent Code Sequence
-8,123,Context Group Identification Sequence
-8,201,Timezone Offset From UTC
-8,301,Private Group Reference
-8,303,Block Identifying Information Status
-8,306,Identifying Private Elements
-8,307,Deidentification Action
-8,1010,Station Name
-8,1032,Procedure Code Sequence
-8,1080,Admitting Diagnoses Description
-8,1110,Referenced Study Sequence
-8,1115,Referenced Series Sequence
-8,1125,Referenced Visit Sequence
-8,1134,Referenced Stereometric Instance Sequence
-8,1140,Referenced Image Sequence
-8,1150,Referenced SOP Class UID
-8,1161,Simple Frame List
-8,1163,Time Range
-8,1195,Transaction UID
-8,1197,Failure Reason
-8,1199,Referenced SOP Sequence
-8,1200,Studies Containing Other Referenced Instances Sequence
-8,2112,Source Image Sequence
-8,2122,Stage Number
-8,2127,View Name
-8,2129,Number of Event Timers
-8,2133,Event Timer Sequence
-8,2135,Event Code Sequence
-8,2143,Stop Trim
-8,2220,Anatomic Region Modifier Sequence
-8,3010,Irradiation Event UID
-8,3012,Radiopharmaceutical Administration Event UID
-8,9007,Frame Type
-8,9121,Referenced Raw Data Sequence
-8,9124,Derivation Image Sequence
-8,9205,Pixel Presentation
-8,9207,Volume Based Calculation Technique
-8,9209,Acquisition Contrast
-8,9237,Referenced Presentation State Sequence
-8,9458,Frame Display Sequence
-8,9460,Skip Frame Range Flag
-10,20,Patient ID
-10,22,Type of Patient ID
-10,26,Source Patient Group Identification Sequence
-10,28,Subject Relative Position in Image
-10,200,Quality Control Subject
-10,212,Strain Description
-10,214,Strain Stock Number
-10,216,Strain Stock Sequence
-10,218,Strain Additional Information
-10,1000,Other Patient IDs
-10,1002,Other Patient IDs Sequence
-10,1081,Branch of Service
-10,1100,Referenced Patient Photo Sequence
-10,2110,Allergies
-10,2152,Region of Residence
-10,2180,Occupation
-10,2201,Patient Species Description
-10,2292,Patient Breed Description
-10,2294,Breed Registration Sequence
-10,2296,Breed Registry Code Sequence
-10,2298,Responsible Person Role
-10,4000,Patient Comments
-12,10,Clinical Trial Sponsor Name
-12,21,Clinical Trial Protocol Name
-12,31,Clinical Trial Site Name
-12,42,Clinical Trial Subject Reading ID
-12,51,Clinical Trial Time Point Description
-12,62,Patient Identity Removed
-12,72,Clinical Trial Series Description
-12,82,Clinical Trial Protocol Ethics Committee Approval Number
-12,84,Distribution Type
-14,25,Component Manufacturing Procedure
-14,30,Material Thickness
-14,34,Material Isolation Diameter
-14,44,Material Properties Description
-14,46,Material Notes
-14,52,Curvature Type
-14,56,Inner Diameter
-14,101,Secondary Approval Status
-14,103,Secondary Review Time
-14,105,Repair ID
-14,107,Other Approval Status
-14,1010,Actual Environmental Conditions
-14,1040,Environmental Conditions
-14,2004,Evaluator Number
-14,2008,Evaluation Attempt
-14,2014,Indication Number
-14,2018,Indication Description
-14,2030,Indication Physical Property Sequence
-14,2202,Coordinate System Number of Axes
-14,2206,Coordinate System Axis Description
-14,2220,Coordinate System Transform Sequence
-14,2224,Transform Number of Axes
-14,2228,Transformed Axis Units
-14,3012,Number of Frames Integrated
-14,3022,Sensor Name
-14,3026,Vertical Offset of Sensor
-14,3040,Dark Current Sequence
-14,3060,Gain Correction Reference Sequence
-14,3071,KV Used in Gain Calibration
-14,3073,Number of Frames Used for Integration
-14,3075,Filter Thickness Used in Gain Calibration
-14,3077,Time of Gain Calibration
-14,3099,Calibration Notes
-14,4004,Pulser Type
-14,4008,Receiver Equipment Sequence
-14,4011,Receive Transducer Sequence
-14,4013,Element Shape
-14,4015,Element Dimension B
-14,4017,Measured Beam Dimension A
-14,4019,Location of Measured Beam Diameter
-14,4022,Pulse Width
-14,4026,Modulation Type
-14,4030,Receiver Settings Sequence
-14,4032,Acquisition Compression Type
-14,4034,Rectifier Smoothing
-14,4036,DAC Type
-14,4051,Receive Transducer Settings Sequence
-14,4054,Coupling Technique
-14,4057,Coupling Velocity
-14,4059,Probe Center Location Z
-14,4062,Gate Threshold
-14,4070,Calibration Settings Sequence
-14,4074,Procedure Version
-14,4078,Procedure Expiration Date
-14,4080,Probe Drive Equipment Sequence
-14,4082,Probe Drive Notes
-14,4084,Probe Inductance
-14,4086,Receive Probe Sequence
-14,4088,Bridge Resistors
-14,4091,Channel Settings Sequence
-14,5002,LINAC Energy
-14,5100,Active Aperture
-14,5102,Aperture Elevation
-14,5104,Main Roof Angle
-14,5106,Wedge Model Number
-14,5108,Wedge Roof Angle
-14,5110,Wedge Manufacturer Name
-14,5112,Nominal Beam Angle
-14,5114,Wedge Offset Y
-14,5116,Wedge In Contact Length
-14,5118,Wedge Total Height
-18,15,Body Part Examined
-18,21,Sequence Variant
-18,23,MR Acquisition Type
-18,25,Angio Flag
-18,27,Intervention Drug Stop Time
-18,29,Intervention Drug Code Sequence
-18,34,Intervention Drug Name
-18,36,Intervention Sequence
-18,38,Intervention Status
-18,42,Initial Cine Run State
-18,60,KVP
-18,70,Counts Accumulated
-18,72,Effective Duration
-18,74,Acquisition Start Condition Data
-18,80,Repetition Time
-18,82,Inversion Time
-18,84,Imaging Frequency
-18,88,Spacing Between Slices
-18,90,Data Collection Diameter
-18,93,Percent Sampling
-18,95,Pixel Bandwidth
-18,1002,Device UID
-18,1004,Plate ID
-18,1006,Grid ID
-18,1008,Gantry ID
-18,1014,Time of Secondary Capture
-18,1019,Secondary Capture Device Software Versions
-18,1022,Video Image Format Acquired
-18,1030,Protocol Name
-18,1045,Syringe Counts
-18,1047,Contrast Flow Duration
-18,1060,Trigger Time
-18,1062,Nominal Interval
-18,1064,Cardiac Framing Type
-18,1066,Frame Delay
-18,1068,Multiplex Group Time Offset
-18,1071,Radiopharmaceutical Volume
-18,1073,Radiopharmaceutical Stop Time
-18,1075,Radionuclide Half Life
-18,1077,Radiopharmaceutical Specific Activity
-18,1079,Radiopharmaceutical Stop DateTime
-18,1083,Intervals Acquired
-18,1085,PVC Rejection
-18,1088,Heart Rate
-18,1094,Trigger Window
-18,1110,Distance Source to Detector
-18,1114,Estimated Radiographic Magnification Factor
-18,1131,Table Traverse
-18,1135,Table Vertical Increment
-18,1137,Table Longitudinal Increment
-18,1143,Scan Arc
-18,1145,Center of Rotation Offset
-18,1147,Field of View Shape
-18,1150,Exposure Time
-18,1152,Exposure
-18,1154,Average Pulse Width
-18,1156,Rectification Type
-18,1161,Type of Filters
-18,1164,Imager Pixel Spacing
-18,1170,Generator Power
-18,1181,Collimator Type
-18,1183,X Focus Center
-18,1201,Time of Last Calibration
-18,1210,Convolution Kernel
-18,1242,Actual Frame Duration
-18,1244,Preferred Playback Sequencing
-18,1251,Transmit Coil Name
-18,1261,Phosphor Type
-18,1272,Water Equivalent Diameter Calculation Method Code Sequence
-18,1301,Whole Body Technique
-18,1310,Acquisition Matrix
-18,1314,Flip Angle
-18,1316,SAR
-18,1320,B1rms
-18,1401,Acquisition Device Processing Code
-18,1403,Cassette Size
-18,1412,Target Exposure Index
-18,1450,Column Angulation
-18,1470,Tomo Angle
-18,1490,Tomo Type
-18,1495,Number of Tomosynthesis Source Images
-18,1508,Positioner Type
-18,1511,Positioner Secondary Angle
-18,1521,Positioner Secondary Angle Increment
-18,1531,Detector Secondary Angle
-18,1602,Shutter Left Vertical Edge
-18,1606,Shutter Upper Horizontal Edge
-18,1610,Center of Circular Shutter
-18,1620,Vertices of the Polygonal Shutter
-18,1623,Shutter Overlay Group
-18,1700,Collimator Shape
-18,1704,Collimator Right Vertical Edge
-18,1708,Collimator Lower Horizontal Edge
-18,1712,Radius of Circular Collimator
-18,1800,Acquisition Time Synchronized
-18,1802,Time Distribution Protocol
-18,2001,Page Number Vector
-18,2003,Frame Primary Angle Vector
-18,2005,Slice Location Vector
-18,2010,Nominal Scanned Pixel Spacing
-18,2030,Rotation of Scanned Film
-18,2042,Target UID
-18,2044,Calculated Target Position
-18,2046,Displayed Z Value
-18,3101,IVUS Pullback Rate
-18,3103,IVUS Pullback Start Frame Number
-18,3105,Lesion Number
-18,5000,Output Power
-18,5012,Focus Depth
-18,5024,Bone Thermal Index
-18,5027,Soft Tissue Thermal Index
-18,5100,Patient Position
-18,5104,Projection Eponymous Name Code Sequence
-18,6011,Sequence of Ultrasound Regions
-18,6014,Region Data Type
-18,6018,Region Location Min X0
-18,6020,Reference Pixel X0
-18,6024,Physical Units X Direction
-18,6028,Reference Pixel Physical Value X
-18,6030,Transducer Frequency
-18,6032,Pulse Repetition Frequency
-18,6036,Steering Angle
-18,6039,Doppler Sample Volume X Position
-18,6046,Pixel Component Mask
-18,6052,Table of X Break Points
-18,6056,Number of Table Entries
-18,7000,Detector Conditions Nominal Flag
-18,7004,Detector Type
-18,7006,Detector Description
-18,7011,Exposures on Detector Since Manufactured
-18,7014,Detector Active Time
-18,7022,Detector Element Spacing
-18,7030,Field of View Origin
-18,7034,Field of View Horizontal Flip
-18,7038,Pixel Data Area Rotation Angle Relative To FOV
-18,7041,Grid Spacing Material
-18,7044,Grid Pitch
-18,7048,Grid Period
-18,7050,Filter Material
-18,7054,Filter Thickness Maximum
-18,7058,Filter Beam Path Length Maximum
-18,7062,Exposure Control Mode Description
-18,7065,Phototimer Setting
-18,9005,Pulse Sequence Name
-18,9008,Echo Pulse Sequence
-18,9010,Flow Compensation
-18,9015,Time of Flight Contrast
-18,9017,Steady State Pulse Sequence
-18,9019,Tag Angle First Axis
-18,9021,T2 Preparation
-18,9024,Saturation Recovery
-18,9026,Spectrally Selected Excitation
-18,9028,Tagging
-18,9030,Tag Spacing First Dimension
-18,9035,Tag Thickness
-18,9037,Cardiac Synchronization Technique
-18,9042,MR Receive Coil Sequence
-18,9044,Quadrature Receive Coil
-18,9050,Transmit Coil Manufacturer Name
-18,9052,Spectral Width
-18,9054,Volume Localization Technique
-18,9065,Time Domain Filtering
-18,9067,Baseline Correction
-18,9074,Frame Acquisition DateTime
-18,9076,Diffusion Gradient Direction Sequence
-18,9078,Parallel Acquisition Technique
-18,9080,Metabolite Map Description
-18,9082,Effective Echo Time
-18,9084,Chemical Shift Sequence
-18,9090,Velocity Encoding Direction
-18,9092,Velocity Encoding Acquisition Sequence
-18,9100,Resonant Nucleus
-18,9105,Slab Orientation
-18,9107,MR Spatial Saturation Sequence
-18,9114,MR Echo Sequence
-18,9117,MR Diffusion Sequence
-18,9119,MR Averages Sequence
-18,9126,Volume Localization Sequence
-18,9147,Diffusion Anisotropy Type
-18,9152,MR Metabolite Map Sequence
-18,9170,Respiratory Motion Compensation Technique
-18,9172,Bulk Motion Compensation Technique
-18,9174,Applicable Safety Standard Agency
-18,9176,Operating Mode Sequence
-18,9178,Operating Mode
-18,9180,Gradient Output Type
-18,9182,Gradient Output
-18,9184,Tagging Delay
-18,9186,Respiratory Signal Source ID
-18,9198,First Order Phase Correction
-18,9200,MR Spectroscopy Acquisition Type
-18,9217,Velocity Encoding Maximum Value
-18,9219,Tag Angle Second Axis
-18,9226,MR Image Frame Type Sequence
-18,9234,Spectroscopy Acquisition Phase Columns
-18,9239,Specific Absorption Rate Sequence
-18,9241,Gradient Echo Train Length
-18,9251,MR Arterial Spin Labeling Sequence
-18,9253,ASL Slab Number
-18,9255,ASL Slab Orientation
-18,9257,ASL Context
-18,9259,ASL Crusher Flag
-18,9295,Chemical Shift Minimum Integration Limit in ppm
-18,9297,Water Reference Acquisition
-18,9301,CT Acquisition Type Sequence
-18,9303,Tube Angle
-18,9305,Revolution Time
-18,9307,Total Collimation Width
-18,9309,Table Speed
-18,9311,Spiral Pitch Factor
-18,9315,Reconstruction Algorithm
-18,9317,Reconstruction Field of View
-18,9319,Reconstruction Angle
-18,9321,CT Exposure Sequence
-18,9323,Exposure Modulation Type
-18,9327,Table Position
-18,9329,CT Image Frame Type Sequence
-18,9332,Exposure in mAs
-18,9334,Fluoroscopy Flag
-18,9340,Contrast Administration Profile Sequence
-18,9346,CTDI Phantom Type Code Sequence
-18,9352,Calcium Scoring Mass Factor Device
-18,9402,Distance Source to Isocenter
-18,9404,Object Pixel Spacing in Center of Beam
-18,9406,Table Position Sequence
-18,9410,Planes in Acquisition
-18,9417,Frame Acquisition Sequence
-18,9423,Acquisition Protocol Name
-18,9427,Intensifier Active Shape
-18,9429,Physical Detector Size
-18,9432,Field of View Sequence
-18,9434,Exposure Control Sensing Regions Sequence
-18,9436,Exposure Control Sensing Region Left Vertical Edge
-18,9438,Exposure Control Sensing Region Upper Horizontal Edge
-18,9440,Center of Circular Exposure Control Sensing Region
-18,9442,Vertices of the Polygonal Exposure Control Sensing Region
-18,9451,Frame Detector Parameters Sequence
-18,9455,Calibration Sequence
-18,9457,Plane Identification
-18,9462,Isocenter Reference System Sequence
-18,9464,Positioner Isocenter Secondary Angle
-18,9466,Table X Position to Isocenter
-18,9468,Table Z Position to Isocenter
-18,9470,Table Head Tilt Angle
-18,9472,Frame Display Shutter Sequence
-18,9477,Irradiation Event Identification Sequence
-18,9506,Contributing Sources Sequence
-18,9508,Primary Positioner Scan Arc
-18,9510,Primary Positioner Scan Start Angle
-18,9514,Primary Positioner Increment
-18,9516,Start Acquisition DateTime
-18,9518,Primary Positioner Increment Sign
-18,9524,Application Name
-18,9526,Application Manufacturer
-18,9528,Algorithm Description
-18,9531,Reconstruction Description
-18,9541,Detector Position Sequence
-18,9545,Breast Support Isocenter Primary Angle
-18,9547,Breast Support X Position to Isocenter
-18,9549,Breast Support Z Position to Isocenter
-18,9551,Detector Isocenter Secondary Angle
-18,9553,Detector Y Position to Isocenter
-18,9557,Detector Active Area TLHC Position
-18,9559,Positioner Primary Angle Direction
-18,9621,Functional MR Sequence
-18,9623,Functional Sync Pulse
-18,9701,Decay Correction DateTime
-18,9716,Start Relative Density Difference Threshold
-18,9718,Start Respiratory Trigger Count Threshold
-18,9720,Termination Density Threshold
-18,9722,Termination Time Threshold
-18,9724,Termination Respiratory Trigger Count Threshold
-18,9726,Transverse Detector Separation
-18,9729,Radiopharmaceutical Agent Number
-18,9733,PET Detector Motion Details Sequence
-18,9735,PET Position Sequence
-18,9737,Radiopharmaceutical Usage Sequence
-18,9739,Number of Iterations
-18,9749,PET Reconstruction Sequence
-18,9755,Time of Flight Information Used
-18,9758,Decay Corrected
-18,9760,Scatter Corrected
-18,9762,Gantry Motion Corrected
-18,9764,Count Loss Normalization Corrected
-18,9768,Detector Normalization Correction
-18,9770,Attenuation Correction Temporal Relationship
-18,9772,Patient Physiological State Code Sequence
-18,9803,Excluded Intervals Sequence
-18,9805,Exclusion Duration
-18,9807,Image Data Type Sequence
-18,9809,Transducer Scan Pattern Code Sequence
-18,9810,Zero Velocity Pixel Value
-20,10,Study ID
-20,12,Acquisition Number
-20,20,Patient Orientation
-20,60,Laterality
-20,105,Number of Temporal Positions
-20,200,Synchronization Frame of Reference UID
-20,1002,Images in Acquisition
-20,1041,Slice Location
-20,1200,Number of Patient Related Studies
-20,1204,Number of Patient Related Instances
-20,1208,Number of Study Related Instances
-20,9056,Stack ID
-20,9071,Frame Anatomy Sequence
-20,9111,Frame Content Sequence
-20,9116,Plane Orientation Sequence
-20,9153,Nominal Cardiac Trigger Delay Time
-20,9157,Dimension Index Values
-20,9161,Concatenation UID
-20,9165,Dimension Index Pointer
-20,9170,Unassigned Shared Converted Attributes Sequence
-20,9172,Conversion Source Attributes Sequence
-20,9221,Dimension Organization Sequence
-20,9228,Concatenation Frame Offset Number
-20,9241,Nominal Percentage of Cardiac Phase
-20,9246,Starting Respiratory Amplitude
-20,9248,Ending Respiratory Amplitude
-20,9250,Respiratory Trigger Type
-20,9252,Actual Cardiac Trigger Delay Time
-20,9254,Respiratory Interval Time
-20,9256,Respiratory Trigger Delay Threshold
-20,9307,Ultrasound Acquisition Geometry
-20,9309,Volume to Transducer Mapping Matrix
-20,9311,Dimension Organization Type
-20,9313,Table Frame of Reference UID
-20,9450,Patient Orientation in Frame Sequence
-20,9518,Acquisition Index
-20,9536,Reconstruction Index
-22,2,Light Path Filter Pass Band
-22,4,Image Path Filter Pass Band
-22,6,Patient Eye Movement Command Code Sequence
-22,8,Cylinder Lens Power
-22,11,Stereo Baseline Displacement
-22,13,Stereo Vertical Pixel Offset
-22,15,Acquisition Device Type Code Sequence
-22,17,Light Path Filter Type Stack Code Sequence
-22,19,Lenses Code Sequence
-22,20,Stereo Pairs Sequence
-22,22,Right Image Sequence
-22,30,Axial Length of the Eye
-22,32,Reference Coordinates
-22,36,Maximum Depth Distortion
-22,41,Depth of Transverse Image
-22,56,Illumination Power
-22,58,Mydriatic Agent Sequence
-22,1008,Ophthalmic Axial Measurements Left Eye Sequence
-22,1010,Ophthalmic Axial Length Measurements Type
-22,1019,Ophthalmic Axial Length
-22,1025,Vitreous Status Code Sequence
-22,1029,IOL Formula Detail
-22,1035,Source of Ophthalmic Axial Length Code Sequence
-22,1039,Refractive Procedure Occurred
-22,1044,Ophthalmic Ultrasound Method Code Sequence
-22,1053,IOL Power
-22,1059,Ophthalmic Axial Length Velocity
-22,1066,Vitreous Status Description
-22,1092,Lens Constant Sequence
-22,1096,Keratometry Measurement Type Code Sequence
-22,1100,Referenced Ophthalmic Axial Measurements Sequence
-22,1103,Refractive Error Before Refractive Surgery Code Sequence
-22,1122,IOL Power For Exact Target Refraction
-22,1127,Lens Thickness Sequence
-22,1130,Lens Thickness
-22,1132,Source of Lens Thickness Data Code Sequence
-22,1134,Source of Refractive Measurements Sequence
-22,1140,Ophthalmic Axial Length Measurement Modified
-22,1159,Ophthalmic Axial Length Data Source Description
-22,1211,Ophthalmic Axial Length Measurements Segmental Length Sequence
-22,1220,Ultrasound Ophthalmic Axial Length Measurements Sequence
-22,1230,Ultrasound Selected Ophthalmic Axial Length Sequence
-22,1255,Optical Selected Ophthalmic Axial Length Sequence
-22,1260,Selected Total Ophthalmic Axial Length Sequence
-22,1300,Intraocular Lens Calculations Right Eye Sequence
-22,1330,Referenced Ophthalmic Axial Length Measurement QC Image Sequence
-22,1420,Acquisition Method Code Sequence
-22,1436,Ophthalmic Thickness Map Type Code Sequence
-22,1445,Retinal Thickness Definition Code Sequence
-22,1452,Mapped Pixel Value
-22,1458,Ophthalmic Thickness Map Quality Threshold Sequence
-22,1463,Anatomic Structure Reference Point
-22,1466,Registered Localizer Units
-22,1468,Registered Localizer Bottom Right Hand Corner
-22,1472,Relevant OPT Attributes Sequence
-22,1513,Transformation Algorithm Sequence
-22,1517,Ophthalmic FOV
-22,1525,Wide Field Ophthalmic Photography Quality Rating Sequence
-22,1527,Wide Field Ophthalmic Photography Threshold Quality Rating
-22,1529,Y Coordinates Center Pixel View Angle
-22,1531,Two Dimensional to Three Dimensional Map Data
-24,11,Visual Field Vertical Extent
-24,16,Screening Test Mode Code Sequence
-24,20,Background Luminance
-24,24,Background Illumination Color Code Sequence
-24,28,Stimulus Presentation Time
-24,33,Fixation Monitoring Code Sequence
-24,35,Fixation Checked Quantity
-24,37,Presented Visual Stimuli Data Flag
-24,39,Excessive Fixation Losses Data Flag
-24,42,Stimuli Retesting Quantity
-24,45,False Negatives Estimate Flag
-24,48,Negative Catch Trials Quantity
-24,51,Excessive False Negatives Data Flag
-24,53,False Positives Estimate Flag
-24,55,Catch Trials Data Flag
-24,57,Test Point Normals Data Flag
-24,59,Global Deviation Probability Normals Flag
-24,61,Excessive False Positives Data Flag
-24,63,Visual Field Test Normals Flag
-24,65,Age Corrected Sensitivity Deviation Algorithm Sequence
-24,67,Generalized Defect Sensitivity Deviation Algorithm Sequence
-24,69,Patient Reliability Indicator
-24,71,Global Deviation Probability
-24,73,Localized Deviation Probability
-24,75,Short Term Fluctuation
-24,77,Short Term Fluctuation Probability
-24,79,Corrected Localized Deviation From Normal
-24,81,Corrected Localized Deviation From Normal Probability
-24,85,Localized Deviation Probability Sequence
-24,87,Foveal Sensitivity
-24,89,Visual Field Test Point Sequence
-24,93,Stimulus Results
-24,95,Retest Stimulus Seen
-24,97,Visual Field Test Point Normals Sequence
-24,100,Age Corrected Sensitivity Deviation Probability Value
-24,103,Generalized Defect Corrected Sensitivity Deviation Value
-24,105,Minimum Sensitivity Value
-24,110,Visual Acuity Measurement Sequence
-24,113,Measurement Laterality
-24,115,Ophthalmic Patient Clinical Information Right Eye Sequence
-24,118,Foveal Point Probability Value
-24,122,Screening Baseline Measured Sequence
-24,126,Screening Baseline Value
-24,306,Data Set Name
-24,308,Data Set Source
-24,317,Visual Field Test Reliability Global Index Sequence
-24,325,Data Observation Sequence
-24,341,Index Probability
-28,2,Samples per Pixel
-28,4,Photometric Interpretation
-28,6,Planar Configuration
-28,9,Frame Increment Pointer
-28,10,Rows
-28,31,Zoom Factor
-28,34,Pixel Aspect Ratio
-28,101,Bits Stored
-28,103,Pixel Representation
-28,107,Largest Image Pixel Value
-28,109,Largest Pixel Value in Series
-28,121,Pixel Padding Range Limit
-28,123,Double Float Pixel Padding Value
-28,125,Double Float Pixel Padding Range Limit
-28,300,Quality Control Image
-28,302,Recognizable Visual Features
-28,304,Referenced Color Palette Instance UID
-28,1040,Pixel Intensity Relationship
-28,1050,Window Center
-28,1052,Rescale Intercept
-28,1054,Rescale Type
-28,1056,VOI LUT Function
-28,1090,Recommended Viewing Mode
-28,1101,Red Palette Color Lookup Table Descriptor
-28,1103,Blue Palette Color Lookup Table Descriptor
-28,1202,Green Palette Color Lookup Table Data
-28,1204,Alpha Palette Color Lookup Table Data
-28,1222,Segmented Green Palette Color Lookup Table Data
-28,1224,Segmented Alpha Palette Color Lookup Table Data
-28,1350,Partial View
-28,1352,Partial View Code Sequence
-28,1401,Data Frame Assignment Sequence
-28,1403,Bits Mapped to Color Lookup Table
-28,1405,Blending LUT 1 Transfer Function
-28,1407,Blending Lookup Table Descriptor
-28,2000,ICC Profile
-28,2110,Lossy Image Compression
-28,2114,Lossy Image Compression Method
-28,3002,LUT Descriptor
-28,3004,Modality LUT Type
-28,3010,VOI LUT Sequence
-28,6010,Representative Frame Number
-28,6022,Frame of Interest Description
-28,6100,Mask Subtraction Sequence
-28,6102,Applicable Frame Range
-28,6112,Contrast Frame Averaging
-28,6120,TID Offset
-28,7000,Equipment Administrator Sequence
-28,7002,Current Configuration ID
-28,7004,Display Subsystem Name
-28,7006,System Status
-28,7008,Target Luminance Characteristics Sequence
-28,7010,Display Subsystem QA Results Sequence
-28,7012,Measurement Equipment Sequence
-28,7014,Measurement Equipment Type
-28,7016,Display Calibration Result Sequence
-28,7018,CIExy White Point
-28,7020,Luminance Response Description
-28,7022,Display Device Type Code Sequence
-28,7024,Luminance Result Sequence
-28,7026,Measured Characteristics
-28,7028,Visual Evaluation Test Sequence
-28,9001,Data Point Rows
-28,9003,Signal Domain Columns
-28,9108,Data Representation
-28,9132,Frame VOI LUT Sequence
-28,9235,Signal Domain Rows
-28,9415,Frame Pixel Shift Sequence
-28,9422,Pixel Intensity Relationship LUT Sequence
-28,9444,Geometrical Properties
-28,9446,Image Processing Applied
-28,9474,LUT Function
-28,9501,Pixel Shift Sequence
-28,9503,Vertices of the Region
-28,9506,Pixel Shift Frame Range
-28,9520,Image to Equipment Mapping Matrix
-32,1031,Requesting Physician Identification Sequence
-32,1033,Requesting Service
-32,1064,Requested Procedure Code Sequence
-38,8,Visit Status ID
-38,16,Route of Admissions
-38,20,Admitting Date
-38,50,Special Needs
-38,64,Issuer of Service Episode ID Sequence
-38,101,Pertinent Resources Sequence
-38,300,Current Patient Location
-38,500,Patient State
-38,4000,Visit Comments
-40,2,Scheduled Procedure Step Start Date
-40,4,Scheduled Procedure Step End Date
-40,8,Scheduled Protocol Code Sequence
-40,10,Scheduled Station Name
-40,26,Order Placer Identifier Sequence
-40,31,Local Namespace Entity ID
-40,33,Universal Entity ID Type
-40,36,Assigning Facility Sequence
-40,242,Performed Station Name
-40,244,Performed Procedure Step Start Date
-40,250,Performed Procedure Step End Date
-40,252,Performed Procedure Step Status
-40,254,Performed Procedure Step Description
-40,260,Performed Protocol Code Sequence
-40,270,Scheduled Step Attributes Sequence
-40,280,Comments on the Performed Procedure Step
-40,293,Quantity Sequence
-40,295,Measuring Units Sequence
-40,300,Total Time of Fluoroscopy
-40,302,Entrance Dose
-40,306,Distance Source to Entrance
-40,316,Organ Dose
-40,320,Billing Procedure Step Sequence
-40,324,Billing Supplies and Devices Sequence
-40,340,Performed Series Sequence
-40,440,Protocol Context Sequence
-40,500,Scheduled Specimen Sequence
-40,512,Container Identifier
-40,515,Alternate Container Identifier Sequence
-40,554,Specimen UID
-40,556,Acquisition Context Description
-40,560,Specimen Description Sequence
-40,600,Specimen Short Description
-40,610,Specimen Preparation Sequence
-40,620,Specimen Localization Content Item Sequence
-40,1001,Requested Procedure ID
-40,1003,Requested Procedure Priority
-40,1005,Requested Procedure Location
-40,1009,Reporting Priority
-40,1010,Names of Intended Recipients of Results
-40,1012,Reason For Performed Procedure Code Sequence
-40,1101,Person Identification Code Sequence
-40,1400,Requested Procedure Comments
-40,2004,Issue Date of Imaging Service Request
-40,2008,Order Entered By
-40,2010,Order Callback Phone Number
-40,2400,Imaging Service Request Comments
-40,4005,Scheduled Procedure Step Start DateTime
-40,4007,Performed Processing Applications Code Sequence
-40,4010,Scheduled Procedure Step Modification DateTime
-40,4018,Scheduled Workitem Code Sequence
-40,4020,Input Availability Flag
-40,4025,Scheduled Station Name Code Sequence
-40,4027,Scheduled Station Geographic Location Code Sequence
-40,4029,Performed Station Class Code Sequence
-40,4033,Output Information Sequence
-40,4035,Actual Human Performers Sequence
-40,4041,Input Readiness State
-40,4051,Performed Procedure Step End DateTime
-40,4070,Output Destination Sequence
-40,4074,XDS Storage Sequence
-40,9092,Parametric Map Frame Type Sequence
-40,9096,Real World Value Mapping Sequence
-40,9210,LUT Label
-40,9212,Real World Value LUT Data
-40,9214,Double Float Real World Value First Value Mapped
-40,9220,Quantity Definition Sequence
-40,9225,Real World Value Slope
-42,11,Encapsulated Document
-42,13,Source Instance Sequence
-44,1,Product Package Identifier
-44,3,Approval Status Further Description
-44,7,Product Type Code Sequence
-44,9,Product Description
-44,11,Substance Administration Notes
-44,13,Product Parameter Sequence
-46,12,Lens Description
-46,15,Left Lens Sequence
-46,18,Cylinder Sequence
-46,30,Horizontal Prism Power
-46,34,Vertical Prism Power
-46,38,Lens Segment Type
-46,42,Channel Width
-46,46,Corneal Size
-46,52,Autorefraction Left Eye Sequence
-46,62,Near Pupillary Distance
-46,64,Other Pupillary Distance
-46,71,Keratometry Left Eye Sequence
-46,75,Radius of Curvature
-46,77,Keratometric Axis
-46,92,Background Color
-46,95,Optotype Presentation
-46,98,Subjective Refraction Left Eye Sequence
-46,101,Add Intermediate Sequence
-46,104,Add Power
-46,121,Visual Acuity Type Code Sequence
-46,123,Visual Acuity Left Eye Sequence
-46,125,Viewing Distance Type
-46,137,Decimal Visual Acuity
-46,145,Referenced Refractive Measurements Sequence
-46,147,Cylinder Power
-46,202,Corneal Vertex Location
-46,207,Corneal Topography Map Type Code Sequence
-46,210,Corneal Topography Mapping Normals Sequence
-46,212,Maximum Corneal Curvature
-46,215,Minimum Keratometric Sequence
-46,220,Average Corneal Power
-46,227,Analyzed Area
-46,232,Surface Asymmetry Index
-46,236,Keratoconus Prediction Index
-46,242,Corneal Topography Map Quality Evaluation
-46,247,Corneal Point Location
-46,249,Axial Power
-46,251,Refractive Power
-46,253,Corneal Wavefront
-48,2,Imaged Volume Height
-48,6,Total Pixel Matrix Columns
-48,8,Total Pixel Matrix Origin Sequence
-48,11,Focus Method
-48,13,Number of Focal Planes
-48,15,Recommended Absent Pixel CIELab Value
-48,106,Optical Path Identifier
-48,108,Illumination Color Code Sequence
-48,111,Condenser Lens Power
-48,113,Objective Lens Numerical Aperture
-48,200,Referenced Image Navigation Sequence
-48,202,Bottom Right Hand Corner of Localizer Area
-50,4,Calibration Image
-50,12,Container Component Type Code Sequence
-50,14,Device Length
-50,16,Device Diameter
-50,18,Device Volume
-52,3,Beam Spot Size
-52,6,OCT Acquisition Domain
-52,8,Axial Resolution
-52,13,Catheter Rotational Rate
-52,16,Mode of Percutaneous Access Sequence
-52,26,OCT Z Offset Applied
-52,28,Intravascular Longitudinal Distance
-52,30,OCT Z Offset Correction
-52,33,Seam Line Location
-52,36,Seam Line Index
-52,39,Interpolation Type
-54,10,Energy Window Vector
-54,12,Energy Window Information Sequence
-54,14,Energy Window Lower Limit
-54,16,Radiopharmaceutical Information Sequence
-54,18,Energy Window Name
-54,21,Number of Detectors
-54,30,Phase Vector
-54,32,Phase Information Sequence
-54,36,Phase Delay
-54,39,Phase Description
-54,51,Number of Rotations
-54,53,Number of Frames in Rotation
-54,63,Data Information Sequence
-54,71,Number of Time Slots
-54,73,Time Slot Time
-54,81,Number of Slices
-54,100,Time Slice Vector
-54,200,Start Angle
-54,210,Trigger Vector
-54,220,View Code Sequence
-54,300,Radionuclide Code Sequence
-54,304,Radiopharmaceutical Code Sequence
-54,308,Energy Window Number
-54,410,Patient Orientation Code Sequence
-54,414,Patient Gantry Relationship Code Sequence
-54,501,Scan Progression Direction
-54,1001,Units
-54,1004,Reprojection Method
-54,1100,Randoms Correction Method
-54,1102,Decay Correction
-54,1104,Detector Lines of Response Used
-54,1200,Axial Acceptance
-54,1202,Transverse Mash
-54,1210,Coincidence Window Width
-54,1300,Frame Reference Time
-54,1311,Secondary Counts Accumulated
-54,1321,Decay Factor
-54,1323,Scatter Fraction Factor
-54,1330,Image Index
-60,3002,Histogram Number of Bins
-60,3006,Histogram Last Bin Value
-60,3010,Histogram Explanation
-62,1,Segmentation Type
-62,3,Segmented Property Category Code Sequence
-62,5,Segment Label
-62,8,Segment Algorithm Type
-62,10,Segmentation Fractional Type
-62,12,Used Segments Sequence
-62,21,Tracking UID
-64,3,Source Frame of Reference UID
-64,7,Grid Dimensions
-64,9,Vector Grid Data
-64,10,Post Deformation Matrix Registration Sequence
-66,2,Surface Sequence
-66,4,Surface Comments
-66,11,Surface Points Sequence
-66,13,Surface Mesh Primitives Sequence
-66,16,Point Coordinates Data
-66,18,Mean Point Distance
-66,21,Vector Coordinate Data
-66,26,Triangle Strip Sequence
-66,28,Line Sequence
-66,30,Algorithm Name Code Sequence
-66,32,Algorithm Parameters
-66,35,Surface Processing Algorithm Identification Sequence
-66,37,Recommended Point Radius
-66,40,Long Primitive Point Index List
-66,42,Long Edge Point Index List
-66,101,Track Set Sequence
-66,103,Recommended Display CIELab Value List
-66,105,Track Set Number
-66,107,Track Set Description
-66,121,Measurements Sequence
-66,125,Floating Point Values
-66,130,Track Statistics Sequence
-66,133,Diffusion Acquisition Code Sequence
-68,6210,Implant Size
-68,6222,Replaced Implant Template Sequence
-68,6224,Derivation Implant Template Sequence
-68,6226,Effective DateTime
-68,6260,Information From Manufacturer Sequence
-68,6270,Information Issue DateTime
-68,6300,HPGL Document
-68,6320,HPGL Pen Sequence
-68,6340,HPGL Pen Label
-68,6346,Recommended Rotation Point
-68,6350,Implant Template 3D Model Surface Number
-68,6380,Surface Model Label
-68,6410,Degree of Freedom ID
-68,6430,2D Mating Feature Coordinates Sequence
-68,6450,2D Mating Point
-68,6470,2D Degree of Freedom Sequence
-68,6500,Planning Landmark Point Sequence
-68,6520,Planning Landmark Plane Sequence
-68,6540,Planning Landmark Description
-68,6550,2D Point Coordinates Sequence
-68,6590,3D Point Coordinates
-68,6610,3D Plane Origin
-70,1,Graphic Annotation Sequence
-70,3,Bounding Box Annotation Units
-70,5,Graphic Annotation Units
-70,8,Text Object Sequence
-70,10,Bounding Box Top Left Hand Corner
-70,12,Bounding Box Text Horizontal Justification
-70,15,Anchor Point Visibility
-70,21,Number of Graphic Points
-70,23,Graphic Type
-70,42,Image Rotation
-70,53,Displayed Area Bottom Right Hand Corner
-70,60,Graphic Layer Sequence
-70,66,Graphic Layer Recommended Display Grayscale Value
-70,68,Graphic Layer Description
-70,81,Content Description
-70,83,Presentation Creation Time
-70,100,Presentation Size Mode
-70,102,Presentation Pixel Aspect Ratio
-70,207,Graphic Group Label
-70,209,Compound Graphic Sequence
-70,227,Font Name
-70,229,CSS Font Name
-70,231,Text Style Sequence
-70,233,Fill Style Sequence
-70,241,Text Color CIELab Value
-70,243,Vertical Alignment
-70,245,Shadow Offset X
-70,247,Shadow Color CIELab Value
-70,249,Bold
-70,251,Pattern On Color CIELab Value
-70,253,Line Thickness
-70,255,Line Pattern
-70,257,Fill Mode
-70,261,Gap Length
-70,273,Rotation Point
-70,278,Show Tick Label
-70,282,Compound Graphic Units
-70,285,Pattern Off Opacity
-70,288,Tick Position
-70,294,Compound Graphic Type
-70,306,Shape Type
-70,309,Matrix Registration Sequence
-70,310,Fiducial Identifier
-70,312,Contour Uncertainty Radius
-70,318,Graphic Coordinates Data Sequence
-70,401,Graphic Layer Recommended Display CIELab Value
-70,403,Relative Opacity
-70,405,Blending Position
-70,1102,Presentation Sequence Collection UID
-70,1104,Rendered Image Reference Sequence
-70,1202,Presentation Input Type
-70,1204,Crop
-70,1206,Compositing Method
-70,1208,Image Volume Geometry
-70,1302,Volume Cropping Method
-70,1304,Oblique Cropping Plane Sequence
-70,1306,Plane Normal
-70,1503,MPR Slab Thickness
-70,1507,MPR View Width Direction
-70,1511,MPR View Height Direction
-70,1801,Presentation State Classification Component Sequence
-70,1803,Component Input Sequence
-70,1805,Presentation State Compositor Component Sequence
-70,1807,Weighting Lookup Table Descriptor
-70,1901,Volumetric Annotation Sequence
-70,1904,Referenced Content Item
-70,1907,Annotation Clipping
-72,4,Hanging Protocol Description
-72,8,Hanging Protocol Creator
-72,10,Hanging Protocol User Group Name
-72,14,Number of Priors Referenced
-72,22,Image Set Selector Sequence
-72,26,Selector Attribute
-72,30,Time Based Image Sets Sequence
-72,34,Image Set Selector Category
-72,50,Selector Attribute VR
-72,54,Selector Sequence Pointer Private Creator
-72,60,Selector AT Value
-72,62,Selector CS Value
-72,64,Selector IS Value
-72,66,Selector LO Value
-72,68,Selector LT Value
-72,70,Selector UT Value
-72,72,Selector DS Value
-72,74,Selector FD Value
-72,76,Selector FL Value
-72,80,Selector Code Sequence Value
-72,102,Nominal Screen Definition Sequence
-72,106,Number of Horizontal Pixels
-72,202,Display Set Number
-72,204,Display Set Presentation Group
-72,208,Partial Data Display Handling
-72,212,Display Set Scrolling Group
-72,216,Navigation Display Set
-72,300,Image Boxes Sequence
-72,304,Image Box Layout Type
-72,308,Image Box Tile Vertical Dimension
-72,312,Image Box Small Scroll Type
-72,316,Image Box Large Scroll Type
-72,320,Image Box Overlap Priority
-72,400,Filter Operations Sequence
-72,420,Structured Display Background CIELab Value
-72,422,Structured Display Image Box Sequence
-72,427,Referenced First Frame Sequence
-72,432,Synchronized Image Box List
-72,500,Blending Operation Type
-72,512,Reformatting Thickness
-72,516,Reformatting Operation Initial View Direction
-72,600,Sorting Operations Sequence
-72,604,Sorting Direction
-72,702,VOI Type
-72,710,Show Image True Size Flag
-72,714,Show Patient Demographics Flag
-72,717,Display Set Horizontal Justification
-74,120,Continuation Start Meterset
-74,1000,Procedure Step State
-74,1004,Procedure Step Progress
-74,1008,Procedure Step Communications URI Sequence
-74,1020,Beam Task Sequence
-74,1026,Table Top Vertical Adjusted Position
-74,1028,Table Top Lateral Adjusted Position
-74,1032,Verification Image Timing
-74,1036,Double Exposure Ordering
-74,1042,General Machine Verification Sequence
-74,1046,Ion Machine Verification Sequence
-74,1052,Attribute Occurrence Pointer
-74,1056,Attribute Occurrence Private Creator
-74,1200,Scheduled Procedure Step Priority
-74,1204,Procedure Step Label
-74,1212,Performed Processing Parameters Sequence
-74,1224,Replaced Procedure Step Sequence
-74,1234,Receiving AE
-74,1238,Reason for Cancellation
-74,1244,Subscription List Status
-74,1324,Beam Order Index
-74,1402,Continuation Start Total Reference Air Kerma
-74,1404,Continuation Pulse Number
-74,1406,Referenced Channel Number
-74,1408,End Cumulative Time Weight
-76,3,Implant Assembly Template Issuer
-76,8,Replaced Implant Assembly Template Sequence
-76,10,Implant Assembly Template Target Anatomy Sequence
-76,30,Surgical Technique
-76,34,Component Type Code Sequence
-76,38,Mandatory Component Type
-76,55,Component ID
-76,70,Component 1 Referenced ID
-76,90,Component 1 Referenced Mating Feature ID
-78,1,Implant Template Group Name
-78,20,Implant Template Group Issuer
-78,26,Replaced Implant Template Group Sequence
-78,50,3D Implant Template Group Member Matching Point
-78,70,Implant Template Group Member Matching 2D Coordinates Sequence
-80,1,Surface Scan Acquisition Type Code Sequence
-80,3,Registration Method Code Sequence
-80,5,Shot Offset Time
-80,7,Surface Point Color CIELab Value Data
-80,9,Texture Label
-80,11,V Value Data
-80,13,Referenced Surface Data Sequence
-82,3,Assessment Summary Description
-82,5,Referenced Comparison SOP Instance Sequence
-82,7,Assessment Observations Sequence
-82,10,Assessed Attribute Value Sequence
-82,17,Assessment Requester Sequence
-82,19,Selector Attribute Keyword
-82,22,Observation Basis Code Sequence
-82,32,Constraint Type
-82,34,Constraint Value Sequence
-82,36,Constraint Violation Significance
-88,200,Icon Image Sequence
-100,420,SOP Authorization DateTime
-100,426,Authorization Equipment Certification Number
-400,10,MAC Calculation Transfer Syntax UID
-400,20,Data Elements Signed
-400,105,Digital Signature DateTime
-400,115,Certificate of Signer
-400,305,Certified Timestamp Type
-400,402,Referenced Digital Signature Sequence
-400,404,MAC
-400,510,Encrypted Content Transfer Syntax UID
-400,550,Modified Attributes Sequence
-400,562,Attribute Modification DateTime
-400,564,Source of Previous Values
-2000,30,Medium Type
-2000,50,Film Session Label
-2000,61,Maximum Memory Allocation
-2000,500,Referenced Film Box Sequence
-2010,10,Image Display Format
-2010,40,Film Orientation
-2010,52,Printer Resolution ID
-2010,60,Magnification Type
-2010,100,Border Density
-2010,120,Min Density
-2010,140,Trim
-2010,152,Configuration Information Description
-2010,376,Printer Pixel Spacing
-2010,510,Referenced Image Box Sequence
-2020,10,Image Box Position
-2020,30,Requested Image Size
-2020,50,Requested Resolution ID
-2020,111,Basic Color Image Sequence
-2030,20,Text String
-2050,20,Presentation LUT Shape
-2100,30,Execution Status Info
-2100,50,Creation Time
-2100,140,Destination AE
-2100,170,Number of Films
-2110,10,Printer Status
-2110,30,Printer Name
-2200,1,Label Using Information Extracted From Instances
-2200,3,Label Style Selection
-2200,5,Barcode Value
-2200,7,Allow Media Splitting
-2200,9,Include Display Application
-3002,2,RT Image Label
-3002,4,RT Image Description
-3002,11,Image Plane Pixel Spacing
-3002,20,Radiation Machine Name
-3002,24,Radiation Machine SSD
-3002,28,Source to Reference Object Distance
-3002,30,Exposure Sequence
-3002,34,Diaphragm Position
-3002,41,Fluence Data Source
-3002,50,Primary Fluence Mode Sequence
-3002,52,Fluence Mode ID
-3004,2,Dose Units
-3004,5,Spatial Transform of Dose
-3004,8,Normalization Point
-3004,10,RT Dose ROI Sequence
-3004,14,Tissue Heterogeneity Correction
-3004,42,DVH Normalization Dose Value
-3004,52,DVH Dose Scaling
-3004,56,DVH Number of Bins
-3004,60,DVH Referenced ROI Sequence
-3004,70,DVH Minimum Dose
-3004,74,DVH Mean Dose
-3006,4,Structure Set Name
-3006,8,Structure Set Date
-3006,10,Referenced Frame of Reference Sequence
-3006,14,RT Referenced Series Sequence
-3006,18,Predecessor Structure Set Sequence
-3006,22,ROI Number
-3006,26,ROI Name
-3006,30,RT Related ROI Sequence
-3006,36,ROI Generation Algorithm
-3006,39,ROI Contour Sequence
-3006,42,Contour Geometric Type
-3006,45,Contour Offset Vector
-3006,48,Contour Number
-3006,50,Contour Data
-3006,82,Observation Number
-3006,85,ROI Observation Label
-3006,88,ROI Observation Description
-3008,10,Measured Dose Reference Sequence
-3008,14,Measured Dose Type
-3008,20,Treatment Session Beam Sequence
-3008,22,Current Fraction Number
-3008,25,Treatment Control Point Time
-3008,30,Referenced Treatment Record Sequence
-3008,33,Specified Secondary Meterset
-3008,37,Delivered Secondary Meterset
-3008,41,Ion Control Point Delivery Sequence
-3008,44,Delivered Meterset
-3008,46,Meterset Rate Delivered
-3008,48,Dose Rate Delivered
-3008,52,Cumulative Dose to Dose Reference
-3008,56,Most Recent Treatment Date
-3008,60,Override Sequence
-3008,62,Override Parameter Pointer
-3008,64,Measured Dose Reference Number
-3008,66,Override Reason
-3008,72,Calculated Dose Reference Number
-3008,76,Calculated Dose Reference Dose Value
-3008,82,Referenced Measured Dose Reference Number
-3008,92,Referenced Calculated Dose Reference Number
-3008,100,Recorded Source Sequence
-3008,110,Treatment Session Application Setup Sequence
-3008,120,Recorded Brachy Accessory Device Sequence
-3008,130,Recorded Channel Sequence
-3008,134,Delivered Channel Total Time
-3008,138,Delivered Number of Pulses
-3008,142,Referenced Source Applicator Number
-3008,152,Referenced Channel Shield Number
-3008,162,Safe Position Exit Date
-3008,166,Safe Position Return Date
-3008,171,Pulse Specific Brachy Control Point Delivered Sequence
-3008,173,Brachy Pulse Control Point Delivered Sequence
-3008,202,Treatment Status Comment
-3008,223,Referenced Fraction Number
-3008,230,Beam Stopper Position
-3008,250,Treatment Date
-4010,1,Low Energy Detectors
-4010,4,Detector Geometry Sequence
-4010,1004,Threat ROI Base
-4010,1006,Threat ROI Bitmap
-4010,1008,Gantry Type
-4010,1011,Threat Sequence
-4010,1013,Threat Category Description
-4010,1015,ATD Assessment Flag
-4010,1017,Mass
-4010,1019,Z Effective
-4010,1021,Abort Reason
-4010,1024,Abort Flag
-4010,1026,Route Segment End Time
-4010,1028,International Route Segment
-4010,1031,Alarm Decision
-4010,1034,Number of Alarm Objects
-4010,1038,ATD Assessment Sequence
-4010,1042,OOI Type
-4010,1044,Acquisition Status
-4010,1046,Phantom Type
-4010,1048,Scan Type
-4010,1052,Itinerary ID Type
-4010,1054,Route ID
-4010,1056,Inbound Arrival Type
-4010,1059,Carrier ID Assigning Authority
-4010,1061,Source Position
-4010,1064,Algorithm Routing Code Sequence
-4010,1068,OOI Type Descriptor
-4010,1070,AIT Device Type
-4010,1072,Target Material Sequence
-4010,1075,Image Scale Representation
-4010,1077,Referenced TDR Instance Sequence
-4010,1079,Anomaly Locator Indicator Sequence
-5400,110,Channel Minimum Value
-5400,1004,Waveform Bits Allocated
-5600,10,First Order Phase Correction Angle
+2,0,UL,FileMetaInformationGroupLength
+2,1,OB,FileMetaInformationVersion
+2,2,UI,MediaStorageSOPClassUID
+2,3,UI,MediaStorageSOPInstanceUID
+2,10,UI,TransferSyntaxUID
+2,12,UI,ImplementationClassUID
+2,13,SH,ImplementationVersionName
+2,16,AE,SourceApplicationEntityTitle
+2,17,AE,SendingApplicationEntityTitle
+2,18,AE,ReceivingApplicationEntityTitle
+2,100,UI,PrivateInformationCreatorUID
+2,102,OB,PrivateInformation
+4,1200,UL,OffsetoftheFirstDirectoryRecordoftheRootDirectoryEntity
+4,1202,UL,OffsetoftheLastDirectoryRecordoftheRootDirectoryEntity
+4,1220,SQ,DirectoryRecordSequence
+4,1400,UL,OffsetoftheNextDirectoryRecord
+4,1430,CS,DirectoryRecordType
+4,1432,UI,PrivateRecordUID
+4,1500,CS,ReferencedFileID
+4,1510,UI,ReferencedSOPClassUIDinFile
+4,1511,UI,ReferencedSOPInstanceUIDinFile
+4,1512,UI,ReferencedTransferSyntaxUIDinFile
+8,5,CS,SpecificCharacterSet
+8,6,SQ,LanguageCodeSequence
+8,8,CS,ImageType
+8,12,DA,InstanceCreationDate
+8,13,TM,InstanceCreationTime
+8,14,UI,InstanceCreatorUID
+8,15,DT,InstanceCoercionDateTime
+8,16,UI,SOPClassUID
+8,18,UI,SOPInstanceUID
+8,20,DA,StudyDate
+8,21,DA,SeriesDate
+8,22,DA,AcquisitionDate
+8,23,DA,ContentDate
+8,30,TM,StudyTime
+8,31,TM,SeriesTime
+8,32,TM,AcquisitionTime
+8,33,TM,ContentTime
+8,50,SH,AccessionNumber
+8,51,SQ,IssuerofAccessionNumberSequence
+8,54,AE,RetrieveAETitle
+8,55,AE,StationAETitle
+8,56,CS,InstanceAvailability
+8,58,UI,FailedSOPInstanceUIDList
+8,60,CS,Modality
+8,61,CS,ModalitiesinStudy
+8,62,UI,SOPClassesinStudy
+8,64,CS,ConversionType
+8,68,CS,PresentationIntentType
+8,70,LO,Manufacturer
+8,80,LO,InstitutionName
+8,81,ST,InstitutionAddress
+8,82,SQ,InstitutionCodeSequence
+8,96,SQ,ReferringPhysicianIdentificationSequence
+8,100,SH,CodeValue
+8,101,LO,ExtendedCodeValue
+8,102,SH,CodingSchemeDesignator
+8,103,SH,CodingSchemeVersion
+8,104,LO,CodeMeaning
+8,105,CS,MappingResource
+8,106,DT,ContextGroupVersion
+8,107,DT,ContextGroupLocalVersion
+8,108,LT,ExtendedCodeMeaning
+8,110,SQ,CodingSchemeIdentificationSequence
+8,112,LO,CodingSchemeRegistry
+8,114,ST,CodingSchemeExternalID
+8,115,ST,CodingSchemeName
+8,116,ST,CodingSchemeResponsibleOrganization
+8,117,UI,ContextUID
+8,118,UI,MappingResourceUID
+8,119,UC,LongCodeValue
+8,120,UR,URNCodeValue
+8,121,SQ,EquivalentCodeSequence
+8,122,LO,MappingResourceName
+8,123,SQ,ContextGroupIdentificationSequence
+8,124,SQ,MappingResourceIdentificationSequence
+8,201,SH,TimezoneOffsetFromUTC
+8,300,SQ,PrivateDataElementCharacteristicsSequence
+8,301,US,PrivateGroupReference
+8,302,LO,PrivateCreatorReference
+8,303,CS,BlockIdentifyingInformationStatus
+8,304,US,NonidentifyingPrivateElements
+8,306,US,IdentifyingPrivateElements
+8,305,SQ,DeidentificationActionSequence
+8,307,CS,DeidentificationAction
+8,1010,SH,StationName
+8,1030,LO,StudyDescription
+8,1032,SQ,ProcedureCodeSequence
+8,1040,LO,InstitutionalDepartmentName
+8,1052,SQ,PerformingPhysicianIdentificationSequence
+8,1072,SQ,OperatorIdentificationSequence
+8,1080,LO,AdmittingDiagnosesDescription
+8,1084,SQ,AdmittingDiagnosesCodeSequence
+8,1110,SQ,ReferencedStudySequence
+8,1111,SQ,ReferencedPerformedProcedureStepSequence
+8,1115,SQ,ReferencedSeriesSequence
+8,1120,SQ,ReferencedPatientSequence
+8,1125,SQ,ReferencedVisitSequence
+8,1134,SQ,ReferencedStereometricInstanceSequence
+8,1140,SQ,ReferencedImageSequence
+8,1150,UI,ReferencedSOPClassUID
+8,1155,UI,ReferencedSOPInstanceUID
+8,1160,IS,ReferencedFrameNumber
+8,1161,UL,SimpleFrameList
+8,1162,UL,CalculatedFrameList
+8,1163,FD,TimeRange
+8,1164,SQ,FrameExtractionSequence
+8,1190,UR,RetrieveURL
+8,1195,UI,TransactionUID
+8,1196,US,WarningReason
+8,1197,US,FailureReason
+8,1198,SQ,FailedSOPSequence
+8,1199,SQ,ReferencedSOPSequence
+8,1200,SQ,StudiesContainingOtherReferencedInstancesSequence
+8,1250,SQ,RelatedSeriesSequence
+8,2111,ST,DerivationDescription
+8,2112,SQ,SourceImageSequence
+8,2120,SH,StageName
+8,2122,IS,StageNumber
+8,2124,IS,NumberofStages
+8,2127,SH,ViewName
+8,2128,IS,ViewNumber
+8,2129,IS,NumberofEventTimers
+8,2133,SQ,EventTimerSequence
+8,2134,FD,EventTimeOffset
+8,2135,SQ,EventCodeSequence
+8,2142,IS,StartTrim
+8,2143,IS,StopTrim
+8,2144,IS,RecommendedDisplayFrameRate
+8,2218,SQ,AnatomicRegionSequence
+8,2220,SQ,AnatomicRegionModifierSequence
+8,2228,SQ,PrimaryAnatomicStructureSequence
+8,2230,SQ,PrimaryAnatomicStructureModifierSequence
+8,3001,SQ,AlternateRepresentationSequence
+8,3010,UI,IrradiationEventUID
+8,3011,SQ,SourceIrradiationEventSequence
+8,3012,UI,RadiopharmaceuticalAdministrationEventUID
+8,9007,CS,FrameType
+8,9092,SQ,ReferencedImageEvidenceSequence
+8,9121,SQ,ReferencedRawDataSequence
+8,9124,SQ,DerivationImageSequence
+8,9154,SQ,SourceImageEvidenceSequence
+8,9205,CS,PixelPresentation
+8,9206,CS,VolumetricProperties
+8,9207,CS,VolumeBasedCalculationTechnique
+8,9208,CS,ComplexImageComponent
+8,9209,CS,AcquisitionContrast
+8,9215,SQ,DerivationCodeSequence
+8,9237,SQ,ReferencedPresentationStateSequence
+8,9410,SQ,ReferencedOtherPlaneSequence
+8,9458,SQ,FrameDisplaySequence
+8,9459,FL,RecommendedDisplayFrameRateinFloat
+8,9460,CS,SkipFrameRangeFlag
+10,20,LO,PatientID
+10,21,LO,IssuerofPatientID
+10,22,CS,TypeofPatientID
+10,24,SQ,IssuerofPatientIDQualifiersSequence
+10,26,SQ,SourcePatientGroupIdentificationSequence
+10,27,SQ,GroupofPatientsIdentificationSequence
+10,28,US,SubjectRelativePositioninImage
+10,200,CS,QualityControlSubject
+10,201,SQ,QualityControlSubjectTypeCodeSequence
+10,212,UC,StrainDescription
+10,213,LO,StrainNomenclature
+10,214,LO,StrainStockNumber
+10,215,SQ,StrainSourceRegistryCodeSequence
+10,216,SQ,StrainStockSequence
+10,217,LO,StrainSource
+10,218,UT,StrainAdditionalInformation
+10,219,SQ,StrainCodeSequence
+10,1000,LO,OtherPatientIDs
+10,1001,PN,OtherPatientNames
+10,1002,SQ,OtherPatientIDsSequence
+10,1080,LO,MilitaryRank
+10,1081,LO,BranchofService
+10,1090,LO,MedicalRecordLocator
+10,1100,SQ,ReferencedPatientPhotoSequence
+10,2000,LO,MedicalAlerts
+10,2110,LO,Allergies
+10,2150,LO,CountryofResidence
+10,2152,LO,RegionofResidence
+10,2160,SH,EthnicGroup
+10,2180,SH,Occupation
+10,2201,LO,PatientSpeciesDescription
+10,2202,SQ,PatientSpeciesCodeSequence
+10,2210,CS,AnatomicalOrientationType
+10,2292,LO,PatientBreedDescription
+10,2293,SQ,PatientBreedCodeSequence
+10,2294,SQ,BreedRegistrationSequence
+10,2295,LO,BreedRegistrationNumber
+10,2296,SQ,BreedRegistryCodeSequence
+10,2297,PN,ResponsiblePerson
+10,2298,CS,ResponsiblePersonRole
+10,2299,LO,ResponsibleOrganization
+10,4000,LT,PatientComments
+10,9431,FL,ExaminedBodyThickness
+12,10,LO,ClinicalTrialSponsorName
+12,20,LO,ClinicalTrialProtocolID
+12,21,LO,ClinicalTrialProtocolName
+12,30,LO,ClinicalTrialSiteID
+12,31,LO,ClinicalTrialSiteName
+12,40,LO,ClinicalTrialSubjectID
+12,42,LO,ClinicalTrialSubjectReadingID
+12,50,LO,ClinicalTrialTimePointID
+12,51,ST,ClinicalTrialTimePointDescription
+12,60,LO,ClinicalTrialCoordinatingCenterName
+12,62,CS,PatientIdentityRemoved
+12,71,LO,ClinicalTrialSeriesID
+12,72,LO,ClinicalTrialSeriesDescription
+12,81,LO,ClinicalTrialProtocolEthicsCommitteeName
+12,82,LO,ClinicalTrialProtocolEthicsCommitteeApprovalNumber
+12,83,SQ,ConsentforClinicalTrialUseSequence
+12,84,CS,DistributionType
+12,85,CS,ConsentforDistributionFlag
+14,25,ST,ComponentManufacturingProcedure
+14,28,ST,ComponentManufacturer
+14,30,DS,MaterialThickness
+14,32,DS,MaterialPipeDiameter
+14,34,DS,MaterialIsolationDiameter
+14,42,ST,MaterialGrade
+14,44,ST,MaterialPropertiesDescription
+14,46,LT,MaterialNotes
+14,50,CS,ComponentShape
+14,52,CS,CurvatureType
+14,54,DS,OuterDiameter
+14,56,DS,InnerDiameter
+14,100,LO,ComponentWelderIDs
+14,101,CS,SecondaryApprovalStatus
+14,102,DA,SecondaryReviewDate
+14,103,TM,SecondaryReviewTime
+14,104,PN,SecondaryReviewerName
+14,105,ST,RepairID
+14,106,SQ,MultipleComponentApprovalSequence
+14,107,CS,OtherApprovalStatus
+14,108,CS,OtherSecondaryApprovalStatus
+14,1010,ST,ActualEnvironmentalConditions
+14,1020,DA,ExpiryDate
+14,1040,ST,EnvironmentalConditions
+14,2002,SQ,EvaluatorSequence
+14,2004,IS,EvaluatorNumber
+14,2006,PN,EvaluatorName
+14,2008,IS,EvaluationAttempt
+14,2012,SQ,IndicationSequence
+14,2014,IS,IndicationNumber
+14,2016,SH,IndicationLabel
+14,2018,ST,IndicationDescription
+14,2030,SQ,IndicationPhysicalPropertySequence
+14,2032,SH,PropertyLabel
+14,2202,IS,CoordinateSystemNumberofAxes
+14,2204,SQ,CoordinateSystemAxesSequence
+14,2206,ST,CoordinateSystemAxisDescription
+14,2208,CS,CoordinateSystemDataSetMapping
+14,2210,OB,CoordinateSystemAxisValues
+14,2220,SQ,CoordinateSystemTransformSequence
+14,2222,ST,TransformDescription
+14,2224,IS,TransformNumberofAxes
+14,2226,IS,TransformOrderofAxes
+14,2228,CS,TransformedAxisUnits
+14,3011,DS,InternalDetectorFrameTime
+14,3012,DS,NumberofFramesIntegrated
+14,3020,SQ,DetectorTemperatureSequence
+14,3022,ST,SensorName
+14,3024,DS,HorizontalOffsetofSensor
+14,3026,DS,VerticalOffsetofSensor
+14,3028,DS,SensorTemperature
+14,3040,SQ,DarkCurrentSequence
+14,3050,OB or OW,DarkCurrentCounts
+14,3060,SQ,GainCorrectionReferenceSequence
+14,3070,OB or OW,AirCounts
+14,3071,DS,KVUsedinGainCalibration
+14,3072,DS,MAUsedinGainCalibration
+14,3073,DS,NumberofFramesUsedforIntegration
+14,3074,LO,FilterMaterialUsedinGainCalibration
+14,3075,DS,FilterThicknessUsedinGainCalibration
+14,3076,DA,DateofGainCalibration
+14,3077,TM,TimeofGainCalibration
+14,3080,OB,BadPixelImage
+14,3099,LT,CalibrationNotes
+14,4002,SQ,PulserEquipmentSequence
+14,4004,CS,PulserType
+14,4006,LT,PulserNotes
+14,4008,SQ,ReceiverEquipmentSequence
+14,4010,SQ,TransmitTransducerSequence
+14,4011,SQ,ReceiveTransducerSequence
+14,4012,US,NumberofElements
+14,4013,CS,ElementShape
+14,4014,DS,ElementDimensionA
+14,4015,DS,ElementDimensionB
+14,4016,DS,ElementPitchA
+14,4017,DS,MeasuredBeamDimensionA
+14,4018,DS,MeasuredBeamDimensionB
+14,4019,DS,LocationofMeasuredBeamDiameter
+14,4020,SQ,PulserSettingsSequence
+14,4022,DS,PulseWidth
+14,4024,DS,ExcitationFrequency
+14,4026,CS,ModulationType
+14,4028,DS,Damping
+14,4030,SQ,ReceiverSettingsSequence
+14,4031,DS,AcquiredSoundpathLength
+14,4032,CS,AcquisitionCompressionType
+14,4033,IS,AcquisitionSampleSize
+14,4034,DS,RectifierSmoothing
+14,4035,SQ,DACSequence
+14,4036,CS,DACType
+14,4038,DS,DACGainPoints
+14,4050,SQ,TransmitTransducerSettingsSequence
+14,4051,SQ,ReceiveTransducerSettingsSequence
+14,4052,DS,IncidentAngle
+14,4054,ST,CouplingTechnique
+14,4056,ST,CouplingMedium
+14,4057,DS,CouplingVelocity
+14,4058,DS,ProbeCenterLocationX
+14,4059,DS,ProbeCenterLocationZ
+14,4060,SQ,GateSettingsSequence
+14,4062,DS,GateThreshold
+14,4064,DS,VelocityofSound
+14,4070,SQ,CalibrationSettingsSequence
+14,4072,ST,CalibrationProcedure
+14,4074,SH,ProcedureVersion
+14,4076,DA,ProcedureCreationDate
+14,4078,DA,ProcedureExpirationDate
+14,4080,SQ,ProbeDriveEquipmentSequence
+14,4081,CS,DriveType
+14,4082,LT,ProbeDriveNotes
+14,4083,SQ,DriveProbeSequence
+14,4084,DS,ProbeInductance
+14,4085,DS,ProbeResistance
+14,4086,SQ,ReceiveProbeSequence
+14,4087,SQ,ProbeDriveSettingsSequence
+14,4088,DS,BridgeResistors
+14,4089,DS,ProbeOrientationAngle
+14,4091,SQ,ChannelSettingsSequence
+14,4092,DS,ChannelThreshold
+14,5002,IS,LINACEnergy
+14,5004,IS,LINACOutput
+14,5100,US,ActiveAperture
+14,5101,DS,TotalAperture
+14,5102,DS,ApertureElevation
+14,5103,DS,MainLobeAngle
+14,5104,DS,MainRoofAngle
+14,5105,CS,ConnectorType
+14,5106,SH,WedgeModelNumber
+14,5107,DS,WedgeAngleFloat
+14,5108,DS,WedgeRoofAngle
+14,5109,CS,WedgeElement1Position
+14,5110,SH,WedgeManufacturerName
+14,5111,LO,WedgeDescription
+14,5112,DS,NominalBeamAngle
+14,5113,DS,WedgeOffsetX
+14,5114,DS,WedgeOffsetY
+14,5115,DS,WedgeTotalLength
+14,5116,DS,WedgeInContactLength
+14,5117,DS,WedgeFrontGap
+14,5118,DS,WedgeTotalHeight
+14,5119,DS,WedgeFrontHeight
+18,15,CS,BodyPartExamined
+18,20,CS,ScanningSequence
+18,21,CS,SequenceVariant
+18,22,CS,ScanOptions
+18,23,CS,MRAcquisitionType
+18,24,SH,SequenceName
+18,25,CS,AngioFlag
+18,26,SQ,InterventionDrugInformationSequence
+18,27,TM,InterventionDrugStopTime
+18,28,DS,InterventionDrugDose
+18,29,SQ,InterventionDrugCodeSequence
+18,31,LO,Radiopharmaceutical
+18,34,LO,InterventionDrugName
+18,35,TM,InterventionDrugStartTime
+18,36,SQ,InterventionSequence
+18,38,CS,InterventionStatus
+18,40,IS,CineRate
+18,42,CS,InitialCineRunState
+18,50,DS,SliceThickness
+18,60,DS,KVP
+18,70,IS,CountsAccumulated
+18,71,CS,AcquisitionTerminationCondition
+18,72,DS,EffectiveDuration
+18,73,CS,AcquisitionStartCondition
+18,74,IS,AcquisitionStartConditionData
+18,75,IS,AcquisitionTerminationConditionData
+18,80,DS,RepetitionTime
+18,81,DS,EchoTime
+18,82,DS,InversionTime
+18,83,DS,NumberofAverages
+18,84,DS,ImagingFrequency
+18,85,SH,ImagedNucleus
+18,87,DS,MagneticFieldStrength
+18,88,DS,SpacingBetweenSlices
+18,89,IS,NumberofPhaseEncodingSteps
+18,90,DS,DataCollectionDiameter
+18,91,IS,EchoTrainLength
+18,93,DS,PercentSampling
+18,94,DS,PercentPhaseFieldofView
+18,95,DS,PixelBandwidth
+18,1000,LO,DeviceSerialNumber
+18,1002,UI,DeviceUID
+18,1003,LO,DeviceID
+18,1004,LO,PlateID
+18,1005,LO,GeneratorID
+18,1006,LO,GridID
+18,1007,LO,CassetteID
+18,1008,LO,GantryID
+18,1010,LO,SecondaryCaptureDeviceID
+18,1012,DA,DateofSecondaryCapture
+18,1014,TM,TimeofSecondaryCapture
+18,1016,LO,SecondaryCaptureDeviceManufacturer
+18,1019,LO,SecondaryCaptureDeviceSoftwareVersions
+18,1022,SH,VideoImageFormatAcquired
+18,1023,LO,DigitalImageFormatAcquired
+18,1030,LO,ProtocolName
+18,1045,IS,SyringeCounts
+18,1046,DS,ContrastFlowRate
+18,1047,DS,ContrastFlowDuration
+18,1050,DS,SpatialResolution
+18,1060,DS,TriggerTime
+18,1061,LO,TriggerSourceorType
+18,1062,IS,NominalInterval
+18,1063,DS,FrameTime
+18,1064,LO,CardiacFramingType
+18,1065,DS,FrameTimeVector
+18,1066,DS,FrameDelay
+18,1067,DS,ImageTriggerDelay
+18,1068,DS,MultiplexGroupTimeOffset
+18,1069,DS,TriggerTimeOffset
+18,1070,LO,RadiopharmaceuticalRoute
+18,1071,DS,RadiopharmaceuticalVolume
+18,1072,TM,RadiopharmaceuticalStartTime
+18,1073,TM,RadiopharmaceuticalStopTime
+18,1074,DS,RadionuclideTotalDose
+18,1075,DS,RadionuclideHalfLife
+18,1076,DS,RadionuclidePositronFraction
+18,1077,DS,RadiopharmaceuticalSpecificActivity
+18,1078,DT,RadiopharmaceuticalStartDateTime
+18,1079,DT,RadiopharmaceuticalStopDateTime
+18,1080,CS,BeatRejectionFlag
+18,1083,IS,IntervalsAcquired
+18,1084,IS,IntervalsRejected
+18,1085,LO,PVCRejection
+18,1086,IS,SkipBeats
+18,1088,IS,HeartRate
+18,1090,IS,CardiacNumberofImages
+18,1094,IS,TriggerWindow
+18,1100,DS,ReconstructionDiameter
+18,1110,DS,DistanceSourcetoDetector
+18,1111,DS,DistanceSourcetoPatient
+18,1114,DS,EstimatedRadiographicMagnificationFactor
+18,1130,DS,TableHeight
+18,1131,DS,TableTraverse
+18,1134,CS,TableMotion
+18,1135,DS,TableVerticalIncrement
+18,1136,DS,TableLateralIncrement
+18,1137,DS,TableLongitudinalIncrement
+18,1138,DS,TableAngle
+18,1140,CS,RotationDirection
+18,1142,DS,RadialPosition
+18,1143,DS,ScanArc
+18,1144,DS,AngularStep
+18,1145,DS,CenterofRotationOffset
+18,1147,CS,FieldofViewShape
+18,1150,IS,ExposureTime
+18,1152,IS,Exposure
+18,1153,IS,ExposureinµAs
+18,1154,DS,AveragePulseWidth
+18,1155,CS,RadiationSetting
+18,1156,CS,RectificationType
+18,1160,SH,FilterType
+18,1161,LO,TypeofFilters
+18,1162,DS,IntensifierSize
+18,1164,DS,ImagerPixelSpacing
+18,1166,CS,Grid
+18,1170,IS,GeneratorPower
+18,1181,CS,CollimatorType
+18,1182,IS,FocalDistance
+18,1183,DS,XFocusCenter
+18,1184,DS,YFocusCenter
+18,1191,CS,AnodeTargetMaterial
+18,1200,DA,DateofLastCalibration
+18,1201,TM,TimeofLastCalibration
+18,1202,DT,DateTimeofLastCalibration
+18,1210,SH,ConvolutionKernel
+18,1242,IS,ActualFrameDuration
+18,1243,IS,CountRate
+18,1244,US,PreferredPlaybackSequencing
+18,1250,SH,ReceiveCoilName
+18,1251,SH,TransmitCoilName
+18,1260,SH,PlateType
+18,1261,LO,PhosphorType
+18,1271,FD,WaterEquivalentDiameter
+18,1272,SQ,WaterEquivalentDiameterCalculationMethodCodeSequence
+18,1300,DS,ScanVelocity
+18,1301,CS,WholeBodyTechnique
+18,1302,IS,ScanLength
+18,1310,US,AcquisitionMatrix
+18,1314,DS,FlipAngle
+18,1315,CS,VariableFlipAngleFlag
+18,1316,DS,SAR
+18,1320,FL,B1rms
+18,1400,LO,AcquisitionDeviceProcessingDescription
+18,1401,LO,AcquisitionDeviceProcessingCode
+18,1402,CS,CassetteOrientation
+18,1403,CS,CassetteSize
+18,1404,US,ExposuresonPlate
+18,1411,DS,ExposureIndex
+18,1412,DS,TargetExposureIndex
+18,1413,DS,DeviationIndex
+18,1450,DS,ColumnAngulation
+18,1460,DS,TomoLayerHeight
+18,1470,DS,TomoAngle
+18,1480,DS,TomoTime
+18,1490,CS,TomoType
+18,1491,CS,TomoClass
+18,1495,IS,NumberofTomosynthesisSourceImages
+18,1500,CS,PositionerMotion
+18,1508,CS,PositionerType
+18,1510,DS,PositionerPrimaryAngle
+18,1511,DS,PositionerSecondaryAngle
+18,1520,DS,PositionerPrimaryAngleIncrement
+18,1521,DS,PositionerSecondaryAngleIncrement
+18,1530,DS,DetectorPrimaryAngle
+18,1531,DS,DetectorSecondaryAngle
+18,1600,CS,ShutterShape
+18,1602,IS,ShutterLeftVerticalEdge
+18,1604,IS,ShutterRightVerticalEdge
+18,1606,IS,ShutterUpperHorizontalEdge
+18,1608,IS,ShutterLowerHorizontalEdge
+18,1610,IS,CenterofCircularShutter
+18,1612,IS,RadiusofCircularShutter
+18,1620,IS,VerticesofthePolygonalShutter
+18,1622,US,ShutterPresentationValue
+18,1623,US,ShutterOverlayGroup
+18,1624,US,ShutterPresentationColorCIELabValue
+18,1700,CS,CollimatorShape
+18,1702,IS,CollimatorLeftVerticalEdge
+18,1704,IS,CollimatorRightVerticalEdge
+18,1706,IS,CollimatorUpperHorizontalEdge
+18,1708,IS,CollimatorLowerHorizontalEdge
+18,1710,IS,CenterofCircularCollimator
+18,1712,IS,RadiusofCircularCollimator
+18,1720,IS,VerticesofthePolygonalCollimator
+18,1800,CS,AcquisitionTimeSynchronized
+18,1801,SH,TimeSource
+18,1802,CS,TimeDistributionProtocol
+18,1803,LO,NTPSourceAddress
+18,2001,IS,PageNumberVector
+18,2002,SH,FrameLabelVector
+18,2003,DS,FramePrimaryAngleVector
+18,2004,DS,FrameSecondaryAngleVector
+18,2005,DS,SliceLocationVector
+18,2006,SH,DisplayWindowLabelVector
+18,2010,DS,NominalScannedPixelSpacing
+18,2020,CS,DigitizingDeviceTransportDirection
+18,2030,DS,RotationofScannedFilm
+18,2041,SQ,BiopsyTargetSequence
+18,2042,UI,TargetUID
+18,2043,FL,LocalizingCursorPosition
+18,2044,FL,CalculatedTargetPosition
+18,2045,SH,TargetLabel
+18,2046,FL,DisplayedZValue
+18,3100,CS,IVUSAcquisition
+18,3101,DS,IVUSPullbackRate
+18,3102,DS,IVUSGatedRate
+18,3103,IS,IVUSPullbackStartFrameNumber
+18,3104,IS,IVUSPullbackStopFrameNumber
+18,3105,IS,LesionNumber
+18,5000,SH,OutputPower
+18,5010,LO,TransducerData
+18,5012,DS,FocusDepth
+18,5020,LO,ProcessingFunction
+18,5022,DS,MechanicalIndex
+18,5024,DS,BoneThermalIndex
+18,5026,DS,CranialThermalIndex
+18,5027,DS,SoftTissueThermalIndex
+18,5050,IS,DepthofScanField
+18,5100,CS,PatientPosition
+18,5101,CS,ViewPosition
+18,5104,SQ,ProjectionEponymousNameCodeSequence
+18,6000,DS,Sensitivity
+18,6011,SQ,SequenceofUltrasoundRegions
+18,6012,US,RegionSpatialFormat
+18,6014,US,RegionDataType
+18,6016,UL,RegionFlags
+18,6018,UL,RegionLocationMinX0
+18,6020,SL,ReferencePixelX0
+18,6022,SL,ReferencePixelY0
+18,6024,US,PhysicalUnitsXDirection
+18,6026,US,PhysicalUnitsYDirection
+18,6028,FD,ReferencePixelPhysicalValueX
+18,6030,UL,TransducerFrequency
+18,6031,CS,TransducerType
+18,6032,UL,PulseRepetitionFrequency
+18,6034,FD,DopplerCorrectionAngle
+18,6036,FD,SteeringAngle
+18,6039,SL,DopplerSampleVolumeXPosition
+18,6044,US,PixelComponentOrganization
+18,6046,UL,PixelComponentMask
+18,6048,UL,PixelComponentRangeStart
+18,6050,UL,NumberofTableBreakPoints
+18,6052,UL,TableofXBreakPoints
+18,6054,FD,TableofYBreakPoints
+18,6056,UL,NumberofTableEntries
+18,6058,UL,TableofPixelValues
+18,6060,FL,RWaveTimeVector
+18,7000,CS,DetectorConditionsNominalFlag
+18,7001,DS,DetectorTemperature
+18,7004,CS,DetectorType
+18,7005,CS,DetectorConfiguration
+18,7006,LT,DetectorDescription
+18,7008,LT,DetectorMode
+18,7010,IS,ExposuresonDetectorSinceLastCalibration
+18,7011,IS,ExposuresonDetectorSinceManufactured
+18,7012,DS,DetectorTimeSinceLastExposure
+18,7014,DS,DetectorActiveTime
+18,7016,DS,DetectorActivationOffsetFromExposure
+18,7020,DS,DetectorElementPhysicalSize
+18,7022,DS,DetectorElementSpacing
+18,7024,CS,DetectorActiveShape
+18,7028,DS,DetectorActiveOrigin
+18,7030,DS,FieldofViewOrigin
+18,7032,DS,FieldofViewRotation
+18,7034,CS,FieldofViewHorizontalFlip
+18,7036,FL,PixelDataAreaOriginRelativeToFOV
+18,7038,FL,PixelDataAreaRotationAngleRelativeToFOV
+18,7040,LT,GridAbsorbingMaterial
+18,7041,LT,GridSpacingMaterial
+18,7042,DS,GridThickness
+18,7044,DS,GridPitch
+18,7046,IS,GridAspectRatio
+18,7048,DS,GridPeriod
+18,7050,CS,FilterMaterial
+18,7052,DS,FilterThicknessMinimum
+18,7054,DS,FilterThicknessMaximum
+18,7056,FL,FilterBeamPathLengthMinimum
+18,7058,FL,FilterBeamPathLengthMaximum
+18,7060,CS,ExposureControlMode
+18,7062,LT,ExposureControlModeDescription
+18,7064,CS,ExposureStatus
+18,7065,DS,PhototimerSetting
+18,8150,DS,ExposureTimeinµS
+18,9004,CS,ContentQualification
+18,9005,SH,PulseSequenceName
+18,9006,SQ,MRImagingModifierSequence
+18,9008,CS,EchoPulseSequence
+18,9009,CS,InversionRecovery
+18,9010,CS,FlowCompensation
+18,9011,CS,MultipleSpinEcho
+18,9014,CS,PhaseContrast
+18,9015,CS,TimeofFlightContrast
+18,9016,CS,Spoiling
+18,9017,CS,SteadyStatePulseSequence
+18,9018,CS,EchoPlanarPulseSequence
+18,9019,FD,TagAngleFirstAxis
+18,9020,CS,MagnetizationTransfer
+18,9021,CS,T2Preparation
+18,9022,CS,BloodSignalNulling
+18,9024,CS,SaturationRecovery
+18,9025,CS,SpectrallySelectedSuppression
+18,9026,CS,SpectrallySelectedExcitation
+18,9028,CS,Tagging
+18,9029,CS,OversamplingPhase
+18,9030,FD,TagSpacingFirstDimension
+18,9034,CS,RectilinearPhaseEncodeReordering
+18,9035,FD,TagThickness
+18,9036,CS,PartialFourierDirection
+18,9037,CS,CardiacSynchronizationTechnique
+18,9041,LO,ReceiveCoilManufacturerName
+18,9042,SQ,MRReceiveCoilSequence
+18,9043,CS,ReceiveCoilType
+18,9044,CS,QuadratureReceiveCoil
+18,9049,SQ,MRTransmitCoilSequence
+18,9050,LO,TransmitCoilManufacturerName
+18,9051,CS,TransmitCoilType
+18,9052,FD,SpectralWidth
+18,9053,FD,ChemicalShiftReference
+18,9054,CS,VolumeLocalizationTechnique
+18,9058,US,MRAcquisitionFrequencyEncodingSteps
+18,9065,CS,TimeDomainFiltering
+18,9066,US,NumberofZeroFills
+18,9067,CS,BaselineCorrection
+18,9073,FD,AcquisitionDuration
+18,9074,DT,FrameAcquisitionDateTime
+18,9075,CS,DiffusionDirectionality
+18,9076,SQ,DiffusionGradientDirectionSequence
+18,9077,CS,ParallelAcquisition
+18,9078,CS,ParallelAcquisitionTechnique
+18,9079,FD,InversionTimes
+18,9080,ST,MetaboliteMapDescription
+18,9081,CS,PartialFourier
+18,9082,FD,EffectiveEchoTime
+18,9083,SQ,MetaboliteMapCodeSequence
+18,9084,SQ,ChemicalShiftSequence
+18,9085,CS,CardiacSignalSource
+18,9089,FD,DiffusionGradientOrientation
+18,9090,FD,VelocityEncodingDirection
+18,9091,FD,VelocityEncodingMinimumValue
+18,9092,SQ,VelocityEncodingAcquisitionSequence
+18,9095,UL,SpectroscopyAcquisitionPhaseRows
+18,9098,FD,TransmitterFrequency
+18,9100,CS,ResonantNucleus
+18,9101,CS,FrequencyCorrection
+18,9104,FD,SlabThickness
+18,9105,FD,SlabOrientation
+18,9106,FD,MidSlabPosition
+18,9107,SQ,MRSpatialSaturationSequence
+18,9112,SQ,MRTimingandRelatedParametersSequence
+18,9114,SQ,MREchoSequence
+18,9115,SQ,MRModifierSequence
+18,9117,SQ,MRDiffusionSequence
+18,9118,SQ,CardiacSynchronizationSequence
+18,9119,SQ,MRAveragesSequence
+18,9126,SQ,VolumeLocalizationSequence
+18,9127,UL,SpectroscopyAcquisitionDataColumns
+18,9147,CS,DiffusionAnisotropyType
+18,9151,DT,FrameReferenceDateTime
+18,9152,SQ,MRMetaboliteMapSequence
+18,9169,CS,CardiacBeatRejectionTechnique
+18,9170,CS,RespiratoryMotionCompensationTechnique
+18,9171,CS,RespiratorySignalSource
+18,9172,CS,BulkMotionCompensationTechnique
+18,9173,CS,BulkMotionSignalSource
+18,9174,CS,ApplicableSafetyStandardAgency
+18,9175,LO,ApplicableSafetyStandardDescription
+18,9176,SQ,OperatingModeSequence
+18,9177,CS,OperatingModeType
+18,9178,CS,OperatingMode
+18,9179,CS,SpecificAbsorptionRateDefinition
+18,9180,CS,GradientOutputType
+18,9181,FD,SpecificAbsorptionRateValue
+18,9182,FD,GradientOutput
+18,9183,CS,FlowCompensationDirection
+18,9184,FD,TaggingDelay
+18,9185,ST,RespiratoryMotionCompensationTechniqueDescription
+18,9186,SH,RespiratorySignalSourceID
+18,9197,SQ,MRVelocityEncodingSequence
+18,9198,CS,FirstOrderPhaseCorrection
+18,9199,CS,WaterReferencedPhaseCorrection
+18,9200,CS,MRSpectroscopyAcquisitionType
+18,9214,CS,RespiratoryCyclePosition
+18,9217,FD,VelocityEncodingMaximumValue
+18,9218,FD,TagSpacingSecondDimension
+18,9219,SS,TagAngleSecondAxis
+18,9220,FD,FrameAcquisitionDuration
+18,9226,SQ,MRImageFrameTypeSequence
+18,9227,SQ,MRSpectroscopyFrameTypeSequence
+18,9234,UL,SpectroscopyAcquisitionPhaseColumns
+18,9236,CS,CardiacCyclePosition
+18,9239,SQ,SpecificAbsorptionRateSequence
+18,9240,US,RFEchoTrainLength
+18,9241,US,GradientEchoTrainLength
+18,9250,CS,ArterialSpinLabelingContrast
+18,9251,SQ,MRArterialSpinLabelingSequence
+18,9252,LO,ASLTechniqueDescription
+18,9253,US,ASLSlabNumber
+18,9254,FD,ASLSlabThickness
+18,9255,FD,ASLSlabOrientation
+18,9256,FD,ASLMidSlabPosition
+18,9257,CS,ASLContext
+18,9258,UL,ASLPulseTrainDuration
+18,9259,CS,ASLCrusherFlag
+18,9260,SQ,ASLSlabSequence
+18,9295,FD,ChemicalShiftMinimumIntegrationLimitinppm
+18,9296,FD,ChemicalShiftMaximumIntegrationLimitinppm
+18,9297,CS,WaterReferenceAcquisition
+18,9298,IS,EchoPeakPosition
+18,9301,SQ,CTAcquisitionTypeSequence
+18,9302,CS,AcquisitionType
+18,9303,FD,TubeAngle
+18,9304,SQ,CTAcquisitionDetailsSequence
+18,9305,FD,RevolutionTime
+18,9306,FD,SingleCollimationWidth
+18,9307,FD,TotalCollimationWidth
+18,9308,SQ,CTTableDynamicsSequence
+18,9309,FD,TableSpeed
+18,9310,FD,TableFeedperRotation
+18,9311,FD,SpiralPitchFactor
+18,9312,SQ,CTGeometrySequence
+18,9314,SQ,CTReconstructionSequence
+18,9315,CS,ReconstructionAlgorithm
+18,9316,CS,ConvolutionKernelGroup
+18,9317,FD,ReconstructionFieldofView
+18,9319,FD,ReconstructionAngle
+18,9320,SH,ImageFilter
+18,9321,SQ,CTExposureSequence
+18,9322,FD,ReconstructionPixelSpacing
+18,9323,CS,ExposureModulationType
+18,9324,FD,EstimatedDoseSaving
+18,9326,SQ,CTPositionSequence
+18,9327,FD,TablePosition
+18,9328,FD,ExposureTimeinms
+18,9329,SQ,CTImageFrameTypeSequence
+18,9332,FD,ExposureinmAs
+18,9333,CS,ConstantVolumeFlag
+18,9334,CS,FluoroscopyFlag
+18,9335,FD,DistanceSourcetoDataCollectionCenter
+18,9340,SQ,ContrastAdministrationProfileSequence
+18,9345,FD,CTDIvol
+18,9346,SQ,CTDIPhantomTypeCodeSequence
+18,9351,FL,CalciumScoringMassFactorPatient
+18,9352,FL,CalciumScoringMassFactorDevice
+18,9353,FL,EnergyWeightingFactor
+18,9401,SQ,ProjectionPixelCalibrationSequence
+18,9402,FL,DistanceSourcetoIsocenter
+18,9403,FL,DistanceObjecttoTableTop
+18,9404,FL,ObjectPixelSpacinginCenterofBeam
+18,9405,SQ,PositionerPositionSequence
+18,9406,SQ,TablePositionSequence
+18,9407,SQ,CollimatorShapeSequence
+18,9410,CS,PlanesinAcquisition
+18,9417,SQ,FrameAcquisitionSequence
+18,9423,LO,AcquisitionProtocolName
+18,9424,LT,AcquisitionProtocolDescription
+18,9426,FL,DistanceReceptorPlanetoDetectorHousing
+18,9427,CS,IntensifierActiveShape
+18,9429,FL,PhysicalDetectorSize
+18,9430,FL,PositionofIsocenterProjection
+18,9432,SQ,FieldofViewSequence
+18,9433,LO,FieldofViewDescription
+18,9434,SQ,ExposureControlSensingRegionsSequence
+18,9435,CS,ExposureControlSensingRegionShape
+18,9436,SS,ExposureControlSensingRegionLeftVerticalEdge
+18,9437,SS,ExposureControlSensingRegionRightVerticalEdge
+18,9438,SS,ExposureControlSensingRegionUpperHorizontalEdge
+18,9439,SS,ExposureControlSensingRegionLowerHorizontalEdge
+18,9440,SS,CenterofCircularExposureControlSensingRegion
+18,9441,US,RadiusofCircularExposureControlSensingRegion
+18,9442,SS,VerticesofthePolygonalExposureControlSensingRegion
+18,9449,FL,BeamAngle
+18,9451,SQ,FrameDetectorParametersSequence
+18,9452,FL,CalculatedAnatomyThickness
+18,9455,SQ,CalibrationSequence
+18,9456,SQ,ObjectThicknessSequence
+18,9457,CS,PlaneIdentification
+18,9462,SQ,IsocenterReferenceSystemSequence
+18,9463,FL,PositionerIsocenterPrimaryAngle
+18,9464,FL,PositionerIsocenterSecondaryAngle
+18,9465,FL,PositionerIsocenterDetectorRotationAngle
+18,9466,FL,TableXPositiontoIsocenter
+18,9467,FL,TableYPositiontoIsocenter
+18,9468,FL,TableZPositiontoIsocenter
+18,9469,FL,TableHorizontalRotationAngle
+18,9470,FL,TableHeadTiltAngle
+18,9471,FL,TableCradleTiltAngle
+18,9472,SQ,FrameDisplayShutterSequence
+18,9473,FL,AcquiredImageAreaDoseProduct
+18,9477,SQ,IrradiationEventIdentificationSequence
+18,9506,SQ,ContributingSourcesSequence
+18,9508,FL,PrimaryPositionerScanArc
+18,9509,FL,SecondaryPositionerScanArc
+18,9510,FL,PrimaryPositionerScanStartAngle
+18,9511,FL,SecondaryPositionerScanStartAngle
+18,9514,FL,PrimaryPositionerIncrement
+18,9515,FL,SecondaryPositionerIncrement
+18,9516,DT,StartAcquisitionDateTime
+18,9517,DT,EndAcquisitionDateTime
+18,9518,SS,PrimaryPositionerIncrementSign
+18,9519,SS,SecondaryPositionerIncrementSign
+18,9524,LO,ApplicationName
+18,9525,LO,ApplicationVersion
+18,9526,LO,ApplicationManufacturer
+18,9527,CS,AlgorithmType
+18,9528,LO,AlgorithmDescription
+18,9531,LO,ReconstructionDescription
+18,9538,SQ,PerProjectionAcquisitionSequence
+18,9541,SQ,DetectorPositionSequence
+18,9545,FD,BreastSupportIsocenterPrimaryAngle
+18,9546,FD,BreastSupportIsocenterSecondaryAngle
+18,9547,FD,BreastSupportXPositiontoIsocenter
+18,9548,FD,BreastSupportYPositiontoIsocenter
+18,9549,FD,BreastSupportZPositiontoIsocenter
+18,9550,FD,DetectorIsocenterPrimaryAngle
+18,9551,FD,DetectorIsocenterSecondaryAngle
+18,9552,FD,DetectorXPositiontoIsocenter
+18,9553,FD,DetectorYPositiontoIsocenter
+18,9554,FD,DetectorZPositiontoIsocenter
+18,9557,FD,DetectorActiveAreaTLHCPosition
+18,9558,FD,DetectorActiveAreaOrientation
+18,9559,CS,PositionerPrimaryAngleDirection
+18,9621,SQ,FunctionalMRSequence
+18,9622,CS,FunctionalSettlingPhaseFramesPresent
+18,9623,DT,FunctionalSyncPulse
+18,9624,CS,SettlingPhaseFrame
+18,9701,DT,DecayCorrectionDateTime
+18,9715,FD,StartDensityThreshold
+18,9716,FD,StartRelativeDensityDifferenceThreshold
+18,9717,FD,StartCardiacTriggerCountThreshold
+18,9718,FD,StartRespiratoryTriggerCountThreshold
+18,9719,FD,TerminationCountsThreshold
+18,9720,FD,TerminationDensityThreshold
+18,9721,FD,TerminationRelativeDensityThreshold
+18,9722,FD,TerminationTimeThreshold
+18,9723,FD,TerminationCardiacTriggerCountThreshold
+18,9724,FD,TerminationRespiratoryTriggerCountThreshold
+18,9725,CS,DetectorGeometry
+18,9726,FD,TransverseDetectorSeparation
+18,9727,FD,AxialDetectorDimension
+18,9729,US,RadiopharmaceuticalAgentNumber
+18,9732,SQ,PETFrameAcquisitionSequence
+18,9733,SQ,PETDetectorMotionDetailsSequence
+18,9734,SQ,PETTableDynamicsSequence
+18,9735,SQ,PETPositionSequence
+18,9736,SQ,PETFrameCorrectionFactorsSequence
+18,9737,SQ,RadiopharmaceuticalUsageSequence
+18,9738,CS,AttenuationCorrectionSource
+18,9739,US,NumberofIterations
+18,9740,US,NumberofSubsets
+18,9749,SQ,PETReconstructionSequence
+18,9751,SQ,PETFrameTypeSequence
+18,9755,CS,TimeofFlightInformationUsed
+18,9756,CS,ReconstructionType
+18,9758,CS,DecayCorrected
+18,9759,CS,AttenuationCorrected
+18,9760,CS,ScatterCorrected
+18,9761,CS,DeadTimeCorrected
+18,9762,CS,GantryMotionCorrected
+18,9763,CS,PatientMotionCorrected
+18,9764,CS,CountLossNormalizationCorrected
+18,9765,CS,RandomsCorrected
+18,9767,CS,SensitivityCalibrated
+18,9768,CS,DetectorNormalizationCorrection
+18,9769,CS,IterativeReconstructionMethod
+18,9770,CS,AttenuationCorrectionTemporalRelationship
+18,9771,SQ,PatientPhysiologicalStateSequence
+18,9772,SQ,PatientPhysiologicalStateCodeSequence
+18,9803,SQ,ExcludedIntervalsSequence
+18,9804,DT,ExclusionStartDateTime
+18,9805,FD,ExclusionDuration
+18,9806,SQ,USImageDescriptionSequence
+18,9807,SQ,ImageDataTypeSequence
+18,9808,CS,DataType
+18,9809,SQ,TransducerScanPatternCodeSequence
+18,9810,US or SS,ZeroVelocityPixelValue
+20,10,SH,StudyID
+20,11,IS,SeriesNumber
+20,12,IS,AcquisitionNumber
+20,13,IS,InstanceNumber
+20,19,IS,ItemNumber
+20,20,CS,PatientOrientation
+20,52,UI,FrameofReferenceUID
+20,60,CS,Laterality
+20,62,CS,ImageLaterality
+20,100,IS,TemporalPositionIdentifier
+20,105,IS,NumberofTemporalPositions
+20,110,DS,TemporalResolution
+20,200,UI,SynchronizationFrameofReferenceUID
+20,242,UI,SOPInstanceUIDofConcatenationSource
+20,1002,IS,ImagesinAcquisition
+20,1040,LO,PositionReferenceIndicator
+20,1041,DS,SliceLocation
+20,1200,IS,NumberofPatientRelatedStudies
+20,1202,IS,NumberofPatientRelatedSeries
+20,1204,IS,NumberofPatientRelatedInstances
+20,1206,IS,NumberofStudyRelatedSeries
+20,1208,IS,NumberofStudyRelatedInstances
+20,1209,IS,NumberofSeriesRelatedInstances
+20,4000,LT,ImageComments
+20,9056,SH,StackID
+20,9071,SQ,FrameAnatomySequence
+20,9072,CS,FrameLaterality
+20,9111,SQ,FrameContentSequence
+20,9113,SQ,PlanePositionSequence
+20,9116,SQ,PlaneOrientationSequence
+20,9128,UL,TemporalPositionIndex
+20,9153,FD,NominalCardiacTriggerDelayTime
+20,9156,US,FrameAcquisitionNumber
+20,9157,UL,DimensionIndexValues
+20,9158,LT,FrameComments
+20,9161,UI,ConcatenationUID
+20,9164,UI,DimensionOrganizationUID
+20,9165,AT,DimensionIndexPointer
+20,9167,AT,FunctionalGroupPointer
+20,9170,SQ,UnassignedSharedConvertedAttributesSequence
+20,9172,SQ,ConversionSourceAttributesSequence
+20,9213,LO,DimensionIndexPrivateCreator
+20,9221,SQ,DimensionOrganizationSequence
+20,9222,SQ,DimensionIndexSequence
+20,9228,UL,ConcatenationFrameOffsetNumber
+20,9238,LO,FunctionalGroupPrivateCreator
+20,9241,FL,NominalPercentageofCardiacPhase
+20,9245,FL,NominalPercentageofRespiratoryPhase
+20,9246,FL,StartingRespiratoryAmplitude
+20,9247,CS,StartingRespiratoryPhase
+20,9248,FL,EndingRespiratoryAmplitude
+20,9249,CS,EndingRespiratoryPhase
+20,9250,CS,RespiratoryTriggerType
+20,9252,FD,ActualCardiacTriggerDelayTime
+20,9253,SQ,RespiratorySynchronizationSequence
+20,9254,FD,RespiratoryIntervalTime
+20,9255,FD,NominalRespiratoryTriggerDelayTime
+20,9256,FD,RespiratoryTriggerDelayThreshold
+20,9257,FD,ActualRespiratoryTriggerDelayTime
+20,9307,CS,UltrasoundAcquisitionGeometry
+20,9308,FD,ApexPosition
+20,9309,FD,VolumetoTransducerMappingMatrix
+20,9310,SQ,TemporalPositionSequence
+20,9311,CS,DimensionOrganizationType
+20,9312,UI,VolumeFrameofReferenceUID
+20,9313,UI,TableFrameofReferenceUID
+20,9421,LO,DimensionDescriptionLabel
+20,9450,SQ,PatientOrientationinFrameSequence
+20,9453,LO,FrameLabel
+20,9518,US,AcquisitionIndex
+20,9529,SQ,ContributingSOPInstancesReferenceSequence
+20,9536,US,ReconstructionIndex
+22,2,US,LightPathFilterPassBand
+22,4,US,ImagePathFilterPassBand
+22,5,CS,PatientEyeMovementCommanded
+22,6,SQ,PatientEyeMovementCommandCodeSequence
+22,7,FL,SphericalLensPower
+22,8,FL,CylinderLensPower
+22,9,FL,CylinderAxis
+22,10,FL,StereoBaselineAngle
+22,11,FL,StereoBaselineDisplacement
+22,12,FL,StereoHorizontalPixelOffset
+22,13,FL,StereoVerticalPixelOffset
+22,14,FL,StereoRotation
+22,15,SQ,AcquisitionDeviceTypeCodeSequence
+22,16,SQ,IlluminationTypeCodeSequence
+22,17,SQ,LightPathFilterTypeStackCodeSequence
+22,18,SQ,ImagePathFilterTypeStackCodeSequence
+22,19,SQ,LensesCodeSequence
+22,20,SQ,StereoPairsSequence
+22,21,SQ,LeftImageSequence
+22,22,SQ,RightImageSequence
+22,28,CS,StereoPairsPresent
+22,30,FL,AxialLengthoftheEye
+22,31,SQ,OphthalmicFrameLocationSequence
+22,32,FL,ReferenceCoordinates
+22,35,FL,DepthSpatialResolution
+22,36,FL,MaximumDepthDistortion
+22,39,CS,OphthalmicImageOrientation
+22,41,FL,DepthofTransverseImage
+22,42,SQ,MydriaticAgentConcentrationUnitsSequence
+22,55,FL,IlluminationWaveLength
+22,56,FL,IlluminationPower
+22,57,FL,IlluminationBandwidth
+22,58,SQ,MydriaticAgentSequence
+22,1007,SQ,OphthalmicAxialMeasurementsRightEyeSequence
+22,1008,SQ,OphthalmicAxialMeasurementsLeftEyeSequence
+22,1009,CS,OphthalmicAxialMeasurementsDeviceType
+22,1010,CS,OphthalmicAxialLengthMeasurementsType
+22,1012,SQ,OphthalmicAxialLengthSequence
+22,1019,FL,OphthalmicAxialLength
+22,1024,SQ,LensStatusCodeSequence
+22,1025,SQ,VitreousStatusCodeSequence
+22,1028,SQ,IOLFormulaCodeSequence
+22,1029,LO,IOLFormulaDetail
+22,1033,FL,KeratometerIndex
+22,1035,SQ,SourceofOphthalmicAxialLengthCodeSequence
+22,1037,FL,TargetRefraction
+22,1039,CS,RefractiveProcedureOccurred
+22,1040,SQ,RefractiveSurgeryTypeCodeSequence
+22,1044,SQ,OphthalmicUltrasoundMethodCodeSequence
+22,1050,SQ,OphthalmicAxialLengthMeasurementsSequence
+22,1053,FL,IOLPower
+22,1054,FL,PredictedRefractiveError
+22,1059,FL,OphthalmicAxialLengthVelocity
+22,1065,LO,LensStatusDescription
+22,1066,LO,VitreousStatusDescription
+22,1090,SQ,IOLPowerSequence
+22,1092,SQ,LensConstantSequence
+22,1093,LO,IOLManufacturer
+22,1095,LO,ImplantName
+22,1096,SQ,KeratometryMeasurementTypeCodeSequence
+22,1097,LO,ImplantPartNumber
+22,1100,SQ,ReferencedOphthalmicAxialMeasurementsSequence
+22,1101,SQ,OphthalmicAxialLengthMeasurementsSegmentNameCodeSequence
+22,1103,SQ,RefractiveErrorBeforeRefractiveSurgeryCodeSequence
+22,1121,FL,IOLPowerForExactEmmetropia
+22,1122,FL,IOLPowerForExactTargetRefraction
+22,1125,SQ,AnteriorChamberDepthDefinitionCodeSequence
+22,1127,SQ,LensThicknessSequence
+22,1128,SQ,AnteriorChamberDepthSequence
+22,1130,FL,LensThickness
+22,1131,FL,AnteriorChamberDepth
+22,1132,SQ,SourceofLensThicknessDataCodeSequence
+22,1133,SQ,SourceofAnteriorChamberDepthDataCodeSequence
+22,1134,SQ,SourceofRefractiveMeasurementsSequence
+22,1135,SQ,SourceofRefractiveMeasurementsCodeSequence
+22,1140,CS,OphthalmicAxialLengthMeasurementModified
+22,1150,SQ,OphthalmicAxialLengthDataSourceCodeSequence
+22,1155,FL,SignaltoNoiseRatio
+22,1159,LO,OphthalmicAxialLengthDataSourceDescription
+22,1210,SQ,OphthalmicAxialLengthMeasurementsTotalLengthSequence
+22,1211,SQ,OphthalmicAxialLengthMeasurementsSegmentalLengthSequence
+22,1212,SQ,OphthalmicAxialLengthMeasurementsLengthSummationSequence
+22,1220,SQ,UltrasoundOphthalmicAxialLengthMeasurementsSequence
+22,1225,SQ,OpticalOphthalmicAxialLengthMeasurementsSequence
+22,1230,SQ,UltrasoundSelectedOphthalmicAxialLengthSequence
+22,1250,SQ,OphthalmicAxialLengthSelectionMethodCodeSequence
+22,1255,SQ,OpticalSelectedOphthalmicAxialLengthSequence
+22,1257,SQ,SelectedSegmentalOphthalmicAxialLengthSequence
+22,1260,SQ,SelectedTotalOphthalmicAxialLengthSequence
+22,1262,SQ,OphthalmicAxialLengthQualityMetricSequence
+22,1300,SQ,IntraocularLensCalculationsRightEyeSequence
+22,1310,SQ,IntraocularLensCalculationsLeftEyeSequence
+22,1330,SQ,ReferencedOphthalmicAxialLengthMeasurementQCImageSequence
+22,1415,CS,OphthalmicMappingDeviceType
+22,1420,SQ,AcquisitionMethodCodeSequence
+22,1423,SQ,AcquisitionMethodAlgorithmSequence
+22,1436,SQ,OphthalmicThicknessMapTypeCodeSequence
+22,1443,SQ,OphthalmicThicknessMappingNormalsSequence
+22,1445,SQ,RetinalThicknessDefinitionCodeSequence
+22,1450,SQ,PixelValueMappingtoCodedConceptSequence
+22,1452,US or SS,MappedPixelValue
+22,1454,LO,PixelValueMappingExplanation
+22,1458,SQ,OphthalmicThicknessMapQualityThresholdSequence
+22,1460,FL,OphthalmicThicknessMapThresholdQualityRating
+22,1463,FL,AnatomicStructureReferencePoint
+22,1465,SQ,RegistrationtoLocalizerSequence
+22,1466,CS,RegisteredLocalizerUnits
+22,1467,FL,RegisteredLocalizerTopLeftHandCorner
+22,1468,FL,RegisteredLocalizerBottomRightHandCorner
+22,1470,SQ,OphthalmicThicknessMapQualityRatingSequence
+22,1472,SQ,RelevantOPTAttributesSequence
+22,1512,SQ,TransformationMethodCodeSequence
+22,1513,SQ,TransformationAlgorithmSequence
+22,1515,CS,OphthalmicAxialLengthMethod
+22,1517,FL,OphthalmicFOV
+22,1518,SQ,TwoDimensionaltoThreeDimensionalMapSequence
+22,1525,SQ,WideFieldOphthalmicPhotographyQualityRatingSequence
+22,1526,SQ,WideFieldOphthalmicPhotographyQualityThresholdSequence
+22,1527,FL,WideFieldOphthalmicPhotographyThresholdQualityRating
+22,1528,FL,XCoordinatesCenterPixelViewAngle
+22,1529,FL,YCoordinatesCenterPixelViewAngle
+22,1530,UL,NumberofMapPoints
+22,1531,OF,TwoDimensionaltoThreeDimensionalMapData
+24,10,FL,VisualFieldHorizontalExtent
+24,11,FL,VisualFieldVerticalExtent
+24,12,CS,VisualFieldShape
+24,16,SQ,ScreeningTestModeCodeSequence
+24,18,FL,MaximumStimulusLuminance
+24,20,FL,BackgroundLuminance
+24,21,SQ,StimulusColorCodeSequence
+24,24,SQ,BackgroundIlluminationColorCodeSequence
+24,25,FL,StimulusArea
+24,28,FL,StimulusPresentationTime
+24,32,SQ,FixationSequence
+24,33,SQ,FixationMonitoringCodeSequence
+24,34,SQ,VisualFieldCatchTrialSequence
+24,35,US,FixationCheckedQuantity
+24,36,US,PatientNotProperlyFixatedQuantity
+24,37,CS,PresentedVisualStimuliDataFlag
+24,38,US,NumberofVisualStimuli
+24,39,CS,ExcessiveFixationLossesDataFlag
+24,40,CS,ExcessiveFixationLosses
+24,42,US,StimuliRetestingQuantity
+24,45,CS,FalseNegativesEstimateFlag
+24,46,FL,FalseNegativesEstimate
+24,48,US,NegativeCatchTrialsQuantity
+24,50,US,FalseNegativesQuantity
+24,51,CS,ExcessiveFalseNegativesDataFlag
+24,52,CS,ExcessiveFalseNegatives
+24,53,CS,FalsePositivesEstimateFlag
+24,54,FL,FalsePositivesEstimate
+24,55,CS,CatchTrialsDataFlag
+24,56,US,PositiveCatchTrialsQuantity
+24,57,CS,TestPointNormalsDataFlag
+24,58,SQ,TestPointNormalsSequence
+24,59,CS,GlobalDeviationProbabilityNormalsFlag
+24,60,US,FalsePositivesQuantity
+24,61,CS,ExcessiveFalsePositivesDataFlag
+24,62,CS,ExcessiveFalsePositives
+24,63,CS,VisualFieldTestNormalsFlag
+24,64,SQ,ResultsNormalsSequence
+24,65,SQ,AgeCorrectedSensitivityDeviationAlgorithmSequence
+24,66,FL,GlobalDeviationFromNormal
+24,67,SQ,GeneralizedDefectSensitivityDeviationAlgorithmSequence
+24,68,FL,LocalizedDeviationFromNormal
+24,69,LO,PatientReliabilityIndicator
+24,70,FL,VisualFieldMeanSensitivity
+24,71,FL,GlobalDeviationProbability
+24,72,CS,LocalDeviationProbabilityNormalsFlag
+24,73,FL,LocalizedDeviationProbability
+24,74,CS,ShortTermFluctuationCalculated
+24,75,FL,ShortTermFluctuation
+24,76,CS,ShortTermFluctuationProbabilityCalculated
+24,77,FL,ShortTermFluctuationProbability
+24,78,CS,CorrectedLocalizedDeviationFromNormalCalculated
+24,79,FL,CorrectedLocalizedDeviationFromNormal
+24,80,CS,CorrectedLocalizedDeviationFromNormalProbabilityCalculated
+24,81,FL,CorrectedLocalizedDeviationFromNormalProbability
+24,83,SQ,GlobalDeviationProbabilitySequence
+24,85,SQ,LocalizedDeviationProbabilitySequence
+24,86,CS,FovealSensitivityMeasured
+24,87,FL,FovealSensitivity
+24,88,FL,VisualFieldTestDuration
+24,89,SQ,VisualFieldTestPointSequence
+24,92,FL,AgeCorrectedSensitivityDeviationValue
+24,93,CS,StimulusResults
+24,94,FL,SensitivityValue
+24,95,CS,RetestStimulusSeen
+24,96,FL,RetestSensitivityValue
+24,97,SQ,VisualFieldTestPointNormalsSequence
+24,98,FL,QuantifiedDefect
+24,100,FL,AgeCorrectedSensitivityDeviationProbabilityValue
+24,102,CS,GeneralizedDefectCorrectedSensitivityDeviationFlag
+24,103,FL,GeneralizedDefectCorrectedSensitivityDeviationValue
+24,104,FL,GeneralizedDefectCorrectedSensitivityDeviationProbabilityValue
+24,105,FL,MinimumSensitivityValue
+24,106,CS,BlindSpotLocalized
+24,110,SQ,VisualAcuityMeasurementSequence
+24,112,SQ,RefractiveParametersUsedonPatientSequence
+24,113,CS,MeasurementLaterality
+24,114,SQ,OphthalmicPatientClinicalInformationLeftEyeSequence
+24,115,SQ,OphthalmicPatientClinicalInformationRightEyeSequence
+24,117,CS,FovealPointNormativeDataFlag
+24,118,FL,FovealPointProbabilityValue
+24,120,CS,ScreeningBaselineMeasured
+24,122,SQ,ScreeningBaselineMeasuredSequence
+24,124,CS,ScreeningBaselineType
+24,126,FL,ScreeningBaselineValue
+24,202,LO,AlgorithmSource
+24,306,LO,DataSetName
+24,307,LO,DataSetVersion
+24,308,LO,DataSetSource
+24,309,LO,DataSetDescription
+24,317,SQ,VisualFieldTestReliabilityGlobalIndexSequence
+24,320,SQ,VisualFieldGlobalResultsIndexSequence
+24,325,SQ,DataObservationSequence
+24,338,CS,IndexNormalsFlag
+24,341,FL,IndexProbability
+24,344,SQ,IndexProbabilitySequence
+28,2,US,SamplesperPixel
+28,3,US,SamplesperPixelUsed
+28,4,CS,PhotometricInterpretation
+28,6,US,PlanarConfiguration
+28,8,IS,NumberofFrames
+28,9,AT,FrameIncrementPointer
+28,10,US,Rows
+28,11,US,Columns
+28,14,US,UltrasoundColorDataPresent
+28,30,DS,PixelSpacing
+28,31,DS,ZoomFactor
+28,32,DS,ZoomCenter
+28,34,IS,PixelAspectRatio
+28,51,CS,CorrectedImage
+28,100,US,BitsAllocated
+28,101,US,BitsStored
+28,102,US,HighBit
+28,103,US,PixelRepresentation
+28,106,US or SS,SmallestImagePixelValue
+28,107,US or SS,LargestImagePixelValue
+28,108,US or SS,SmallestPixelValueinSeries
+28,109,US or SS,LargestPixelValueinSeries
+28,120,US or SS,PixelPaddingValue
+28,121,US or SS,PixelPaddingRangeLimit
+28,122,FL,FloatPixelPaddingValue
+28,123,FD,DoubleFloatPixelPaddingValue
+28,124,FL,FloatPixelPaddingRangeLimit
+28,125,FD,DoubleFloatPixelPaddingRangeLimit
+28,300,CS,QualityControlImage
+28,301,CS,BurnedInAnnotation
+28,302,CS,RecognizableVisualFeatures
+28,303,CS,LongitudinalTemporalInformationModified
+28,304,UI,ReferencedColorPaletteInstanceUID
+28,1040,CS,PixelIntensityRelationship
+28,1041,SS,PixelIntensityRelationshipSign
+28,1050,DS,WindowCenter
+28,1051,DS,WindowWidth
+28,1052,DS,RescaleIntercept
+28,1053,DS,RescaleSlope
+28,1054,LO,RescaleType
+28,1056,CS,VOILUTFunction
+28,1090,CS,RecommendedViewingMode
+28,1101,US or SS,RedPaletteColorLookupTableDescriptor
+28,1102,US or SS,GreenPaletteColorLookupTableDescriptor
+28,1103,US or SS,BluePaletteColorLookupTableDescriptor
+28,1104,US,AlphaPaletteColorLookupTableDescriptor
+28,1199,UI,PaletteColorLookupTableUID
+28,1201,OW,RedPaletteColorLookupTableData
+28,1202,OW,GreenPaletteColorLookupTableData
+28,1203,OW,BluePaletteColorLookupTableData
+28,1204,OW,AlphaPaletteColorLookupTableData
+28,1221,OW,SegmentedRedPaletteColorLookupTableData
+28,1222,OW,SegmentedGreenPaletteColorLookupTableData
+28,1223,OW,SegmentedBluePaletteColorLookupTableData
+28,1224,OW,SegmentedAlphaPaletteColorLookupTableData
+28,1300,CS,BreastImplantPresent
+28,1350,CS,PartialView
+28,1351,ST,PartialViewDescription
+28,1352,SQ,PartialViewCodeSequence
+28,1401,SQ,DataFrameAssignmentSequence
+28,1402,CS,DataPathAssignment
+28,1403,US,BitsMappedtoColorLookupTable
+28,1404,SQ,BlendingLUT1Sequence
+28,1405,CS,BlendingLUT1TransferFunction
+28,1406,FD,BlendingWeightConstant
+28,1407,US,BlendingLookupTableDescriptor
+28,1408,OW,BlendingLookupTableData
+28,1410,CS,AlphaLUTTransferFunction
+28,2000,OB,ICCProfile
+28,2002,CS,ColorSpace
+28,2110,CS,LossyImageCompression
+28,2112,DS,LossyImageCompressionRatio
+28,2114,CS,LossyImageCompressionMethod
+28,3000,SQ,ModalityLUTSequence
+28,3002,US or SS,LUTDescriptor
+28,3003,LO,LUTExplanation
+28,3004,LO,ModalityLUTType
+28,3006,US or OW,LUTData
+28,3010,SQ,VOILUTSequence
+28,3110,SQ,SoftcopyVOILUTSequence
+28,6010,US,RepresentativeFrameNumber
+28,6022,LO,FrameofInterestDescription
+28,6023,CS,FrameofInterestType
+28,6040,US,RWavePointer
+28,6100,SQ,MaskSubtractionSequence
+28,6101,CS,MaskOperation
+28,6102,US,ApplicableFrameRange
+28,6110,US,MaskFrameNumbers
+28,6112,US,ContrastFrameAveraging
+28,6120,SS,TIDOffset
+28,6190,ST,MaskOperationExplanation
+28,7000,SQ,EquipmentAdministratorSequence
+28,7001,US,NumberofDisplaySubsystems
+28,7002,US,CurrentConfigurationID
+28,7003,US,DisplaySubsystemID
+28,7004,SH,DisplaySubsystemName
+28,7005,LO,DisplaySubsystemDescription
+28,7006,CS,SystemStatus
+28,7007,LO,SystemStatusComment
+28,7008,SQ,TargetLuminanceCharacteristicsSequence
+28,7009,US,LuminanceCharacteristicsID
+28,7010,SQ,DisplaySubsystemQAResultsSequence
+28,7011,SQ,ConfigurationQAResultsSequence
+28,7012,SQ,MeasurementEquipmentSequence
+28,7013,CS,MeasurementFunctions
+28,7014,CS,MeasurementEquipmentType
+28,7015,SQ,VisualEvaluationResultSequence
+28,7016,SQ,DisplayCalibrationResultSequence
+28,7017,US,DDLValue
+28,7018,FL,CIExyWhitePoint
+28,7019,CS,DisplayFunctionType
+28,7020,LO,LuminanceResponseDescription
+28,7021,CS,WhitePointFlag
+28,7022,SQ,DisplayDeviceTypeCodeSequence
+28,7023,SQ,DisplaySubsystemSequence
+28,7024,SQ,LuminanceResultSequence
+28,7025,CS,AmbientLightValueSource
+28,7026,CS,MeasuredCharacteristics
+28,7027,SQ,LuminanceUniformityResultSequence
+28,7028,SQ,VisualEvaluationTestSequence
+28,7029,CS,TestResult
+28,9001,UL,DataPointRows
+28,9002,UL,DataPointColumns
+28,9003,CS,SignalDomainColumns
+28,9108,CS,DataRepresentation
+28,9110,SQ,PixelMeasuresSequence
+28,9132,SQ,FrameVOILUTSequence
+28,9145,SQ,PixelValueTransformationSequence
+28,9235,CS,SignalDomainRows
+28,9411,FL,DisplayFilterPercentage
+28,9415,SQ,FramePixelShiftSequence
+28,9416,US,SubtractionItemID
+28,9422,SQ,PixelIntensityRelationshipLUTSequence
+28,9443,SQ,FramePixelDataPropertiesSequence
+28,9444,CS,GeometricalProperties
+28,9445,FL,GeometricMaximumDistortion
+28,9446,CS,ImageProcessingApplied
+28,9454,CS,MaskSelectionMode
+28,9474,CS,LUTFunction
+28,9478,FL,MaskVisibilityPercentage
+28,9501,SQ,PixelShiftSequence
+28,9502,SQ,RegionPixelShiftSequence
+28,9503,SS,VerticesoftheRegion
+28,9506,US,PixelShiftFrameRange
+28,9507,US,LUTFrameRange
+28,9520,DS,ImagetoEquipmentMappingMatrix
+28,9537,CS,EquipmentCoordinateSystemIdentification
+32,1031,SQ,RequestingPhysicianIdentificationSequence
+32,1032,PN,RequestingPhysician
+32,1033,LO,RequestingService
+32,1034,SQ,RequestingServiceCodeSequence
+32,1060,LO,RequestedProcedureDescription
+32,1064,SQ,RequestedProcedureCodeSequence
+32,1070,LO,RequestedContrastAgent
+38,4,SQ,ReferencedPatientAliasSequence
+38,8,CS,VisitStatusID
+38,10,LO,AdmissionID
+38,14,SQ,IssuerofAdmissionIDSequence
+38,16,LO,RouteofAdmissions
+38,20,DA,AdmittingDate
+38,21,TM,AdmittingTime
+38,50,LO,SpecialNeeds
+38,60,LO,ServiceEpisodeID
+38,62,LO,ServiceEpisodeDescription
+38,64,SQ,IssuerofServiceEpisodeIDSequence
+38,100,SQ,PertinentDocumentsSequence
+38,101,SQ,PertinentResourcesSequence
+38,102,LO,ResourceDescription
+38,300,LO,CurrentPatientLocation
+38,500,LO,PatientState
+38,502,SQ,PatientClinicalTrialParticipationSequence
+38,4000,LT,VisitComments
+40,1,AE,ScheduledStationAETitle
+40,2,DA,ScheduledProcedureStepStartDate
+40,3,TM,ScheduledProcedureStepStartTime
+40,4,DA,ScheduledProcedureStepEndDate
+40,5,TM,ScheduledProcedureStepEndTime
+40,7,LO,ScheduledProcedureStepDescription
+40,8,SQ,ScheduledProtocolCodeSequence
+40,9,SH,ScheduledProcedureStepID
+40,10,SH,ScheduledStationName
+40,11,SH,ScheduledProcedureStepLocation
+40,20,CS,ScheduledProcedureStepStatus
+40,26,SQ,OrderPlacerIdentifierSequence
+40,27,SQ,OrderFillerIdentifierSequence
+40,31,UT,LocalNamespaceEntityID
+40,32,UT,UniversalEntityID
+40,33,CS,UniversalEntityIDType
+40,35,CS,IdentifierTypeCode
+40,36,SQ,AssigningFacilitySequence
+40,39,SQ,AssigningJurisdictionCodeSequence
+40,100,SQ,ScheduledProcedureStepSequence
+40,241,AE,PerformedStationAETitle
+40,242,SH,PerformedStationName
+40,243,SH,PerformedLocation
+40,244,DA,PerformedProcedureStepStartDate
+40,245,TM,PerformedProcedureStepStartTime
+40,250,DA,PerformedProcedureStepEndDate
+40,251,TM,PerformedProcedureStepEndTime
+40,252,CS,PerformedProcedureStepStatus
+40,253,SH,PerformedProcedureStepID
+40,254,LO,PerformedProcedureStepDescription
+40,255,LO,PerformedProcedureTypeDescription
+40,260,SQ,PerformedProtocolCodeSequence
+40,261,CS,PerformedProtocolType
+40,270,SQ,ScheduledStepAttributesSequence
+40,275,SQ,RequestAttributesSequence
+40,280,ST,CommentsonthePerformedProcedureStep
+40,281,SQ,PerformedProcedureStepDiscontinuationReasonCodeSequence
+40,293,SQ,QuantitySequence
+40,294,DS,Quantity
+40,295,SQ,MeasuringUnitsSequence
+40,296,SQ,BillingItemSequence
+40,300,US,TotalTimeofFluoroscopy
+40,301,US,TotalNumberofExposures
+40,302,US,EntranceDose
+40,303,US,ExposedArea
+40,306,DS,DistanceSourcetoEntrance
+40,310,ST,CommentsonRadiationDose
+40,314,DS,HalfValueLayer
+40,316,DS,OrganDose
+40,318,CS,OrganExposed
+40,320,SQ,BillingProcedureStepSequence
+40,321,SQ,FilmConsumptionSequence
+40,324,SQ,BillingSuppliesandDevicesSequence
+40,340,SQ,PerformedSeriesSequence
+40,400,LT,CommentsontheScheduledProcedureStep
+40,440,SQ,ProtocolContextSequence
+40,441,SQ,ContentItemModifierSequence
+40,500,SQ,ScheduledSpecimenSequence
+40,512,LO,ContainerIdentifier
+40,513,SQ,IssueroftheContainerIdentifierSequence
+40,515,SQ,AlternateContainerIdentifierSequence
+40,518,SQ,ContainerTypeCodeSequence
+40,520,SQ,ContainerComponentSequence
+40,551,LO,SpecimenIdentifier
+40,554,UI,SpecimenUID
+40,555,SQ,AcquisitionContextSequence
+40,556,ST,AcquisitionContextDescription
+40,560,SQ,SpecimenDescriptionSequence
+40,562,SQ,IssueroftheSpecimenIdentifierSequence
+40,600,LO,SpecimenShortDescription
+40,602,UT,SpecimenDetailedDescription
+40,610,SQ,SpecimenPreparationSequence
+40,612,SQ,SpecimenPreparationStepContentItemSequence
+40,620,SQ,SpecimenLocalizationContentItemSequence
+40,1001,SH,RequestedProcedureID
+40,1002,LO,ReasonfortheRequestedProcedure
+40,1003,SH,RequestedProcedurePriority
+40,1004,LO,PatientTransportArrangements
+40,1005,LO,RequestedProcedureLocation
+40,1008,LO,ConfidentialityCode
+40,1009,SH,ReportingPriority
+40,1010,PN,NamesofIntendedRecipientsofResults
+40,1011,SQ,IntendedRecipientsofResultsIdentificationSequence
+40,1012,SQ,ReasonForPerformedProcedureCodeSequence
+40,1101,SQ,PersonIdentificationCodeSequence
+40,1400,LT,RequestedProcedureComments
+40,2004,DA,IssueDateofImagingServiceRequest
+40,2005,TM,IssueTimeofImagingServiceRequest
+40,2008,PN,OrderEnteredBy
+40,2010,SH,OrderCallbackPhoneNumber
+40,2011,LT,OrderCallbackTelecomInformation
+40,2400,LT,ImagingServiceRequestComments
+40,3001,LO,ConfidentialityConstraintonPatientDataDescription
+40,4005,DT,ScheduledProcedureStepStartDateTime
+40,4007,SQ,PerformedProcessingApplicationsCodeSequence
+40,4009,SQ,HumanPerformerCodeSequence
+40,4010,DT,ScheduledProcedureStepModificationDateTime
+40,4011,DT,ExpectedCompletionDateTime
+40,4018,SQ,ScheduledWorkitemCodeSequence
+40,4019,SQ,PerformedWorkitemCodeSequence
+40,4020,CS,InputAvailabilityFlag
+40,4021,SQ,InputInformationSequence
+40,4025,SQ,ScheduledStationNameCodeSequence
+40,4026,SQ,ScheduledStationClassCodeSequence
+40,4027,SQ,ScheduledStationGeographicLocationCodeSequence
+40,4028,SQ,PerformedStationNameCodeSequence
+40,4029,SQ,PerformedStationClassCodeSequence
+40,4030,SQ,PerformedStationGeographicLocationCodeSequence
+40,4033,SQ,OutputInformationSequence
+40,4034,SQ,ScheduledHumanPerformersSequence
+40,4035,SQ,ActualHumanPerformersSequence
+40,4040,CS,RawDataHandling
+40,4041,CS,InputReadinessState
+40,4050,DT,PerformedProcedureStepStartDateTime
+40,4051,DT,PerformedProcedureStepEndDateTime
+40,4052,DT,ProcedureStepCancellationDateTime
+40,4070,SQ,OutputDestinationSequence
+40,4071,SQ,DICOMStorageSequence
+40,4073,UR,StorageURL
+40,4074,SQ,XDSStorageSequence
+40,8302,DS,EntranceDoseinmGy
+40,9092,SQ,ParametricMapFrameTypeSequence
+40,9094,SQ,ReferencedImageRealWorldValueMappingSequence
+40,9096,SQ,RealWorldValueMappingSequence
+40,9098,SQ,PixelValueMappingCodeSequence
+40,9210,SH,LUTLabel
+40,9211,US or SS,RealWorldValueLastValueMapped
+40,9212,FD,RealWorldValueLUTData
+40,9213,FD,DoubleFloatRealWorldValueLastValueMapped
+40,9214,FD,DoubleFloatRealWorldValueFirstValueMapped
+40,9216,US or SS,RealWorldValueFirstValueMapped
+40,9220,SQ,QuantityDefinitionSequence
+40,9224,FD,RealWorldValueIntercept
+40,9225,FD,RealWorldValueSlope
+42,10,ST,DocumentTitle
+42,11,OB,EncapsulatedDocument
+42,12,LO,MIMETypeofEncapsulatedDocument
+42,13,SQ,SourceInstanceSequence
+42,14,LO,ListofMIMETypes
+44,1,ST,ProductPackageIdentifier
+44,2,CS,SubstanceAdministrationApproval
+44,3,LT,ApprovalStatusFurtherDescription
+44,4,DT,ApprovalStatusDateTime
+44,7,SQ,ProductTypeCodeSequence
+44,8,LO,ProductName
+44,9,LT,ProductDescription
+44,10,DT,SubstanceAdministrationDateTime
+44,11,LO,SubstanceAdministrationNotes
+44,12,LO,SubstanceAdministrationDeviceID
+44,13,SQ,ProductParameterSequence
+44,19,SQ,SubstanceAdministrationParameterSequence
+46,12,LO,LensDescription
+46,14,SQ,RightLensSequence
+46,15,SQ,LeftLensSequence
+46,16,SQ,UnspecifiedLateralityLensSequence
+46,18,SQ,CylinderSequence
+46,28,SQ,PrismSequence
+46,30,FD,HorizontalPrismPower
+46,32,CS,HorizontalPrismBase
+46,34,FD,VerticalPrismPower
+46,36,CS,VerticalPrismBase
+46,38,CS,LensSegmentType
+46,40,FD,OpticalTransmittance
+46,42,FD,ChannelWidth
+46,44,FD,PupilSize
+46,46,FD,CornealSize
+46,50,SQ,AutorefractionRightEyeSequence
+46,52,SQ,AutorefractionLeftEyeSequence
+46,60,FD,DistancePupillaryDistance
+46,62,FD,NearPupillaryDistance
+46,63,FD,IntermediatePupillaryDistance
+46,64,FD,OtherPupillaryDistance
+46,70,SQ,KeratometryRightEyeSequence
+46,71,SQ,KeratometryLeftEyeSequence
+46,74,SQ,SteepKeratometricAxisSequence
+46,75,FD,RadiusofCurvature
+46,76,FD,KeratometricPower
+46,77,FD,KeratometricAxis
+46,80,SQ,FlatKeratometricAxisSequence
+46,92,CS,BackgroundColor
+46,94,CS,Optotype
+46,95,CS,OptotypePresentation
+46,97,SQ,SubjectiveRefractionRightEyeSequence
+46,98,SQ,SubjectiveRefractionLeftEyeSequence
+46,100,SQ,AddNearSequence
+46,101,SQ,AddIntermediateSequence
+46,102,SQ,AddOtherSequence
+46,104,FD,AddPower
+46,106,FD,ViewingDistance
+46,121,SQ,VisualAcuityTypeCodeSequence
+46,122,SQ,VisualAcuityRightEyeSequence
+46,123,SQ,VisualAcuityLeftEyeSequence
+46,124,SQ,VisualAcuityBothEyesOpenSequence
+46,125,CS,ViewingDistanceType
+46,135,SS,VisualAcuityModifiers
+46,137,FD,DecimalVisualAcuity
+46,139,LO,OptotypeDetailedDefinition
+46,145,SQ,ReferencedRefractiveMeasurementsSequence
+46,146,FD,SpherePower
+46,147,FD,CylinderPower
+46,201,CS,CornealTopographySurface
+46,202,FL,CornealVertexLocation
+46,205,FL,EquivalentPupilRadius
+46,207,SQ,CornealTopographyMapTypeCodeSequence
+46,208,IS,VerticesoftheOutlineofPupil
+46,210,SQ,CornealTopographyMappingNormalsSequence
+46,211,SQ,MaximumCornealCurvatureSequence
+46,212,FL,MaximumCornealCurvature
+46,213,FL,MaximumCornealCurvatureLocation
+46,215,SQ,MinimumKeratometricSequence
+46,218,SQ,SimulatedKeratometricCylinderSequence
+46,220,FL,AverageCornealPower
+46,227,FL,AnalyzedArea
+46,230,FL,SurfaceRegularityIndex
+46,232,FL,SurfaceAsymmetryIndex
+46,234,FL,CornealEccentricityIndex
+46,236,FL,KeratoconusPredictionIndex
+46,238,FL,DecimalPotentialVisualAcuity
+46,242,CS,CornealTopographyMapQualityEvaluation
+46,244,SQ,SourceImageCornealProcessedDataSequence
+46,247,FL,CornealPointLocation
+46,248,CS,CornealPointEstimated
+46,249,FL,AxialPower
+46,250,FL,TangentialPower
+46,251,FL,RefractivePower
+46,252,FL,RelativeElevation
+46,253,FL,CornealWavefront
+48,1,FL,ImagedVolumeWidth
+48,2,FL,ImagedVolumeHeight
+48,3,FL,ImagedVolumeDepth
+48,6,UL,TotalPixelMatrixColumns
+48,7,UL,TotalPixelMatrixRows
+48,8,SQ,TotalPixelMatrixOriginSequence
+48,10,CS,SpecimenLabelinImage
+48,11,CS,FocusMethod
+48,12,CS,ExtendedDepthofField
+48,13,US,NumberofFocalPlanes
+48,14,FL,DistanceBetweenFocalPlanes
+48,15,US,RecommendedAbsentPixelCIELabValue
+48,100,SQ,IlluminatorTypeCodeSequence
+48,105,SQ,OpticalPathSequence
+48,106,SH,OpticalPathIdentifier
+48,107,ST,OpticalPathDescription
+48,108,SQ,IlluminationColorCodeSequence
+48,110,SQ,SpecimenReferenceSequence
+48,111,DS,CondenserLensPower
+48,112,DS,ObjectiveLensPower
+48,113,DS,ObjectiveLensNumericalAperture
+48,120,SQ,PaletteColorLookupTableSequence
+48,200,SQ,ReferencedImageNavigationSequence
+48,201,US,TopLeftHandCornerofLocalizerArea
+48,202,US,BottomRightHandCornerofLocalizerArea
+48,207,SQ,OpticalPathIdentificationSequence
+48,301,CS,PixelOriginInterpretation
+50,4,CS,CalibrationImage
+50,10,SQ,DeviceSequence
+50,12,SQ,ContainerComponentTypeCodeSequence
+50,13,FD,ContainerComponentThickness
+50,14,DS,DeviceLength
+50,15,FD,ContainerComponentWidth
+50,16,DS,DeviceDiameter
+50,17,CS,DeviceDiameterUnits
+50,18,DS,DeviceVolume
+50,20,LO,DeviceDescription
+52,2,FD,OCTFocalDistance
+52,3,FD,BeamSpotSize
+52,4,FD,EffectiveRefractiveIndex
+52,6,CS,OCTAcquisitionDomain
+52,7,FD,OCTOpticalCenterWavelength
+52,8,FD,AxialResolution
+52,9,FD,RangingDepth
+52,13,FD,CatheterRotationalRate
+52,16,SQ,ModeofPercutaneousAccessSequence
+52,25,SQ,IntravascularOCTFrameTypeSequence
+52,26,CS,OCTZOffsetApplied
+52,27,SQ,IntravascularFrameContentSequence
+52,28,FD,IntravascularLongitudinalDistance
+52,29,SQ,IntravascularOCTFrameContentSequence
+52,30,SS,OCTZOffsetCorrection
+52,31,CS,CatheterDirectionofRotation
+52,33,FD,SeamLineLocation
+52,36,US,SeamLineIndex
+52,39,CS,InterpolationType
+54,10,US,EnergyWindowVector
+54,11,US,NumberofEnergyWindows
+54,12,SQ,EnergyWindowInformationSequence
+54,13,SQ,EnergyWindowRangeSequence
+54,14,DS,EnergyWindowLowerLimit
+54,15,DS,EnergyWindowUpperLimit
+54,16,SQ,RadiopharmaceuticalInformationSequence
+54,17,IS,ResidualSyringeCounts
+54,18,SH,EnergyWindowName
+54,20,US,DetectorVector
+54,21,US,NumberofDetectors
+54,22,SQ,DetectorInformationSequence
+54,30,US,PhaseVector
+54,31,US,NumberofPhases
+54,32,SQ,PhaseInformationSequence
+54,33,US,NumberofFramesinPhase
+54,36,IS,PhaseDelay
+54,38,IS,PauseBetweenFrames
+54,39,CS,PhaseDescription
+54,50,US,RotationVector
+54,51,US,NumberofRotations
+54,52,SQ,RotationInformationSequence
+54,53,US,NumberofFramesinRotation
+54,62,SQ,GatedInformationSequence
+54,63,SQ,DataInformationSequence
+54,70,US,TimeSlotVector
+54,71,US,NumberofTimeSlots
+54,72,SQ,TimeSlotInformationSequence
+54,73,DS,TimeSlotTime
+54,80,US,SliceVector
+54,81,US,NumberofSlices
+54,90,US,AngularViewVector
+54,100,US,TimeSliceVector
+54,101,US,NumberofTimeSlices
+54,200,DS,StartAngle
+54,202,CS,TypeofDetectorMotion
+54,210,IS,TriggerVector
+54,211,US,NumberofTriggersinPhase
+54,220,SQ,ViewCodeSequence
+54,222,SQ,ViewModifierCodeSequence
+54,300,SQ,RadionuclideCodeSequence
+54,302,SQ,AdministrationRouteCodeSequence
+54,304,SQ,RadiopharmaceuticalCodeSequence
+54,306,SQ,CalibrationDataSequence
+54,308,US,EnergyWindowNumber
+54,400,SH,ImageID
+54,410,SQ,PatientOrientationCodeSequence
+54,412,SQ,PatientOrientationModifierCodeSequence
+54,414,SQ,PatientGantryRelationshipCodeSequence
+54,500,CS,SliceProgressionDirection
+54,501,CS,ScanProgressionDirection
+54,1000,CS,SeriesType
+54,1001,CS,Units
+54,1002,CS,CountsSource
+54,1004,CS,ReprojectionMethod
+54,1006,CS,SUVType
+54,1100,CS,RandomsCorrectionMethod
+54,1101,LO,AttenuationCorrectionMethod
+54,1102,CS,DecayCorrection
+54,1103,LO,ReconstructionMethod
+54,1104,LO,DetectorLinesofResponseUsed
+54,1105,LO,ScatterCorrectionMethod
+54,1200,DS,AxialAcceptance
+54,1201,IS,AxialMash
+54,1202,IS,TransverseMash
+54,1203,DS,DetectorElementSize
+54,1210,DS,CoincidenceWindowWidth
+54,1220,CS,SecondaryCountsType
+54,1300,DS,FrameReferenceTime
+54,1311,IS,SecondaryCountsAccumulated
+54,1320,DS,SliceSensitivityFactor
+54,1321,DS,DecayFactor
+54,1322,DS,DoseCalibrationFactor
+54,1323,DS,ScatterFractionFactor
+54,1324,DS,DeadTimeFactor
+54,1330,US,ImageIndex
+60,3000,SQ,HistogramSequence
+60,3002,US,HistogramNumberofBins
+60,3004,US or SS,HistogramFirstBinValue
+60,3006,US or SS,HistogramLastBinValue
+60,3008,US,HistogramBinWidth
+60,3010,LO,HistogramExplanation
+60,3020,UL,HistogramData
+62,1,CS,SegmentationType
+62,2,SQ,SegmentSequence
+62,3,SQ,SegmentedPropertyCategoryCodeSequence
+62,4,US,SegmentNumber
+62,5,LO,SegmentLabel
+62,6,ST,SegmentDescription
+62,8,CS,SegmentAlgorithmType
+62,9,LO,SegmentAlgorithmName
+62,10,CS,SegmentationFractionalType
+62,11,SQ,SegmentedPropertyTypeModifierCodeSequence
+62,12,SQ,UsedSegmentsSequence
+62,20,UT,TrackingID
+62,21,UI,TrackingUID
+64,2,SQ,DeformableRegistrationSequence
+64,3,UI,SourceFrameofReferenceUID
+64,5,SQ,DeformableRegistrationGridSequence
+64,7,UL,GridDimensions
+64,8,FD,GridResolution
+64,9,OF,VectorGridData
+64,10,SQ,PostDeformationMatrixRegistrationSequence
+66,1,UL,NumberofSurfaces
+66,2,SQ,SurfaceSequence
+66,3,UL,SurfaceNumber
+66,4,LT,SurfaceComments
+66,9,CS,SurfaceProcessing
+66,10,CS,Manifold
+66,11,SQ,SurfacePointsSequence
+66,12,SQ,SurfacePointsNormalsSequence
+66,13,SQ,SurfaceMeshPrimitivesSequence
+66,15,UL,NumberofSurfacePoints
+66,16,OF,PointCoordinatesData
+66,17,FL,PointPositionAccuracy
+66,18,FL,MeanPointDistance
+66,19,FL,MaximumPointDistance
+66,20,FL,VectorAccuracy
+66,21,OF,VectorCoordinateData
+66,26,SQ,TriangleStripSequence
+66,27,SQ,TriangleFanSequence
+66,28,SQ,LineSequence
+66,30,SQ,AlgorithmNameCodeSequence
+66,31,LO,AlgorithmVersion
+66,32,LT,AlgorithmParameters
+66,34,SQ,FacetSequence
+66,35,SQ,SurfaceProcessingAlgorithmIdentificationSequence
+66,36,LO,AlgorithmName
+66,37,FL,RecommendedPointRadius
+66,38,FL,RecommendedLineThickness
+66,40,OL,LongPrimitivePointIndexList
+66,41,OL,LongTrianglePointIndexList
+66,42,OL,LongEdgePointIndexList
+66,43,OL,LongVertexPointIndexList
+66,101,SQ,TrackSetSequence
+66,102,SQ,TrackSequence
+66,103,OW,RecommendedDisplayCIELabValueList
+66,104,SQ,TrackingAlgorithmIdentificationSequence
+66,105,UL,TrackSetNumber
+66,106,LO,TrackSetLabel
+66,107,UT,TrackSetDescription
+66,108,SQ,TrackSetAnatomicalTypeCodeSequence
+66,121,SQ,MeasurementsSequence
+66,124,SQ,TrackSetStatisticsSequence
+66,125,OF,FloatingPointValues
+66,129,OL,TrackPointIndexList
+66,130,SQ,TrackStatisticsSequence
+66,132,SQ,MeasurementValuesSequence
+66,133,SQ,DiffusionAcquisitionCodeSequence
+66,134,SQ,DiffusionModelCodeSequence
+68,6210,LO,ImplantSize
+68,6221,LO,ImplantTemplateVersion
+68,6222,SQ,ReplacedImplantTemplateSequence
+68,6223,CS,ImplantType
+68,6224,SQ,DerivationImplantTemplateSequence
+68,6225,SQ,OriginalImplantTemplateSequence
+68,6226,DT,EffectiveDateTime
+68,6230,SQ,ImplantTargetAnatomySequence
+68,6260,SQ,InformationFromManufacturerSequence
+68,6265,SQ,NotificationFromManufacturerSequence
+68,6270,DT,InformationIssueDateTime
+68,6280,ST,InformationSummary
+68,6300,OB,HPGLDocument
+68,6310,US,HPGLContourPenNumber
+68,6320,SQ,HPGLPenSequence
+68,6330,US,HPGLPenNumber
+68,6340,LO,HPGLPenLabel
+68,6345,ST,HPGLPenDescription
+68,6346,FD,RecommendedRotationPoint
+68,6347,FD,BoundingRectangle
+68,6350,US,ImplantTemplate3DModelSurfaceNumber
+68,6360,SQ,SurfaceModelDescriptionSequence
+68,6380,LO,SurfaceModelLabel
+68,6390,FD,SurfaceModelScalingFactor
+68,6400,SQ,MatingFeatureDegreeofFreedomSequence
+68,6410,US,DegreeofFreedomID
+68,6420,CS,DegreeofFreedomType
+68,6430,SQ,2DMatingFeatureCoordinatesSequence
+68,6440,US,ReferencedHPGLDocumentID
+68,6450,FD,2DMatingPoint
+68,6460,FD,2DMatingAxes
+68,6470,SQ,2DDegreeofFreedomSequence
+68,6490,FD,3DDegreeofFreedomAxis
+68,6500,SQ,PlanningLandmarkPointSequence
+68,6510,SQ,PlanningLandmarkLineSequence
+68,6520,SQ,PlanningLandmarkPlaneSequence
+68,6530,US,PlanningLandmarkID
+68,6540,LO,PlanningLandmarkDescription
+68,6545,SQ,PlanningLandmarkIdentificationCodeSequence
+68,6550,SQ,2DPointCoordinatesSequence
+68,6560,FD,2DPointCoordinates
+68,6590,FD,3DPointCoordinates
+68,6610,FD,3DPlaneOrigin
+68,6620,FD,3DPlaneNormal
+70,1,SQ,GraphicAnnotationSequence
+70,2,CS,GraphicLayer
+70,3,CS,BoundingBoxAnnotationUnits
+70,4,CS,AnchorPointAnnotationUnits
+70,5,CS,GraphicAnnotationUnits
+70,6,ST,UnformattedTextValue
+70,8,SQ,TextObjectSequence
+70,9,SQ,GraphicObjectSequence
+70,10,FL,BoundingBoxTopLeftHandCorner
+70,11,FL,BoundingBoxBottomRightHandCorner
+70,12,CS,BoundingBoxTextHorizontalJustification
+70,14,FL,AnchorPoint
+70,15,CS,AnchorPointVisibility
+70,20,US,GraphicDimensions
+70,21,US,NumberofGraphicPoints
+70,22,FL,GraphicData
+70,23,CS,GraphicType
+70,24,CS,GraphicFilled
+70,41,CS,ImageHorizontalFlip
+70,42,US,ImageRotation
+70,52,SL,DisplayedAreaTopLeftHandCorner
+70,53,SL,DisplayedAreaBottomRightHandCorner
+70,60,SQ,GraphicLayerSequence
+70,62,IS,GraphicLayerOrder
+70,66,US,GraphicLayerRecommendedDisplayGrayscaleValue
+70,68,LO,GraphicLayerDescription
+70,80,CS,ContentLabel
+70,81,LO,ContentDescription
+70,82,DA,PresentationCreationDate
+70,83,TM,PresentationCreationTime
+70,87,SQ,AlternateContentDescriptionSequence
+70,100,CS,PresentationSizeMode
+70,101,DS,PresentationPixelSpacing
+70,102,IS,PresentationPixelAspectRatio
+70,103,FL,PresentationPixelMagnificationRatio
+70,207,LO,GraphicGroupLabel
+70,208,ST,GraphicGroupDescription
+70,209,SQ,CompoundGraphicSequence
+70,226,UL,CompoundGraphicInstanceID
+70,227,LO,FontName
+70,228,CS,FontNameType
+70,229,LO,CSSFontName
+70,230,FD,RotationAngle
+70,231,SQ,TextStyleSequence
+70,232,SQ,LineStyleSequence
+70,233,SQ,FillStyleSequence
+70,234,SQ,GraphicGroupSequence
+70,241,US,TextColorCIELabValue
+70,242,CS,HorizontalAlignment
+70,243,CS,VerticalAlignment
+70,244,CS,ShadowStyle
+70,245,FL,ShadowOffsetX
+70,246,FL,ShadowOffsetY
+70,247,US,ShadowColorCIELabValue
+70,248,CS,Underlined
+70,249,CS,Bold
+70,250,CS,Italic
+70,251,US,PatternOnColorCIELabValue
+70,252,US,PatternOffColorCIELabValue
+70,253,FL,LineThickness
+70,254,CS,LineDashingStyle
+70,255,UL,LinePattern
+70,256,OB,FillPattern
+70,257,CS,FillMode
+70,258,FL,ShadowOpacity
+70,261,FL,GapLength
+70,262,FL,DiameterofVisibility
+70,273,FL,RotationPoint
+70,274,CS,TickAlignment
+70,278,CS,ShowTickLabel
+70,279,CS,TickLabelAlignment
+70,282,CS,CompoundGraphicUnits
+70,284,FL,PatternOnOpacity
+70,285,FL,PatternOffOpacity
+70,287,SQ,MajorTicksSequence
+70,288,FL,TickPosition
+70,289,SH,TickLabel
+70,294,CS,CompoundGraphicType
+70,295,UL,GraphicGroupID
+70,306,CS,ShapeType
+70,308,SQ,RegistrationSequence
+70,309,SQ,MatrixRegistrationSequence
+70,310,SH,FiducialIdentifier
+70,311,SQ,FiducialIdentifierCodeSequence
+70,312,FD,ContourUncertaintyRadius
+70,314,SQ,UsedFiducialsSequence
+70,318,SQ,GraphicCoordinatesDataSequence
+70,401,US,GraphicLayerRecommendedDisplayCIELabValue
+70,402,SQ,BlendingSequence
+70,403,FL,RelativeOpacity
+70,404,SQ,ReferencedSpatialRegistrationSequence
+70,405,CS,BlendingPosition
+70,1101,UI,PresentationDisplayCollectionUID
+70,1102,UI,PresentationSequenceCollectionUID
+70,1103,US,PresentationSequencePositionIndex
+70,1104,SQ,RenderedImageReferenceSequence
+70,1201,SQ,VolumetricPresentationStateInputSequence
+70,1202,CS,PresentationInputType
+70,1203,US,InputSequencePositionIndex
+70,1204,CS,Crop
+70,1205,US,CroppingSpecificationIndex
+70,1206,CS,CompositingMethod
+70,1207,US,VolumetricPresentationInputNumber
+70,1208,CS,ImageVolumeGeometry
+70,1301,SQ,VolumeCroppingSequence
+70,1302,CS,VolumeCroppingMethod
+70,1303,FD,BoundingBoxCrop
+70,1304,SQ,ObliqueCroppingPlaneSequence
+70,1305,FD,Plane
+70,1306,FD,PlaneNormal
+70,1309,US,CroppingSpecificationNumber
+70,1502,CS,MPRThicknessType
+70,1503,FD,MPRSlabThickness
+70,1505,FD,MPRTopLeftHandCorner
+70,1507,FD,MPRViewWidthDirection
+70,1508,FD,MPRViewWidth
+70,1511,FD,MPRViewHeightDirection
+70,1512,FD,MPRViewHeight
+70,1801,SQ,PresentationStateClassificationComponentSequence
+70,1802,CS,ComponentType
+70,1803,SQ,ComponentInputSequence
+70,1804,US,VolumetricPresentationInputIndex
+70,1805,SQ,PresentationStateCompositorComponentSequence
+70,1806,SQ,WeightingTransferFunctionSequence
+70,1807,US,WeightingLookupTableDescriptor
+70,1808,OB,WeightingLookupTableData
+70,1901,SQ,VolumetricAnnotationSequence
+70,1903,SQ,ReferencedStructuredContextSequence
+70,1904,UI,ReferencedContentItem
+70,1905,SQ,VolumetricPresentationInputAnnotationSequence
+70,1907,CS,AnnotationClipping
+72,2,SH,HangingProtocolName
+72,4,LO,HangingProtocolDescription
+72,6,CS,HangingProtocolLevel
+72,8,LO,HangingProtocolCreator
+72,10,LO,HangingProtocolUserGroupName
+72,12,SQ,SourceHangingProtocolSequence
+72,14,US,NumberofPriorsReferenced
+72,20,SQ,ImageSetsSequence
+72,22,SQ,ImageSetSelectorSequence
+72,24,CS,ImageSetSelectorUsageFlag
+72,26,AT,SelectorAttribute
+72,28,US,SelectorValueNumber
+72,30,SQ,TimeBasedImageSetsSequence
+72,32,US,ImageSetNumber
+72,34,CS,ImageSetSelectorCategory
+72,38,US,RelativeTime
+72,40,LO,ImageSetLabel
+72,50,CS,SelectorAttributeVR
+72,52,AT,SelectorSequencePointer
+72,54,LO,SelectorSequencePointerPrivateCreator
+72,56,LO,SelectorAttributePrivateCreator
+72,60,AT,SelectorATValue
+72,61,DA,SelectorDAValue
+72,62,CS,SelectorCSValue
+72,63,DT,SelectorDTValue
+72,64,IS,SelectorISValue
+72,65,OB,SelectorOBValue
+72,66,LO,SelectorLOValue
+72,67,OF,SelectorOFValue
+72,68,LT,SelectorLTValue
+72,69,OW,SelectorOWValue
+72,70,UT,SelectorUTValue
+72,71,UR,SelectorURValue
+72,72,DS,SelectorDSValue
+72,73,OD,SelectorODValue
+72,74,FD,SelectorFDValue
+72,75,OL,SelectorOLValue
+72,76,FL,SelectorFLValue
+72,78,UL,SelectorULValue
+72,80,SQ,SelectorCodeSequenceValue
+72,100,US,NumberofScreens
+72,102,SQ,NominalScreenDefinitionSequence
+72,104,US,NumberofVerticalPixels
+72,106,US,NumberofHorizontalPixels
+72,108,FD,DisplayEnvironmentSpatialPosition
+72,200,SQ,DisplaySetsSequence
+72,202,US,DisplaySetNumber
+72,203,LO,DisplaySetLabel
+72,204,US,DisplaySetPresentationGroup
+72,206,LO,DisplaySetPresentationGroupDescription
+72,208,CS,PartialDataDisplayHandling
+72,210,SQ,SynchronizedScrollingSequence
+72,212,US,DisplaySetScrollingGroup
+72,214,SQ,NavigationIndicatorSequence
+72,216,US,NavigationDisplaySet
+72,218,US,ReferenceDisplaySets
+72,300,SQ,ImageBoxesSequence
+72,302,US,ImageBoxNumber
+72,304,CS,ImageBoxLayoutType
+72,306,US,ImageBoxTileHorizontalDimension
+72,308,US,ImageBoxTileVerticalDimension
+72,310,CS,ImageBoxScrollDirection
+72,312,CS,ImageBoxSmallScrollType
+72,314,US,ImageBoxSmallScrollAmount
+72,316,CS,ImageBoxLargeScrollType
+72,318,US,ImageBoxLargeScrollAmount
+72,320,US,ImageBoxOverlapPriority
+72,400,SQ,FilterOperationsSequence
+72,420,US,StructuredDisplayBackgroundCIELabValue
+72,421,US,EmptyImageBoxCIELabValue
+72,422,SQ,StructuredDisplayImageBoxSequence
+72,424,SQ,StructuredDisplayTextBoxSequence
+72,427,SQ,ReferencedFirstFrameSequence
+72,430,SQ,ImageBoxSynchronizationSequence
+72,432,US,SynchronizedImageBoxList
+72,434,CS,TypeofSynchronization
+72,500,CS,BlendingOperationType
+72,510,CS,ReformattingOperationType
+72,512,FD,ReformattingThickness
+72,514,FD,ReformattingInterval
+72,516,CS,ReformattingOperationInitialViewDirection
+72,520,CS,3DRenderingType
+72,600,SQ,SortingOperationsSequence
+72,604,CS,SortingDirection
+72,700,CS,DisplaySetPatientOrientation
+72,702,CS,VOIType
+72,706,CS,ShowGrayscaleInverted
+72,710,CS,ShowImageTrueSizeFlag
+72,712,CS,ShowGraphicAnnotationFlag
+72,714,CS,ShowPatientDemographicsFlag
+72,716,CS,ShowAcquisitionTechniquesFlag
+72,717,CS,DisplaySetHorizontalJustification
+72,718,CS,DisplaySetVerticalJustification
+74,120,FD,ContinuationStartMeterset
+74,121,FD,ContinuationEndMeterset
+74,1000,CS,ProcedureStepState
+74,1002,SQ,ProcedureStepProgressInformationSequence
+74,1004,DS,ProcedureStepProgress
+74,1006,ST,ProcedureStepProgressDescription
+74,1008,SQ,ProcedureStepCommunicationsURISequence
+74,1020,SQ,BeamTaskSequence
+74,1022,CS,BeamTaskType
+74,1025,CS,AutosequenceFlag
+74,1026,FD,TableTopVerticalAdjustedPosition
+74,1027,FD,TableTopLongitudinalAdjustedPosition
+74,1028,FD,TableTopLateralAdjustedPosition
+74,1030,SQ,DeliveryVerificationImageSequence
+74,1032,CS,VerificationImageTiming
+74,1034,CS,DoubleExposureFlag
+74,1036,CS,DoubleExposureOrdering
+74,1040,SQ,RelatedReferenceRTImageSequence
+74,1042,SQ,GeneralMachineVerificationSequence
+74,1044,SQ,ConventionalMachineVerificationSequence
+74,1046,SQ,IonMachineVerificationSequence
+74,1048,SQ,FailedAttributesSequence
+74,1050,SQ,AttributeOccurrenceSequence
+74,1052,AT,AttributeOccurrencePointer
+74,1054,UL,AttributeItemSelector
+74,1056,LO,AttributeOccurrencePrivateCreator
+74,1057,IS,SelectorSequencePointerItems
+74,1200,CS,ScheduledProcedureStepPriority
+74,1202,LO,WorklistLabel
+74,1204,LO,ProcedureStepLabel
+74,1210,SQ,ScheduledProcessingParametersSequence
+74,1212,SQ,PerformedProcessingParametersSequence
+74,1216,SQ,UnifiedProcedureStepPerformedProcedureSequence
+74,1224,SQ,ReplacedProcedureStepSequence
+74,1230,LO,DeletionLock
+74,1234,AE,ReceivingAE
+74,1236,AE,RequestingAE
+74,1238,LT,ReasonforCancellation
+74,1242,CS,SCPStatus
+74,1244,CS,SubscriptionListStatus
+74,1246,CS,UnifiedProcedureStepListStatus
+74,1324,UL,BeamOrderIndex
+74,1338,FD,DoubleExposureMeterset
+74,1401,SQ,BrachyTaskSequence
+74,1402,DS,ContinuationStartTotalReferenceAirKerma
+74,1403,DS,ContinuationEndTotalReferenceAirKerma
+74,1404,IS,ContinuationPulseNumber
+74,1405,SQ,ChannelDeliveryOrderSequence
+74,1406,IS,ReferencedChannelNumber
+74,1407,DS,StartCumulativeTimeWeight
+74,1408,DS,EndCumulativeTimeWeight
+74,1409,SQ,OmittedChannelSequence
+76,1,LO,ImplantAssemblyTemplateName
+76,3,LO,ImplantAssemblyTemplateIssuer
+76,6,LO,ImplantAssemblyTemplateVersion
+76,8,SQ,ReplacedImplantAssemblyTemplateSequence
+76,10,SQ,ImplantAssemblyTemplateTargetAnatomySequence
+76,20,SQ,ProcedureTypeCodeSequence
+76,30,LO,SurgicalTechnique
+76,32,SQ,ComponentTypesSequence
+76,34,CS,ComponentTypeCodeSequence
+76,36,CS,ExclusiveComponentType
+76,38,CS,MandatoryComponentType
+76,40,SQ,ComponentSequence
+76,55,US,ComponentID
+76,60,SQ,ComponentAssemblySequence
+76,70,US,Component1ReferencedID
+76,80,US,Component1ReferencedMatingFeatureSetID
+76,90,US,Component1ReferencedMatingFeatureID
+78,1,LO,ImplantTemplateGroupName
+78,10,ST,ImplantTemplateGroupDescription
+78,20,LO,ImplantTemplateGroupIssuer
+78,24,LO,ImplantTemplateGroupVersion
+78,26,SQ,ReplacedImplantTemplateGroupSequence
+78,28,SQ,ImplantTemplateGroupTargetAnatomySequence
+78,50,FD,3DImplantTemplateGroupMemberMatchingPoint
+78,60,FD,3DImplantTemplateGroupMemberMatchingAxes
+78,70,SQ,ImplantTemplateGroupMemberMatching2DCoordinatesSequence
+78,90,FD,2DImplantTemplateGroupMemberMatchingPoint
+80,1,SQ,SurfaceScanAcquisitionTypeCodeSequence
+80,2,SQ,SurfaceScanModeCodeSequence
+80,3,SQ,RegistrationMethodCodeSequence
+80,4,FD,ShotDurationTime
+80,5,FD,ShotOffsetTime
+80,6,US,SurfacePointPresentationValueData
+80,7,US,SurfacePointColorCIELabValueData
+80,8,SQ,UVMappingSequence
+80,9,SH,TextureLabel
+80,10,OF,UValueData
+80,11,OF,VValueData
+80,12,SQ,ReferencedTextureSequence
+80,13,SQ,ReferencedSurfaceDataSequence
+82,1,CS,AssessmentSummary
+82,3,UT,AssessmentSummaryDescription
+82,4,SQ,AssessedSOPInstanceSequence
+82,5,SQ,ReferencedComparisonSOPInstanceSequence
+82,6,UL,NumberofAssessmentObservations
+82,7,SQ,AssessmentObservationsSequence
+82,8,CS,ObservationSignificance
+82,10,SQ,AssessedAttributeValueSequence
+82,16,LO,AssessmentSetID
+82,17,SQ,AssessmentRequesterSequence
+82,18,LO,SelectorAttributeName
+82,19,LO,SelectorAttributeKeyword
+82,21,SQ,AssessmentTypeCodeSequence
+82,22,SQ,ObservationBasisCodeSequence
+82,23,LO,AssessmentLabel
+82,32,CS,ConstraintType
+82,33,UT,SpecificationSelectionGuidance
+82,34,SQ,ConstraintValueSequence
+82,35,SQ,RecommendedDefaultValueSequence
+82,36,CS,ConstraintViolationSignificance
+82,37,UT,ConstraintViolationCondition
+88,200,SQ,IconImageSequence
+100,410,CS,SOPInstanceStatus
+100,420,DT,SOPAuthorizationDateTime
+100,424,LT,SOPAuthorizationComment
+100,426,LO,AuthorizationEquipmentCertificationNumber
+400,5,US,MACIDNumber
+400,10,UI,MACCalculationTransferSyntaxUID
+400,15,CS,MACAlgorithm
+400,20,AT,DataElementsSigned
+400,100,UI,DigitalSignatureUID
+400,105,DT,DigitalSignatureDateTime
+400,110,CS,CertificateType
+400,115,OB,CertificateofSigner
+400,120,OB,Signature
+400,305,CS,CertifiedTimestampType
+400,310,OB,CertifiedTimestamp
+400,401,SQ,DigitalSignaturePurposeCodeSequence
+400,402,SQ,ReferencedDigitalSignatureSequence
+400,403,SQ,ReferencedSOPInstanceMACSequence
+400,404,OB,MAC
+400,500,SQ,EncryptedAttributesSequence
+400,510,UI,EncryptedContentTransferSyntaxUID
+400,520,OB,EncryptedContent
+400,550,SQ,ModifiedAttributesSequence
+400,561,SQ,OriginalAttributesSequence
+400,562,DT,AttributeModificationDateTime
+400,563,LO,ModifyingSystem
+400,564,LO,SourceofPreviousValues
+400,565,CS,ReasonfortheAttributeModification
+2000,10,IS,NumberofCopies
+2000,20,CS,PrintPriority
+2000,30,CS,MediumType
+2000,40,CS,FilmDestination
+2000,50,LO,FilmSessionLabel
+2000,60,IS,MemoryAllocation
+2000,61,IS,MaximumMemoryAllocation
+2000,500,SQ,ReferencedFilmBoxSequence
+2010,10,ST,ImageDisplayFormat
+2010,30,CS,AnnotationDisplayFormatID
+2010,40,CS,FilmOrientation
+2010,50,CS,FilmSizeID
+2010,52,CS,PrinterResolutionID
+2010,54,CS,DefaultPrinterResolutionID
+2010,60,CS,MagnificationType
+2010,80,CS,SmoothingType
+2010,100,CS,BorderDensity
+2010,110,CS,EmptyImageDensity
+2010,120,US,MinDensity
+2010,130,US,MaxDensity
+2010,140,CS,Trim
+2010,150,ST,ConfigurationInformation
+2010,152,LT,ConfigurationInformationDescription
+2010,154,IS,MaximumCollatedFilms
+2010,160,US,ReflectedAmbientLight
+2010,376,DS,PrinterPixelSpacing
+2010,500,SQ,ReferencedFilmSessionSequence
+2010,510,SQ,ReferencedImageBoxSequence
+2010,520,SQ,ReferencedBasicAnnotationBoxSequence
+2020,10,US,ImageBoxPosition
+2020,20,CS,Polarity
+2020,30,DS,RequestedImageSize
+2020,50,CS,RequestedResolutionID
+2020,110,SQ,BasicGrayscaleImageSequence
+2020,111,SQ,BasicColorImageSequence
+2030,10,US,AnnotationPosition
+2030,20,LO,TextString
+2050,10,SQ,PresentationLUTSequence
+2050,20,CS,PresentationLUTShape
+2050,500,SQ,ReferencedPresentationLUTSequence
+2100,20,CS,ExecutionStatus
+2100,30,CS,ExecutionStatusInfo
+2100,40,DA,CreationDate
+2100,50,TM,CreationTime
+2100,70,AE,Originator
+2100,140,AE,DestinationAE
+2100,160,SH,OwnerID
+2100,170,IS,NumberofFilms
+2110,10,CS,PrinterStatus
+2110,20,CS,PrinterStatusInfo
+2110,30,LO,PrinterName
+2200,1,CS,LabelUsingInformationExtractedFromInstances
+2200,2,UT,LabelText
+2200,3,CS,LabelStyleSelection
+2200,4,LT,MediaDisposition
+2200,5,LT,BarcodeValue
+2200,6,CS,BarcodeSymbology
+2200,7,CS,AllowMediaSplitting
+2200,9,CS,IncludeDisplayApplication
+2200,20,CS,RequestPriority
+3002,2,SH,RTImageLabel
+3002,3,LO,RTImageName
+3002,4,ST,RTImageDescription
+3002,10,DS,RTImageOrientation
+3002,11,DS,ImagePlanePixelSpacing
+3002,12,DS,RTImagePosition
+3002,20,SH,RadiationMachineName
+3002,22,DS,RadiationMachineSAD
+3002,24,DS,RadiationMachineSSD
+3002,26,DS,RTImageSID
+3002,28,DS,SourcetoReferenceObjectDistance
+3002,29,IS,FractionNumber
+3002,30,SQ,ExposureSequence
+3002,32,DS,MetersetExposure
+3002,34,DS,DiaphragmPosition
+3002,40,SQ,FluenceMapSequence
+3002,41,CS,FluenceDataSource
+3002,42,DS,FluenceDataScale
+3002,50,SQ,PrimaryFluenceModeSequence
+3002,51,CS,FluenceMode
+3002,52,SH,FluenceModeID
+3004,1,CS,DVHType
+3004,2,CS,DoseUnits
+3004,4,CS,DoseType
+3004,5,CS,SpatialTransformofDose
+3004,6,LO,DoseComment
+3004,8,DS,NormalizationPoint
+3004,10,SQ,RTDoseROISequence
+3004,12,DS,DoseValue
+3004,14,CS,TissueHeterogeneityCorrection
+3004,40,DS,DVHNormalizationPoint
+3004,42,DS,DVHNormalizationDoseValue
+3004,50,SQ,DVHSequence
+3004,52,DS,DVHDoseScaling
+3004,54,CS,DVHVolumeUnits
+3004,56,IS,DVHNumberofBins
+3004,58,DS,DVHData
+3004,60,SQ,DVHReferencedROISequence
+3004,62,CS,DVHROIContributionType
+3004,70,DS,DVHMinimumDose
+3004,72,DS,DVHMaximumDose
+3004,74,DS,DVHMeanDose
+3006,2,SH,StructureSetLabel
+3006,4,LO,StructureSetName
+3006,6,ST,StructureSetDescription
+3006,8,DA,StructureSetDate
+3006,9,TM,StructureSetTime
+3006,10,SQ,ReferencedFrameofReferenceSequence
+3006,12,SQ,RTReferencedStudySequence
+3006,14,SQ,RTReferencedSeriesSequence
+3006,16,SQ,ContourImageSequence
+3006,18,SQ,PredecessorStructureSetSequence
+3006,20,SQ,StructureSetROISequence
+3006,22,IS,ROINumber
+3006,24,UI,ReferencedFrameofReferenceUID
+3006,26,LO,ROIName
+3006,28,ST,ROIDescription
+3006,30,SQ,RTRelatedROISequence
+3006,33,CS,RTROIRelationship
+3006,36,CS,ROIGenerationAlgorithm
+3006,38,LO,ROIGenerationDescription
+3006,39,SQ,ROIContourSequence
+3006,40,SQ,ContourSequence
+3006,42,CS,ContourGeometricType
+3006,44,DS,ContourSlabThickness
+3006,45,DS,ContourOffsetVector
+3006,46,IS,NumberofContourPoints
+3006,48,IS,ContourNumber
+3006,49,IS,AttachedContours
+3006,50,DS,ContourData
+3006,80,SQ,RTROIObservationsSequence
+3006,82,IS,ObservationNumber
+3006,84,IS,ReferencedROINumber
+3006,85,SH,ROIObservationLabel
+3006,86,SQ,RTROIIdentificationCodeSequence
+3006,88,ST,ROIObservationDescription
+3008,10,SQ,MeasuredDoseReferenceSequence
+3008,12,ST,MeasuredDoseDescription
+3008,14,CS,MeasuredDoseType
+3008,16,DS,MeasuredDoseValue
+3008,20,SQ,TreatmentSessionBeamSequence
+3008,21,SQ,TreatmentSessionIonBeamSequence
+3008,22,IS,CurrentFractionNumber
+3008,24,DA,TreatmentControlPointDate
+3008,25,TM,TreatmentControlPointTime
+3008,30,SQ,ReferencedTreatmentRecordSequence
+3008,32,DS,SpecifiedPrimaryMeterset
+3008,33,DS,SpecifiedSecondaryMeterset
+3008,36,DS,DeliveredPrimaryMeterset
+3008,37,DS,DeliveredSecondaryMeterset
+3008,40,SQ,ControlPointDeliverySequence
+3008,41,SQ,IonControlPointDeliverySequence
+3008,42,DS,SpecifiedMeterset
+3008,44,DS,DeliveredMeterset
+3008,45,FL,MetersetRateSet
+3008,46,FL,MetersetRateDelivered
+3008,47,FL,ScanSpotMetersetsDelivered
+3008,48,DS,DoseRateDelivered
+3008,50,SQ,TreatmentSummaryCalculatedDoseReferenceSequence
+3008,52,DS,CumulativeDosetoDoseReference
+3008,54,DA,FirstTreatmentDate
+3008,56,DA,MostRecentTreatmentDate
+3008,60,SQ,OverrideSequence
+3008,61,AT,ParameterSequencePointer
+3008,62,AT,OverrideParameterPointer
+3008,63,IS,ParameterItemIndex
+3008,64,IS,MeasuredDoseReferenceNumber
+3008,65,AT,ParameterPointer
+3008,66,ST,OverrideReason
+3008,68,SQ,CorrectedParameterSequence
+3008,70,SQ,CalculatedDoseReferenceSequence
+3008,72,IS,CalculatedDoseReferenceNumber
+3008,74,ST,CalculatedDoseReferenceDescription
+3008,76,DS,CalculatedDoseReferenceDoseValue
+3008,78,DS,StartMeterset
+3008,80,SQ,ReferencedMeasuredDoseReferenceSequence
+3008,82,IS,ReferencedMeasuredDoseReferenceNumber
+3008,90,SQ,ReferencedCalculatedDoseReferenceSequence
+3008,92,IS,ReferencedCalculatedDoseReferenceNumber
+3008,100,SQ,RecordedSourceSequence
+3008,105,LO,SourceSerialNumber
+3008,110,SQ,TreatmentSessionApplicationSetupSequence
+3008,116,CS,ApplicationSetupCheck
+3008,120,SQ,RecordedBrachyAccessoryDeviceSequence
+3008,122,IS,ReferencedBrachyAccessoryDeviceNumber
+3008,130,SQ,RecordedChannelSequence
+3008,132,DS,SpecifiedChannelTotalTime
+3008,134,DS,DeliveredChannelTotalTime
+3008,136,IS,SpecifiedNumberofPulses
+3008,138,IS,DeliveredNumberofPulses
+3008,140,SQ,RecordedSourceApplicatorSequence
+3008,142,IS,ReferencedSourceApplicatorNumber
+3008,150,SQ,RecordedChannelShieldSequence
+3008,152,IS,ReferencedChannelShieldNumber
+3008,160,SQ,BrachyControlPointDeliveredSequence
+3008,162,DA,SafePositionExitDate
+3008,164,TM,SafePositionExitTime
+3008,166,DA,SafePositionReturnDate
+3008,168,TM,SafePositionReturnTime
+3008,171,SQ,PulseSpecificBrachyControlPointDeliveredSequence
+3008,172,US,PulseNumber
+3008,173,SQ,BrachyPulseControlPointDeliveredSequence
+3008,200,CS,CurrentTreatmentStatus
+3008,202,ST,TreatmentStatusComment
+3008,220,SQ,FractionGroupSummarySequence
+3008,223,IS,ReferencedFractionNumber
+3008,224,CS,FractionGroupType
+3008,230,CS,BeamStopperPosition
+3008,240,SQ,FractionStatusSummarySequence
+3008,250,DA,TreatmentDate
+3008,251,TM,TreatmentTime
+4010,1,CS,LowEnergyDetectors
+4010,2,CS,HighEnergyDetectors
+4010,4,SQ,DetectorGeometrySequence
+4010,1001,SQ,ThreatROIVoxelSequence
+4010,1004,FL,ThreatROIBase
+4010,1005,FL,ThreatROIExtents
+4010,1006,OB,ThreatROIBitmap
+4010,1007,SH,RouteSegmentID
+4010,1008,CS,GantryType
+4010,1009,CS,OOIOwnerType
+4010,1010,US,PotentialThreatObjectID
+4010,1011,SQ,ThreatSequence
+4010,1012,CS,ThreatCategory
+4010,1013,LT,ThreatCategoryDescription
+4010,1014,CS,ATDAbilityAssessment
+4010,1015,CS,ATDAssessmentFlag
+4010,1016,FL,ATDAssessmentProbability
+4010,1017,FL,Mass
+4010,1018,FL,Density
+4010,1019,FL,ZEffective
+4010,1020,CS,RouteSegmentLocationIDType
+4010,1021,CS,AbortReason
+4010,1023,FL,VolumeofPTO
+4010,1024,CS,AbortFlag
+4010,1025,DT,RouteSegmentStartTime
+4010,1026,DT,RouteSegmentEndTime
+4010,1027,CS,TDRType
+4010,1028,CS,InternationalRouteSegment
+4010,1029,LO,ThreatDetectionAlgorithmandVersion
+4010,1031,CS,AlarmDecision
+4010,1033,US,NumberofTotalObjects
+4010,1034,US,NumberofAlarmObjects
+4010,1037,SQ,PTORepresentationSequence
+4010,1038,SQ,ATDAssessmentSequence
+4010,1039,CS,TIPType
+4010,1041,DT,OOIOwnerCreationTime
+4010,1042,CS,OOIType
+4010,1043,FL,OOISize
+4010,1044,CS,AcquisitionStatus
+4010,1045,SQ,BasisMaterialsCodeSequence
+4010,1046,CS,PhantomType
+4010,1047,SQ,OOIOwnerSequence
+4010,1048,CS,ScanType
+4010,1051,LO,ItineraryID
+4010,1052,SH,ItineraryIDType
+4010,1053,LO,ItineraryIDAssigningAuthority
+4010,1054,SH,RouteID
+4010,1055,SH,RouteIDAssigningAuthority
+4010,1056,CS,InboundArrivalType
+4010,1058,SH,CarrierID
+4010,1059,CS,CarrierIDAssigningAuthority
+4010,1060,FL,SourceOrientation
+4010,1061,FL,SourcePosition
+4010,1062,FL,BeltHeight
+4010,1064,SQ,AlgorithmRoutingCodeSequence
+4010,1067,CS,TransportClassification
+4010,1068,LT,OOITypeDescriptor
+4010,1069,FL,TotalProcessingTime
+4010,1070,CS,AITDeviceType
+4010,1071,SQ,QRMeasurementsSequence
+4010,1072,SQ,TargetMaterialSequence
+4010,1073,FD,SNRThreshold
+4010,1075,DS,ImageScaleRepresentation
+4010,1076,SQ,ReferencedPTOSequence
+4010,1077,SQ,ReferencedTDRInstanceSequence
+4010,1078,ST,PTOLocationDescription
+4010,1079,SQ,AnomalyLocatorIndicatorSequence
+5200,9229,SQ,SharedFunctionalGroupsSequence
+5400,100,SQ,WaveformSequence
+5400,110,OB or OW,ChannelMinimumValue
+5400,112,OB or OW,ChannelMaximumValue
+5400,1004,US,WaveformBitsAllocated
+5400,1006,CS,WaveformSampleInterpretation
+5400,1010,OB or OW,WaveformData
+5600,10,OF,FirstOrderPhaseCorrectionAngle
+5600,20,OF,SpectroscopyData
