@@ -6,7 +6,6 @@
 // Thorough explanation on DICOM standard: https://www.leadtools.com/help/leadtools/v19/dh/to/di-topics-basicdicomfilestructure.html
 // Data Element Structure: https://www.leadtools.com/help/leadtools/v19/dh/to/di-topics-dataelementstructure.html
 // All the TAGS http://dicom.nema.org/medical/dicom/current/output/pdf/part06.pdf
-
 // Online viewer for metadata https://www.get-metadata.com/
 #include <bits/stdc++.h>
 #include "HeaderElements.h"
@@ -28,6 +27,7 @@ void managePreamble(ifstream* fd){
     char prefix[4];
     fd->read(prefix, 4);
     if(strcmp(prefix, "DICM") != 0){
+        printf("Este arquivo não tem o preambulo!!!\n");
         fd->seekg(0);
     }
 }
@@ -112,7 +112,7 @@ void readNextMeta(ifstream* fd){
     printf("TAG: (%#x,%#x) - %s\n", tag[0], tag[1], specs.getName().c_str());
     printf("VR: %c%c\n", vr[0], vr[1]);
     printf("LEN: %#x\n", len);
-    printf("DATA: %lu\n", UL);
+    printf("DATA: %#lx\n", UL);
 }
 
 int main(){

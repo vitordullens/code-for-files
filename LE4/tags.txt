@@ -33,6 +33,7 @@
 8,33,DA,SeriesDate
 8,34,DA,AcquisitionDate
 8,35,DA,ContentDate
+8,42,DT,AcquisitionDateTime
 8,48,TM,StudyTime
 8,49,TM,SeriesTime
 8,50,TM,AcquisitionTime
