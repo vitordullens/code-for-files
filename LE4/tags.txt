@@ -266,9 +266,9 @@
 20,12326,DS,VerticalOffsetofSensor
 20,12328,DS,SensorTemperature
 20,12352,SQ,DarkCurrentSequence
-20,12368,OB or OW,DarkCurrentCounts
+20,12368,OB,DarkCurrentCounts
 20,12384,SQ,GainCorrectionReferenceSequence
-20,12400,OB or OW,AirCounts
+20,12400,OB,AirCounts
 20,12401,DS,KVUsedinGainCalibration
 20,12402,DS,MAUsedinGainCalibration
 20,12403,DS,NumberofFramesUsedforIntegration
@@ -930,7 +930,7 @@
 24,38919,SQ,ImageDataTypeSequence
 24,38920,CS,DataType
 24,38921,SQ,TransducerScanPatternCodeSequence
-24,38928,US or SS,ZeroVelocityPixelValue
+24,38928,US,ZeroVelocityPixelValue
 32,16,SH,StudyID
 32,17,IS,SeriesNumber
 32,18,IS,AcquisitionNumber
@@ -1103,7 +1103,7 @@
 34,5187,SQ,OphthalmicThicknessMappingNormalsSequence
 34,5189,SQ,RetinalThicknessDefinitionCodeSequence
 34,5200,SQ,PixelValueMappingtoCodedConceptSequence
-34,5202,US or SS,MappedPixelValue
+34,5202,US,MappedPixelValue
 34,5204,LO,PixelValueMappingExplanation
 34,5208,SQ,OphthalmicThicknessMapQualityThresholdSequence
 34,5216,FL,OphthalmicThicknessMapThresholdQualityRating
@@ -1240,12 +1240,12 @@
 40,257,US,BitsStored
 40,258,US,HighBit
 40,259,US,PixelRepresentation
-40,262,US or SS,SmallestImagePixelValue
-40,263,US or SS,LargestImagePixelValue
-40,264,US or SS,SmallestPixelValueinSeries
-40,265,US or SS,LargestPixelValueinSeries
-40,288,US or SS,PixelPaddingValue
-40,289,US or SS,PixelPaddingRangeLimit
+40,262,US,SmallestImagePixelValue
+40,263,US,LargestImagePixelValue
+40,264,US,SmallestPixelValueinSeries
+40,265,US,LargestPixelValueinSeries
+40,288,US,PixelPaddingValue
+40,289,US,PixelPaddingRangeLimit
 40,290,FL,FloatPixelPaddingValue
 40,291,FD,DoubleFloatPixelPaddingValue
 40,292,FL,FloatPixelPaddingRangeLimit
@@ -1264,9 +1264,9 @@
 40,4180,LO,RescaleType
 40,4182,CS,VOILUTFunction
 40,4240,CS,RecommendedViewingMode
-40,4353,US or SS,RedPaletteColorLookupTableDescriptor
-40,4354,US or SS,GreenPaletteColorLookupTableDescriptor
-40,4355,US or SS,BluePaletteColorLookupTableDescriptor
+40,4353,US,RedPaletteColorLookupTableDescriptor
+40,4354,US,GreenPaletteColorLookupTableDescriptor
+40,4355,US,BluePaletteColorLookupTableDescriptor
 40,4356,US,AlphaPaletteColorLookupTableDescriptor
 40,4505,UI,PaletteColorLookupTableUID
 40,4609,OW,RedPaletteColorLookupTableData
@@ -1296,10 +1296,10 @@
 40,8466,DS,LossyImageCompressionRatio
 40,8468,CS,LossyImageCompressionMethod
 40,12288,SQ,ModalityLUTSequence
-40,12290,US or SS,LUTDescriptor
+40,12290,US,LUTDescriptor
 40,12291,LO,LUTExplanation
 40,12292,LO,ModalityLUTType
-40,12294,US or OW,LUTData
+40,12294,US,LUTData
 40,12304,SQ,VOILUTSequence
 40,12560,SQ,SoftcopyVOILUTSequence
 40,24592,US,RepresentativeFrameNumber
@@ -1520,11 +1520,11 @@
 64,37014,SQ,RealWorldValueMappingSequence
 64,37016,SQ,PixelValueMappingCodeSequence
 64,37392,SH,LUTLabel
-64,37393,US or SS,RealWorldValueLastValueMapped
+64,37393,US,RealWorldValueLastValueMapped
 64,37394,FD,RealWorldValueLUTData
 64,37395,FD,DoubleFloatRealWorldValueLastValueMapped
 64,37396,FD,DoubleFloatRealWorldValueFirstValueMapped
-64,37398,US or SS,RealWorldValueFirstValueMapped
+64,37398,US,RealWorldValueFirstValueMapped
 64,37408,SQ,QuantityDefinitionSequence
 64,37412,FD,RealWorldValueIntercept
 64,37413,FD,RealWorldValueSlope
@@ -1755,8 +1755,8 @@
 84,4912,US,ImageIndex
 96,12288,SQ,HistogramSequence
 96,12290,US,HistogramNumberofBins
-96,12292,US or SS,HistogramFirstBinValue
-96,12294,US or SS,HistogramLastBinValue
+96,12292,US,HistogramFirstBinValue
+96,12294,US,HistogramLastBinValue
 96,12296,US,HistogramBinWidth
 96,12304,LO,HistogramExplanation
 96,12320,UL,HistogramData
@@ -2517,10 +2517,40 @@
 16400,4217,SQ,AnomalyLocatorIndicatorSequence
 20992,37417,SQ,SharedFunctionalGroupsSequence
 21504,256,SQ,WaveformSequence
-21504,272,OB or OW,ChannelMinimumValue
-21504,274,OB or OW,ChannelMaximumValue
+21504,272,OB,ChannelMinimumValue
+21504,274,OB,ChannelMaximumValue
 21504,4100,US,WaveformBitsAllocated
 21504,4102,CS,WaveformSampleInterpretation
-21504,4112,OB or OW,WaveformData
+21504,4112,OB,WaveformData
 22016,16,OF,FirstOrderPhaseCorrectionAngle
 22016,32,OF,SpectroscopyData
+65534,57344,Im,StartOfItem
+65534,57357,Im,EndOfItem
+65534,57565,Im,EndOfSequence
+8,144,PN,ReferringPhysician'sName
+8,4158,LO,SeriesDescription
+8,4208,PN,Operators'Name
+8,4240,LO,ManufacturerModelName
+16,16,PN,Patient'sName
+16,48,DA,Patient'sBirthDate
+16,64,CS,Patient'sSex
+24,16,LO,Contrast/BolusAgent
+24,4128,LO,SoftwareVersions
+24,28682,SH,DetectorID
+24,28710,DS,DetectorActiveDimension
+25,16,LO,PrivateElement
+25,4103,CS,PrivateElement
+25,4129,FL,PrivateElement
+25,4136,CS,PrivateElement
+25,4341,CS,PrivateElement
+25,4342,DS,PrivateElement
+25,4343,DS,PrivateElement
+25,4346,IS,PrivateElement
+25,4347,FL,PrivateElement
+25,4348,IS,PrivateElement
+25,4349,CS,PrivateElement
+25,4350,CS,PrivateElement
+32,13,UI,StudyInstanceUID
+32,14,UI,SeriesInstanceUID
+40,4181,LO,WindowCenter&WidthExplanation
+32736,16,OB,PixelInformation-TheImage

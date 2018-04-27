@@ -20,6 +20,8 @@
 
 using namespace std;
 
+HE::Element readNextMeta(ifstream* fd);
+void readData(ifstream* fd, string vr, unsigned int len, HE::Element el);
 // Some images have preamble followed by prefix DICM before metadata, others don't
 // This functions will skip preamble if it exists.
 void managePreamble(ifstream* fd){
@@ -60,20 +62,41 @@ bool implicitVR(char* vr){
     return false;
 }
 
+void readData(ifstream* fd, string vr, unsigned int len, HE::Element el){
+    if(vr == "SQ" || len == (unsigned int) -1){
+        // Sequência de itens sem valor definido.
+        printf("Sequence of Undefined Length\n");
+        HE::Element probe = HE::Element();
+        while(probe.getName() != "EndOfItem" && probe.getName() != "EndOfSequence"){
+            cout << "+-------------------------- Still in the loop..." << fd->tellg() << endl;
+            probe = readNextMeta(fd);
+        }
+        return;
+    }
+    else if(el.getName() == "EndOfItem" || el.getName() == "EndOfSequence"){
+        cout << "Found Something: " << el.getName() << endl;
+        return;
+    }
+    else if(el.getName() == "PixelInformation-TheImage"){
+        cout << "END OF METADATA\n";
+        return;
+    }
+    char buff[len+1];
+    fd->read(buff, len);
+    buff[len] = '\0';
+    printf("%s\n", buff);
 
-string readData(string vr, unsigned long len){
-    // vei
-    return "";
 }
 
 // tag for pixel data (7FE0,0010) ?
-void readNextMeta(ifstream* fd){
+HE::Element readNextMeta(ifstream* fd){
     char buff[128], vr[10];
-    uint16_t tag[2], len;
-    unsigned long UL;
+    uint16_t tag[2];
+    unsigned int len;
     fd->read(buff, 4);
-    tag[0] =  (buff[1] << 8) | buff[0];
-    tag[1] =  (buff[3] << 8) | buff[2];
+    printf("buff for tag: %x %x %x %x\n", buff[0], buff[1], buff[2], buff[3]);
+    tag[0] =  (buff[1] << 8) | (0x00FF & buff[0]);
+    tag[1] =  (buff[3] << 8) | (0x00FF & buff[2]);
     fd->read(vr, 2);
 
     // Dealing with cases OB, OW, OF, SQ, UT or UN for explicit VR, which have 2 reserved bytes
@@ -81,11 +104,9 @@ void readNextMeta(ifstream* fd){
         // forwards two bytes
         cout << "Forwarded 2 bytes because of specialVR\n";
         fd->read(buff, 2);
-        int len;
+
         fd->read(buff, 4);  // special values have 4 bytes of length
         len = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
-        fd->read(buff, len);
-        UL = (unsigned long) buff[0];
     }
     // Some cases may contain implicit vr (?)
     else if(implicitVR(vr)){
@@ -95,24 +116,19 @@ void readNextMeta(ifstream* fd){
         fd->seekg(curr-2);
         strcpy(vr, "Implicit\0");
 
-        int len;
         fd->read(buff, 4);  // special values have 4 bytes of length
         len = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
-        fd->read(buff, len);
-        UL = (unsigned long) buff[0];
     }
     else{
         fd->read(buff, 2);
         len = (buff[1] << 8) | buff[0];
-        fd->read(buff, len);
-        UL = (unsigned long) buff[0];
     }
     HE::Element specs = HE::getElement(make_pair(tag[0], tag[1]));
-
     printf("TAG: (%#x,%#x) - %s\n", tag[0], tag[1], specs.getName().c_str());
     printf("VR: %c%c\n", vr[0], vr[1]);
     printf("LEN: %#x\n", len);
-    printf("DATA: %#lx\n", UL);
+    readData(fd, string(vr), len, specs);
+    return specs;
 }
 
 int main(){
@@ -132,9 +148,17 @@ int main(){
     
     managePreamble(&fd);
     HE::makeTag();
-    for(int i = 0; i < 20; i++){
-        readNextMeta(&fd);
-        cout << "--------+" << endl;
+    unsigned int g, e, i = 0;
+    HE::Element prev = HE::Element();
+    prev.getTag(&g, &e);
+    while(!(g == 0x7FE0 && e == 0x0010)){
+        prev = readNextMeta(&fd);
+        cout << "------------------------+" << endl;
+        prev.getTag(&g, &e);
+        cout << "Tellg:" << fd.tellg() << endl;
+        printf("PrevTag: %#x,%#x\n", g,e);
+        i++;
     }
     
+    return 0;
 }
