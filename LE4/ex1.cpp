@@ -68,13 +68,13 @@ void readData(ifstream* fd, string vr, unsigned int len, HE::Element el){
         printf("Sequence of Undefined Length\n");
         HE::Element probe = HE::Element();
         while(probe.getName() != "EndOfItem" && probe.getName() != "EndOfSequence"){
-            cout << "+-------------------------- Still in the loop..." << fd->tellg() << endl;
+            cout << "+-------------------------- Still in the loop" << endl;
             probe = readNextMeta(fd);
         }
         return;
     }
     else if(el.getName() == "EndOfItem" || el.getName() == "EndOfSequence"){
-        cout << "Found Something: " << el.getName() << endl;
+        cout << "OUT OF THE LOOP: " << el.getName() << endl;
         return;
     }
     else if(el.getName() == "PixelInformation-TheImage"){
@@ -94,7 +94,7 @@ HE::Element readNextMeta(ifstream* fd){
     uint16_t tag[2];
     unsigned int len;
     fd->read(buff, 4);
-    printf("buff for tag: %x %x %x %x\n", buff[0], buff[1], buff[2], buff[3]);
+    // DEBUG PRINT printf("buff for tag: %x %x %x %x\n", buff[0], buff[1], buff[2], buff[3]);
     tag[0] =  (buff[1] << 8) | (0x00FF & buff[0]);
     tag[1] =  (buff[3] << 8) | (0x00FF & buff[2]);
     fd->read(vr, 2);
@@ -155,8 +155,8 @@ int main(){
         prev = readNextMeta(&fd);
         cout << "------------------------+" << endl;
         prev.getTag(&g, &e);
-        cout << "Tellg:" << fd.tellg() << endl;
-        printf("PrevTag: %#x,%#x\n", g,e);
+        // DEBUG PRINT cout << "Tellg:" << fd.tellg() << endl;
+        // DEBUG PRINT printf("PrevTag: %#x,%#x\n", g,e);
         i++;
     }
     
