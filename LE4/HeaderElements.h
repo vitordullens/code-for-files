@@ -1,3 +1,5 @@
+// Simple lib created by Giovanni Guidini and Vitor Dullens
+// to organize DICOM Headers
 using namespace std;
 
 namespace HE{
