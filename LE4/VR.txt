@@ -1,0 +1,21 @@
+UL - Unsigned Long
+OB - Other Byte (byte)
+FL - Float Point (IEEE 754)
+US - Unsigned Short
+SS - Signed Short
+
+DA [PE] - Date YYYYMMDD     (string)
+TM [PE] - Time HHMMSS.FFFFFF (string)
+DT [PE] - Date Time YYYYMMDDHHMMSS.FFFFFF&ZZXX (string)
+
+DS [ok] - Decimal String    (string)
+UI [ok] - Unique Identifier (string)
+SH [ok] - Short String      (string)
+AE [ok] - App Entry         (string)
+CS [ok] - Code String       (string)
+LO [ok] - Long String       (string)
+ST [ok] - Short Text        (string)
+SQ [ok] - Sequence
+LT [ok] - Long Text         (string)
+IS [ok] - Int String        (string)
+PN [ok] - Person Name       (string)

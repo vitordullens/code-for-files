@@ -20,6 +20,7 @@
 
 using namespace std;
 
+// function headers
 HE::Element readNextMeta(ifstream* fd);
 void readData(ifstream* fd, string vr, unsigned int len, HE::Element el);
 // Some images have preamble followed by prefix DICM before metadata, others don't
@@ -74,18 +75,88 @@ void readData(ifstream* fd, string vr, unsigned int len, HE::Element el){
         return;
     }
     else if(el.getName() == "EndOfItem" || el.getName() == "EndOfSequence"){
+        // Sequence delimiters
         cout << "OUT OF THE LOOP: " << el.getName() << endl;
         return;
     }
     else if(el.getName() == "PixelInformation-TheImage"){
+        // Header delimiter
         cout << "END OF METADATA\n";
         return;
     }
-    char buff[len+1];
-    fd->read(buff, len);
-    buff[len] = '\0';
-    printf("%s\n", buff);
-
+    else if(len == 0){
+        cout << "LEN IS ZERO - NO DATA\n";
+    }
+    else if(el.compareVR("UL") || el.compareVR("OB") || el.compareVR("FL") ||
+            el.compareVR("US") || el.compareVR("SS")){
+        // Numered Values  
+        char buff[len+1];
+        fd->read(buff, len);
+        if(el.compareVR("UL")){
+            unsigned int out;
+            out = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
+            printf("%#x\n", out);
+        }  
+        else if(el.compareVR("OB")){
+            int8_t out = buff[0];
+            printf("%d\n", out);
+        }
+        else if(el.compareVR("FL")){
+            float out;
+            out = (buff[3] << 24) | (buff[2] << 16) | (buff[1] << 8) | buff[0];
+            cout << out << endl;
+        }
+        else if(el.compareVR("US")){
+            unsigned short out;
+            out = (buff[1] << 8) | (0x00FF & buff[0]);
+            cout << out << endl;
+        }
+        else{
+            short out;
+            out = (buff[1] << 8) | (0x00FF & buff[0]);
+            cout << out << endl;
+        }
+        
+    }
+    else if(el.compareVR("DA") || el.compareVR("TM") || el.compareVR("DT")){
+        // Date strings
+        char buff[len+1];
+        fd->read(buff, len);
+        buff[len] = '\0';
+        if(el.compareVR("DA")){
+            // DA are arranged YYYYMMDD
+            char Y[5], M[3], D[3];
+            Y[0] = buff[0]; Y[1] = buff[1]; Y[2] = buff[2]; Y[3] = buff[3]; Y[4] = '\0';
+            M[0] = buff[4]; M[1] = buff[5]; M[2] = '\0';
+            D[0] = buff[6]; D[1] = buff[7]; D[2] = '\0';
+            printf("%s/%s/%s\n", D,M,Y);
+        }
+        else if(el.compareVR("TM")){
+            // TM is HHMMSS.FFFFFF
+            printf("%c%c:%c%c:%c%c\n", buff[0], buff[1], buff[2], buff[3], buff[4], buff[5]);
+        }
+        else{
+            // DT is YYYYMMDDHHMMSS.FFFFFF&ZZXX
+            char Y[5], M[3], D[3];
+            Y[0] = buff[0]; Y[1] = buff[1]; Y[2] = buff[2]; Y[3] = buff[3]; Y[4] = '\0';
+            M[0] = buff[4]; M[1] = buff[5]; M[2] = '\0';
+            D[0] = buff[6]; D[1] = buff[7]; D[2] = '\0';
+            printf("%s/%s/%s ", D,M,Y);
+            printf("%c%c:%c%c:%c%c ", buff[8], buff[9], buff[10], buff[11], buff[12], buff[13]);
+            if(buff[20] == '+' || buff[20] == '-'){
+                printf("UTF%c%c%c", buff[20], buff[21], buff[22]);
+            }
+            printf("\n");
+            
+        }
+    }
+    else{
+        // String Values
+        char buff[len+1];
+        fd->read(buff, len);
+        buff[len] = '\0';
+        printf("%s\n", buff);
+    }
 }
 
 // tag for pixel data (7FE0,0010) ?

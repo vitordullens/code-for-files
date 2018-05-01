@@ -34,6 +34,10 @@ namespace HE{
             *g = GroupNumber;
             *e = ElNumber;
         }
+
+        bool compareVR(string cmp){
+            return not VR.compare(cmp);
+        }
     };
 
     // Maps tag to its name and VR
@@ -44,14 +48,13 @@ namespace HE{
         FILE* f;
         // aux file with tag and its name
         f = fopen("tags.txt", "r");
-        unsigned int a, b;           // tag numbers
-        string vr = "";     
-        char g,e;           // VR values
+        unsigned int a, b;           // tag numbers     
+        char t[3];           // VR values
         char name[100];     // Tag name
         int p = 0;
-        while(fscanf(f, "%u,%u,%c%c,%s", &a, &b, &g, &e, name) != EOF){  // file has that many lines
-            vr = g+e;
-            Element el = Element(a,b, vr, string(name));
+        while(fscanf(f, "%u,%u,%c%c,%s", &a, &b, &t[0], &t[1], name) != EOF){  // file has that many lines
+            t[2] = '\0';
+            Element el = Element(a,b, string(t), string(name));
             tags[make_pair(a,b)] = el;
             p++;
         }
