@@ -11,9 +11,7 @@ void swap(int *a, int *b){
  
 
 void quickSort(int array[], int low, int high) {
-
       int i = low, j = high;
-      int tmp;
       int pivot = array[(low + high) / 2];
       // partition 
       while (i <= j) {
