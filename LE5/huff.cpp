@@ -3,11 +3,13 @@
 */
 
 #include <bits/stdc++.h>
+#include "compactstorage-master/compactstorage.h"
 using namespace std;
 
 class node{
     char ch;
     int freq;
+    vector<bool> code;
     node* left;
     node* right;
 
@@ -32,6 +34,21 @@ public:
     char getChar(){
         return ch;
     }
+
+    node* getLeft(){
+        return left;
+    }
+
+    node* getRight(){
+        return right;
+    }
+    void setCode(vector<bool> Code){
+        code = Code;
+    }
+
+    vector<bool> getCode(){
+        return code;
+    }
 };
 
 // necessary to make priority queue work right
@@ -45,7 +62,7 @@ public:
     }
 };
 
-ostream& operator<<(ostream& os, node& n)  {  
+ostream& operator<<(ostream& os, node& n){  
     char out = n.getChar();
     if(out == '\n'){
         out = 1;
@@ -54,6 +71,12 @@ ostream& operator<<(ostream& os, node& n)  {
     return os;  
     }  
 
+ostream& operator<<(ostream& os, vector<bool> v){
+    for(bool b : v){
+        os << b << " ";
+    }
+    return os;
+}
 // create the trie of codes
 node* makeTrie(map<char,int> &freq){
     // priority queue to create trie
@@ -62,7 +85,7 @@ node* makeTrie(map<char,int> &freq){
     for (auto key: freq){
         char k = key.first;
         node* pt = new node(k, freq[k]);
-        cout << "Creating initial node - " << *pt << endl;
+        // DEBUG cout << "Creating initial node - " << *pt << endl;
         trie.push(pt);
     }
     // creating the bloddy trie
@@ -70,7 +93,7 @@ node* makeTrie(map<char,int> &freq){
         node* left = trie.top(); trie.pop();
         node* right = trie.top(); trie.pop();
         node* parent = new node(left->getFreq() + right->getFreq(), left, right);
-        cout << "Creating new node from: " << *left << " and " << *right << " result: " << *parent << endl;
+        // DEBUG cout << "Creating new node from: " << *left << " and " << *right << " result: " << *parent << endl;
         trie.push(parent);
     }
 
@@ -101,6 +124,22 @@ map<char,int>& makeFreq(ifstream* fd){
     return freq;
 }
 
+// add codes to nodes and create map of chars to nodes
+void renderCodes(node* root, vector<bool> cd, map<char,node*>& codes){
+    if(root->getChar() != 2){
+        root->setCode(cd);
+        cd.pop_back();
+        codes[root->getChar()] = root;
+        return;
+    }
+    node* l = root->getLeft();
+    cd.push_back(false);
+    renderCodes(l, cd, codes);
+    cd.pop_back();
+    l = root->getRight();
+    cd.push_back(true);
+    renderCodes(l, cd, codes);
+}
 
 int main(int argc, char const *argv[]){
     string file = "sample.txt";
@@ -111,5 +150,11 @@ int main(int argc, char const *argv[]){
     ifstream fd (file);
     map<char, int>& frequencies = makeFreq(&fd);
     node* root = makeTrie(frequencies);
-    cout << "ROOT: " << *root << endl;
+    vector<bool> codeCreator;
+    map<char, node*> refTable;
+    // save codes to nodes
+    renderCodes(root, codeCreator, refTable);
+    for(auto x: refTable){
+        cout << "Char: " << x.first << " Value: " << x.second->getCode() << endl;
+    }
 }
