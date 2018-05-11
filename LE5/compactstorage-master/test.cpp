@@ -16,12 +16,6 @@ int main(int argc, char** argv)
   storage.writeBool(true);
   storage.writeBool(false);
 	
-  // get content
-	fstream fd;
-  fd.open("out.txt", ios::out | ios::binary);
-  storage.dump(&fd);
-  fd.close();
-
   // Display the compacted data
   storage.dump();
   

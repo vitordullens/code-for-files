@@ -24,6 +24,9 @@
 #include "compactstorage.h"
 
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 using namespace std;
 
@@ -61,6 +64,8 @@ void CompactStorage::freeBytes()
 void CompactStorage::reallocateBytes(int numberOfBytes)
 {
 	char* temp = new char[numberOfBytes];
+  // was getting mistakes without this using writeBool because it would get memory garbage
+  memset(temp, 0, numberOfBytes);
 	for (int i = 0; i < m_numBytes; i++) {
 		temp[i] = m_bytes[i];
 	}
@@ -71,9 +76,9 @@ void CompactStorage::reallocateBytes(int numberOfBytes)
 
 void CompactStorage::ensureRoomFor(int bits)
 {
-	cout << "make sure we have room for " << bits << " bits..." << endl;
+	// cout << "make sure we have room for " << bits << " bits..." << endl;
 	int newLength = m_usedBits + bits;
-	if (newLength > m_numBytes * 8) {
+	if (newLength >= m_numBytes * 8) {
 		reallocateBytes(newLength / 8 + 1);
 	}
 }
@@ -104,6 +109,7 @@ void CompactStorage::dump()
 	cout << "^" << endl;
 }
 
+// dump storage in a file
 void CompactStorage::dump(fstream* fd)
 {
   for (int curByte = 0; curByte < m_numBytes; curByte++) {
@@ -135,12 +141,16 @@ void CompactStorage::writeInt(int value, int bits)
 
 void CompactStorage::writeBool(bool value)
 {
+  // let's make sure we have space
+  ensureRoomFor(1);
 	char byte = m_bytes[curByte()];
-	byte |= (int) value << (7 - curBit());
+  char toAdd = (char) value & 0x01;
+	byte |=  (toAdd << (7 - curBit()));
 	m_bytes[curByte()] = byte;
 
 	m_curPos += 1;
 	m_usedBits += 1;
+  // DEBUG cout << "current position: " << curByte()*8+curBit()<< endl;
 }
 
 int CompactStorage::readInt(int bits)
