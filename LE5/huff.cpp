@@ -1,159 +1,26 @@
-/* header
-    blah blha
+/* 
+    [X] Implemente o método de Huffman para compressão de dados.
+    Implementação por Vitor F Dullens - 16/0148260 e Giovanni M Guidini - 16/0122660
+    Código de Huffman de tamanho variável.
+
+    Fazendo uso da biblioteca compactstorage para manipulação de bits. Copyright (C) 2012 Franz Liedke
+    Fazendo uso da biblioteca hufftrie para criação da árvore de huffman. Ours.
 */
 
 #include <bits/stdc++.h>
 #include "compactstorage-master/compactstorage.h"
+#include "hufftrie.hpp"
 using namespace std;
+namespace hft = hufftrie;
 
-#define INTERNAL_CHAR 2
-class node{
-    char ch;
-    int freq;
-    vector<bool> code;
-    node* left;
-    node* right;
-
-public:
-    node(char Char, int Freq){
-        ch = Char;
-        freq = Freq;
-        left = NULL;
-        right = NULL;
-    }
-
-    node(int Freq, node* Left, node* Right){
-        ch = INTERNAL_CHAR;
-        freq = Freq;
-        left = Left;
-        right = Right;
-    }
-
-    int getFreq(){
-        return freq;
-    }
-    char getChar(){
-        return ch;
-    }
-
-    node* getLeft(){
-        return left;
-    }
-
-    node* getRight(){
-        return right;
-    }
-    void setCode(vector<bool> Code){
-        code = Code;
-    }
-
-    vector<bool> getCode(){
-        return code;
-    }
-};
-
-// necessary to make priority queue work right
-class Compare {
-public:
-    bool operator() (node* lhs, node* rhs){
-        if (lhs->getFreq() > rhs->getFreq())
-            return true;
-        else
-            return false;
-    }
-};
-
-ostream& operator<<(ostream& os, node& n){  
-    char out = n.getChar();
-    if(out == '\n'){
-        out = 1;
-    }
-    os << "char: " << out << " freq: " << n.getFreq();  
-    return os;  
-    }  
-
-ostream& operator<<(ostream& os, vector<bool> v){
-    for(bool b : v){
-        os << b << " ";
-    }
-    return os;
-}
-// create the trie of codes
-node* makeTrie(map<char,int> &freq){
-    // priority queue to create trie
-    priority_queue<node*, vector<node*>, Compare> trie;
-    // initial nodes
-    for (auto key: freq){
-        char k = key.first;
-        node* pt = new node(k, freq[k]);
-        // DEBUG cout << "Creating initial node - " << *pt << endl;
-        trie.push(pt);
-    }
-    // creating the bloddy trie
-    while(trie.size() > 1){
-        node* left = trie.top(); trie.pop();
-        node* right = trie.top(); trie.pop();
-        node* parent = new node(left->getFreq() + right->getFreq(), left, right);
-        // DEBUG cout << "Creating new node from: " << *left << " and " << *right << " result: " << *parent << endl;
-        trie.push(parent);
-    }
-
-    // only root node remains in queue now
-    return trie.top();
-}
-
-// create frequence for the characters in the file
-map<char,int>& makeFreq(ifstream* fd){
-    string line;
-    static map<char,int> freq;
-    // only because getline() consumes the \n at end of lines
-    freq['\n'] = -1; // -1 because last line will not contain a \n
-    // count occurence of all characters in the file
-    while(getline(*fd, line)){
-        freq['\n']++;
-        for(auto ch : line){
-            // if char appeared before
-            if(freq.count(ch)){
-                freq[ch]++;  // another hit
-            }
-            // if char is new in map
-            else{
-                freq[ch] = 1;
-            }
-        }
-    }
-    freq[EOF] = 1; // last char in file
-    return freq;
-}
-
-// add codes to nodes and create map of chars to nodes
-void renderCodes(node* root, vector<bool> cd, map<char,node*>& codes){
-    // DEBUG cout << "Im in " << *root << " with code " << cd << endl;
-    if(root->getChar() != 2){
-        root->setCode(cd);
-        codes[root->getChar()] = root;
-        return;
-    }
-    
-    node* l = root->getLeft();
-    // DEBUG cout << "To explore next:\nLeft - " << *l << endl;
-    cd.push_back(false);
-    renderCodes(l, cd, codes);
-    cd.pop_back();
-    l = root->getRight();
-    // DEBUG cout << "To explore next:\nRight - " << *l << endl;
-    cd.push_back(true);
-    renderCodes(l, cd, codes);
-}
-
-string shrinkFile(map<char, node*>& ref, string fileName){
-    int done = 0;
+string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
+    int done = 0; 
     ifstream in (fileName); // file to read from
     fileName += ".hfm"; // .hfm for huffman
     fstream fd (fileName, ios::out | ios::binary); // file to write into
     CompactStorage storage;
     char ch;
-    while(in.get(ch)){      // node*    code
+    while(in.get(ch)){      // hft::Huffnode*    code
         vector<bool> code = ref[ch]->getCode();
         // cout << "char: " << ch << " code: " << code << endl;
         done += code.size();
@@ -162,21 +29,22 @@ string shrinkFile(map<char, node*>& ref, string fileName){
             storage.writeBool(b);
             // cout << "written: " << done << endl;
         }
+        // TODO: Relief storage for very large files by dumping it partially when number of bits
+        // written is a multiple of 8. Otherwise large files will create seg fault
     }
     // last character is EOF, but get() will not get it
     // so we manually add EOF
     for(bool b : ref[EOF]->getCode()){
         storage.writeBool(b);
     }
-    // finally, creates new file
-    storage.dump();
+    // dump remaining contents
     storage.dump(&fd);
     fd.close();
-
+    // returns name of compressed file
     return fileName;
 }
 
-void testShrink(string fSmall, node* root){
+void testShrink(string fSmall, hft::Huffnode* root){
     ifstream fd (fSmall, ios::binary);
     CompactStorage storage;
     char byte;
@@ -186,7 +54,7 @@ void testShrink(string fSmall, node* root){
     }
     byte = 0;
     storage.reset(); // goes back to beginning of storage
-    node* it = root;
+    hft::Huffnode* it = root;
     while(byte != EOF){
         if(it->getChar() != INTERNAL_CHAR){
             byte = it->getChar();
@@ -207,24 +75,78 @@ void testShrink(string fSmall, node* root){
     }
     
 }
-int main(int argc, char const *argv[]){
-    string file = "sample.txt";
-    if (argc > 1){
-        file = argv[1];
-    }
 
-    ifstream fd (file);
-    map<char, int>& frequencies = makeFreq(&fd);
-    fd.close(); // no longer necessary (yet)
-    node* root = makeTrie(frequencies);
+// automate file compression process
+int compress(string fileName){
+    ifstream fd (fileName); // we know it exists because test was in main
+    
+    // frequence of characters
+    map<char, int>& frequencies = hft::makeFreq(&fd);
+    fd.close(); // no longer necessary
+    // Trie of codes
+    hft::Huffnode* root = hft::makeTrie(frequencies);
+    // Important data containers
     vector<bool> codeCreator;
-    map<char, node*> refTable;
-    // save codes to nodes
-    renderCodes(root, codeCreator, refTable);
+    map<char, hft::Huffnode*> refTable;
+    // Extract codes from trie into refTable
+    hft::renderCodes(root, codeCreator, refTable);
+
+    // print codes in screen
     for(auto x: refTable){
         cout << "Char: " << x.first << " Value: " << x.second->getCode() << endl;
     }
-    cout << "creating new file\n";
-    file = shrinkFile(refTable, file);
-    testShrink(file, root);
+
+    cout << "creating new file...\n";
+    // created the compressed file
+    fileName = shrinkFile(refTable, fileName);
+    cout << "...done!\n";
+
+    int r; // size of new file
+    fd.open(fileName);
+    fd.seekg(0, fd.end);
+    r = fd.tellg();
+    fd.close();
+
+    return r;
+}
+
+string intro(){
+    printf("#################################\n");
+    printf("# Huffman Compression Algorithm #\n");
+    printf("#################################\n");
+    printf("#     Aluno: Vitor Dullens      #\n");
+    printf("#    Matrícula: 16/0148260      #\n");
+    printf("#                               #\n");
+    printf("#   Aluno: Giovanni Guidini     #\n");
+    printf("#    Matrícula: 16/0122660      #\n");
+    printf("#################################\n");
+    printf("\n\nInform name of file to compress. Leave blank to use \"sample.txt\"\n");
+    string file;
+    getline(cin,file); // gets entire line to allow for blank characters
+    file = file.substr(0, file.find(" ")); // gets only fist word
+    return file;  
+}
+int main(){
+    system("clear");
+    string file = intro();
+    if (file == ""){
+        file = "sample.txt";
+    }
+
+    ifstream fd (file);
+    if(!fd){
+        cout << "Arquivo " << file << " inexistente\n";
+        return 1;
+    }
+    // size of original file
+    int fileSize;
+    fd.seekg(0, fd.end);
+    fileSize = fd.tellg();
+    fd.close();
+
+    int compressedSize = compress(file);
+
+    cout << "Size of original file:\t" << fileSize << "bytes\n";
+    cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
+    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n";
 }
