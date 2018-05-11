@@ -6,7 +6,7 @@
 #include "compactstorage-master/compactstorage.h"
 using namespace std;
 
-#define DEBUG " "
+#define INTERNAL_CHAR 2
 class node{
     char ch;
     int freq;
@@ -23,7 +23,7 @@ public:
     }
 
     node(int Freq, node* Left, node* Right){
-        ch = 2;
+        ch = INTERNAL_CHAR;
         freq = Freq;
         left = Left;
         right = Right;
@@ -146,7 +146,7 @@ void renderCodes(node* root, vector<bool> cd, map<char,node*>& codes){
     renderCodes(l, cd, codes);
 }
 
-void shrinkFile(map<char, node*>& ref, string fileName){
+string shrinkFile(map<char, node*>& ref, string fileName){
     int done = 0;
     ifstream in (fileName); // file to read from
     fileName += ".hfm"; // .hfm for huffman
@@ -169,20 +169,43 @@ void shrinkFile(map<char, node*>& ref, string fileName){
         storage.writeBool(b);
     }
     // finally, creates new file
-    DEBUG storage.dump();
+    storage.dump();
     storage.dump(&fd);
     fd.close();
 
+    return fileName;
 }
 
 void testShrink(string fSmall, node* root){
-    ifstream fd (fSmall | ios:::binary);
+    ifstream fd (fSmall, ios::binary);
     CompactStorage storage;
     char byte;
+    // save all file into storage, for now
     while(fd.get(byte)){
-        storage.add(byte, 8);
+        storage.writeInt(byte, 8);
     }
-    DEBUG storage.dump();
+    byte = 0;
+    storage.reset(); // goes back to beginning of storage
+    node* it = root;
+    while(byte != EOF){
+        if(it->getChar() != INTERNAL_CHAR){
+            byte = it->getChar();
+            cout << byte;
+            it = root;
+            
+            continue;
+        }
+        bool next = storage.readBool();
+        // moves down the trie
+        if(next){
+            it = it->getRight();
+        }
+        else{
+            it = it->getLeft();
+        }
+        
+    }
+    
 }
 int main(int argc, char const *argv[]){
     string file = "sample.txt";
@@ -202,5 +225,6 @@ int main(int argc, char const *argv[]){
         cout << "Char: " << x.first << " Value: " << x.second->getCode() << endl;
     }
     cout << "creating new file\n";
-    shrinkFile(refTable, file);
+    file = shrinkFile(refTable, file);
+    testShrink(file, root);
 }
