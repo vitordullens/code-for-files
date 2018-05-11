@@ -2,14 +2,6 @@
 
 using namespace std;
 
-// swap the position of two elements, to ajust the array
-void swap(int *a, int *b){
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
- 
-
 void quickSort(int array[], int low, int high) {
       int i = low, j = high;
       int pivot = array[(low + high) / 2];
@@ -20,7 +12,7 @@ void quickSort(int array[], int low, int high) {
             while (array[j] > pivot)
                   j--;
             if (i <= j) {
-                 swap(&array[i], &array[j]);
+                 swap(array[i], array[j]); // swap the position of two elements, to ajust the array
                   i++;
                   j--;
             }
