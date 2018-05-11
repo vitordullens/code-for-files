@@ -1,3 +1,4 @@
+.vscode/
 LE1/ex1
 LE1/a.out
 LE1/out.txt
@@ -6,5 +7,6 @@ LE2/1C
 LE2/testes/
 LE3/ex1
 LE4/ex1
-.vscode/
 LE5/quickSort
+LE5/huff
+LE5/sample.*

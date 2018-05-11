@@ -13,12 +13,29 @@
 using namespace std;
 namespace hft = hufftrie;
 
+// writes trie has a stream of bits
+void addTrieToFile(CompactStorage& storage, hft::Huffnode* root){
+    if(root->getChar() != INTERNAL_CHAR){
+        storage.writeBool(1);
+        storage.writeInt(root->getChar(), 8);
+        return;
+    }
+    // write internal node
+    storage.writeBool(0);
+    // explore left
+    addTrieToFile(storage, root->getLeft());
+    // explore Right
+    addTrieToFile(storage, root->getRight());
+}
+
 string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
     int done = 0; 
     ifstream in (fileName); // file to read from
     fileName += ".hfm"; // .hfm for huffman
     fstream fd (fileName, ios::out | ios::binary); // file to write into
     CompactStorage storage;
+    // first thing in file needs to be the trie
+    addTrieToFile(storage, hft::getRoot());
     char ch;
     while(in.get(ch)){      // hft::Huffnode*    code
         vector<bool> code = ref[ch]->getCode();
