@@ -132,13 +132,14 @@ int compress(string fileName){
 
 CompactStorage readTrie(fstream& fd){
     bool done = false;
-    static CompactStorage storage;
+    static CompactStorage storage(1);
     char ch;
-    hft::Huffnode* curr;
+    hft::Huffnode* curr = NULL;
     while(!done){
         fd.get(ch);
         // reads char from file
         storage.writeInt(ch, 8);
+        storage.dump();
         // reading that char bit by bit
         storage.reset();
         for(int i = 0; i < 8; i++){
@@ -153,17 +154,24 @@ CompactStorage readTrie(fstream& fd){
                 storage.readInt(i); // forward to curr position
                 v = storage.readInt(8);
                 hft::Huffnode* n = new hft::Huffnode(v, 0, curr);
+
+                cout << "Found char: " << v << endl;
                 if(curr->getLeft() == NULL)
                     curr->setLeft(n);
-                else
+                else{
                     curr->setRight(n);
+                    curr = curr->getParent(); // this node is done
+                }
             }
             else{
+                cout << "found internal node\n";
                 hft::Huffnode* now = new hft::Huffnode(curr);
-                if(curr->getLeft() == NULL)
-                    curr->setLeft(now);
-                else
-                    curr->setRight(now);
+                if(curr != NULL){
+                    if(curr->getLeft() == NULL)
+                        curr->setLeft(now);
+                    else
+                        curr->setRight(now);
+                }
                 curr = now;
             }
             if(curr->getLeft() != NULL && curr->getRight() != NULL){
@@ -252,16 +260,21 @@ void decompress(string file, string  outFile = ""){
     hft::Huffnode* root;
     fstream fd (file, ios::in);
     // created trie. Returns last byte possibly unused
+    cout << "reading trie now\n";
+    getchar();
     storage = readTrie(fd);
     // actual trie root
     root = hft::getRoot();
     // dumping file
+        cout << "reading trie done\n";
+    getchar();
     if(outFile != ""){
         fstream out (outFile, ios::out | ios::trunc);
         readFile(fd, root, storage, out);
         cout << "Done! Output in file " << outFile << endl;
     }
     else{
+        cout << "Pushing file now\n";
         readFile(fd, root, storage);
     }
 }
@@ -285,6 +298,7 @@ string intro(){
 int main(){
     system("clear");
     string file = intro();
+    
     if (file == ""){
         file = "sample.txt";
     }
@@ -305,4 +319,7 @@ int main(){
     cout << "Size of original file:\t" << fileSize << "bytes\n";
     cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
     cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n";
+    file += ".hfm";
+
+    // decompress(file);
 }
