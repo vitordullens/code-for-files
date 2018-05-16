@@ -62,37 +62,6 @@ string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
     return fileName;
 }
 
-void testShrink(string fSmall, hft::Huffnode* root){
-    ifstream fd (fSmall, ios::binary);
-    CompactStorage storage;
-    char byte;
-    // save all file into storage, for now
-    while(fd.get(byte)){
-        storage.writeInt(byte, 8);
-    }
-    byte = 0;
-    storage.reset(); // goes back to beginning of storage
-    hft::Huffnode* it = root;
-    while(byte != EOT){
-        if(it->getChar() != INTERNAL_CHAR){
-            byte = it->getChar();
-            cout << byte;
-            it = root;
-            
-            continue;
-        }
-        bool next = storage.readBool();
-        // moves down the trie
-        if(next){
-            it = it->getRight();
-        }
-        else{
-            it = it->getLeft();
-        }
-        
-    }
-    
-}
 // automate file compression process
 int compress(string fileName){
     ifstream fd (fileName); // we know it exists because test was in main
@@ -153,6 +122,8 @@ CompactStorage readTrie(fstream& fd){
                 storage.writeInt(v, 8);
                 storage.readInt(i); // forward to curr position
                 v = storage.readInt(8);
+                storage.dump();
+                cout << v << endl;
                 hft::Huffnode* n = new hft::Huffnode(v, 0, curr);
 
                 cout << "Found char: " << v << endl;
@@ -303,7 +274,7 @@ int main(){
         file = "sample.txt";
     }
 
-    ifstream fd (file);
+    /*ifstream fd (file);
     if(!fd){
         cout << "Arquivo " << file << " inexistente\n";
         return 1;
@@ -318,8 +289,8 @@ int main(){
 
     cout << "Size of original file:\t" << fileSize << "bytes\n";
     cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
-    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n";
+    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n";*/
     file += ".hfm";
 
-    // decompress(file);
+    decompress(file);
 }
