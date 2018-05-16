@@ -43,6 +43,8 @@ class CompactStorage
 		char* getContent(int & length);
 		void reset();
 
+		int curByte();
+		int curBit();
 	private:
 		int m_numBytes;
 		int m_usedBits;
@@ -54,9 +56,6 @@ class CompactStorage
 		void freeBytes();
 
 		void ensureRoomFor(int bits);
-
-		int curByte();
-		int curBit();
 };
 
 #endif /* _COMPACTSTORAGE_H */

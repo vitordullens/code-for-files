@@ -8,6 +8,7 @@ By Giovanni Guidini and Vitor Dullens
 #include <bits/stdc++.h>
 // value for chars in the internal nodes
 #define INTERNAL_CHAR 2
+#define EOT 4
 
 namespace hufftrie {
     #define endl std::endl
@@ -18,14 +19,19 @@ namespace hufftrie {
         std::vector<bool> code;
         Huffnode* left;
         Huffnode* right;
+        Huffnode* parent;
 
     public:
-        Huffnode(char Char, int Freq);
-        Huffnode(int Freq, Huffnode* Left, Huffnode* Right);
+        Huffnode(Huffnode* p);
+        Huffnode(char Char, int Freq, Huffnode* p);
+        Huffnode(int Freq, Huffnode* Left, Huffnode* Right, Huffnode* p);
         int getFreq();
         char getChar();
         Huffnode* getLeft();
         Huffnode* getRight();
+        Huffnode* getParent();
+        void setLeft(Huffnode* l);
+        void setRight(Huffnode* r);
         std::vector<bool> getCode();
         void setCode(std::vector<bool> Code);
     };
@@ -51,19 +57,29 @@ namespace hufftrie {
 
         // class for the nodes in the trie - functions definitions
         // constructor for leaf nodes
-        Huffnode::Huffnode(char Char, int Freq){
+        Huffnode::Huffnode(char Char, int Freq = 0, Huffnode* p = NULL){
             ch = Char;
             freq = Freq;
             left = NULL;
             right = NULL;
+            parent = p;
         }
 
         // constructor for internal nodes
-        Huffnode::Huffnode(int Freq, Huffnode* Left, Huffnode* Right){
+        Huffnode::Huffnode(int Freq, Huffnode* Left, Huffnode* Right, Huffnode* p = NULL){
             ch = INTERNAL_CHAR;
             freq = Freq;
             left = Left;
             right = Right;
+            parent = p;
+        }
+
+        Huffnode::Huffnode(Huffnode* p = NULL){
+            ch = INTERNAL_CHAR;
+            freq = 0;
+            left = NULL;
+            right = NULL;
+            parent = p;
         }
 
         // getters and setters
@@ -82,11 +98,23 @@ namespace hufftrie {
             return right;
         }
 
+        Huffnode* Huffnode::getParent(){
+            return parent;
+        }
+
         std::vector<bool> Huffnode::getCode(){
             return code;
         }
         void Huffnode::setCode(std::vector<bool> Code){
             code = Code;
+        }
+
+        void Huffnode::setLeft(Huffnode* l){
+            left = l;
+        }
+
+        void Huffnode::setRight(Huffnode* r){
+            right = r;
         }
 
 /* ----------------------------- END OF HUFFNODE CLASS DEFINITION ------------------------------ */
@@ -96,6 +124,10 @@ namespace hufftrie {
     // returns the trie root, if any exists
     Huffnode* getRoot(){
         return TrieRoot;
+    }
+
+    void setRoot(Huffnode* root){
+        TrieRoot = root;
     }
     // create the trie of codes
     Huffnode* makeTrie(std::map<char,int> &freq){
@@ -142,7 +174,7 @@ namespace hufftrie {
                 }
             }
         }
-        freq[EOF] = 1; // last char in file
+        freq[EOT] = 1; // last char in file
         return freq;
     }
 

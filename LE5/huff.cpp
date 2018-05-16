@@ -13,6 +13,7 @@
 using namespace std;
 namespace hft = hufftrie;
 
+/* ================================ COMPRESSING FILE =================================*/
 // writes trie has a stream of bits
 void addTrieToFile(CompactStorage& storage, hft::Huffnode* root){
     if(root->getChar() != INTERNAL_CHAR){
@@ -51,7 +52,7 @@ string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
     }
     // last character is EOF, but get() will not get it
     // so we manually add EOF
-    for(bool b : ref[EOF]->getCode()){
+    for(bool b : ref[EOT]->getCode()){
         storage.writeBool(b);
     }
     // dump remaining contents
@@ -72,7 +73,7 @@ void testShrink(string fSmall, hft::Huffnode* root){
     byte = 0;
     storage.reset(); // goes back to beginning of storage
     hft::Huffnode* it = root;
-    while(byte != EOF){
+    while(byte != EOT){
         if(it->getChar() != INTERNAL_CHAR){
             byte = it->getChar();
             cout << byte;
@@ -92,7 +93,6 @@ void testShrink(string fSmall, hft::Huffnode* root){
     }
     
 }
-
 // automate file compression process
 int compress(string fileName){
     ifstream fd (fileName); // we know it exists because test was in main
@@ -127,6 +127,145 @@ int compress(string fileName){
     return r;
 }
 
+/* ================================ COMPRESSING FILE END =================================*/
+/* ================================ DECOMPRESSING FILE =================================*/
+
+CompactStorage readTrie(fstream& fd){
+    bool done = false;
+    static CompactStorage storage;
+    char ch;
+    hft::Huffnode* curr;
+    while(!done){
+        fd.get(ch);
+        // reads char from file
+        storage.writeInt(ch, 8);
+        // reading that char bit by bit
+        storage.reset();
+        for(int i = 0; i < 8; i++){
+            bool b = storage.readBool();
+            if(b){
+                // rewrite storage
+                storage.reset();
+                storage.writeInt(ch, 8);
+                // expand with new char
+                char v = fd.get();
+                storage.writeInt(v, 8);
+                storage.readInt(i); // forward to curr position
+                v = storage.readInt(8);
+                hft::Huffnode* n = new hft::Huffnode(v, 0, curr);
+                if(curr->getLeft() == NULL)
+                    curr->setLeft(n);
+                else
+                    curr->setRight(n);
+            }
+            else{
+                hft::Huffnode* now = new hft::Huffnode(curr);
+                if(curr->getLeft() == NULL)
+                    curr->setLeft(now);
+                else
+                    curr->setRight(now);
+                curr = now;
+            }
+            if(curr->getLeft() != NULL && curr->getRight() != NULL){
+                done = true;
+                break;
+            }
+        }
+        // next byte to process
+        if(!done){
+            ch = fd.get();
+            storage.reset();
+            storage.writeInt(ch, 8);
+        }
+    }
+    // get the root of the trie and set it
+    while(curr->getParent() != NULL){
+        curr = curr->getParent();
+    }
+    hft::setRoot(curr);
+    return storage;
+}
+
+// write to stdout
+void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage){
+    int i = storage.curBit();
+    hft::Huffnode* it = root;
+    char out = 0;
+    char read;
+    // file to be read
+    while(out != EOF){
+        // next byte to read
+        while(i < 8){
+            bool b = storage.readBool();
+            if(b){
+                it = it->getRight();
+            }
+            else{
+                it = it->getLeft();
+            }
+            out = it->getChar();
+            if(out != INTERNAL_CHAR){
+                cout << out;
+                it = root;
+            }
+        }
+        if(out != EOF){
+            storage.reset();
+            read = in.get();
+            storage.writeInt(read, 8);
+        }
+    }
+}
+
+// write into another file
+void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage, fstream& ou){
+    int i = storage.curBit();
+    hft::Huffnode* it = root;
+    char out = 0;
+    char read;
+    // file to be read
+    while(out != EOF){
+        // next byte to read
+        while(i < 8){
+            bool b = storage.readBool();
+            if(b){
+                it = it->getRight();
+            }
+            else{
+                it = it->getLeft();
+            }
+            out = it->getChar();
+            if(out != INTERNAL_CHAR){
+                ou.write(&out, 1);
+            }
+        }
+        if(out != EOF){
+            storage.reset();
+            read = in.get();
+            storage.writeInt(read, 8);
+        }
+    }
+}
+
+void decompress(string file, string  outFile = ""){
+    CompactStorage storage;
+    hft::Huffnode* root;
+    fstream fd (file, ios::in);
+    // created trie. Returns last byte possibly unused
+    storage = readTrie(fd);
+    // actual trie root
+    root = hft::getRoot();
+    // dumping file
+    if(outFile != ""){
+        fstream out (outFile, ios::out | ios::trunc);
+        readFile(fd, root, storage, out);
+        cout << "Done! Output in file " << outFile << endl;
+    }
+    else{
+        readFile(fd, root, storage);
+    }
+}
+/* ================================ DECOMPRESSING FILE END =================================*/
 string intro(){
     printf("#################################\n");
     printf("# Huffman Compression Algorithm #\n");
