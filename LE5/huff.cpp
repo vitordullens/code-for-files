@@ -98,7 +98,7 @@ int compress(string fileName){
     }
 
     // showTrie(root); // DEBUG
-    cout << "creating new file...\n";
+    cout << "creating new file...";
     // created the compressed file
     fileName = shrinkFile(refTable, fileName);
     cout << "...done!\n";
@@ -288,9 +288,14 @@ void decompress(string file, string  outFile = ""){
     CompactStorage storage;
     hft::Huffnode* root;
     fstream fd (file, ios::in);
-    // created trie. Returns last byte possibly unused
+    // check for file
+    if(!fd){
+        cout << "File not found\n";
+        exit(1);
+    }
     // cout << "reading trie now\n"; // DEBUG
     // getchar(); // DEBUG
+    // created trie. Returns last byte possibly unused
     storage = readTrie(fd);
     // actual trie root
     root = hft::getRoot();
@@ -320,7 +325,7 @@ string intro(){
     printf("#   Aluno: Giovanni Guidini     #\n");
     printf("#    Matrícula: 16/0122660      #\n");
     printf("#################################\n");
-    printf("\n\nInform name of file to compress. Leave blank to use \"sample.txt\"\n");
+    printf("\n\nInform name of file to operate (name and extension, but not .hfm, even if you're decompressing). Leave blank to use \"sample.txt\"\n");
     string file;
     getline(cin,file); // gets entire line to allow for blank characters
     file = file.substr(0, file.find(" ")); // gets only fist word
@@ -334,23 +339,32 @@ int main(){
         file = "sample.txt";
     }
     
-    ifstream fd (file);
-    if(!fd){
-        cout << "Arquivo " << file << " inexistente\n";
-        return 1;
+    int op = 0;
+    cout << "Choose one:\n(1) Compress\n(2) Decompress\n";
+    while (op != 1 && op != 2)
+        cin >> op;
+
+    if(op == 1){ 
+        ifstream fd (file);
+        if(!fd){
+            cout << "Arquivo " << file << " inexistente\n";
+            return 1;
+        }
+        // size of original file
+        int fileSize;
+        fd.seekg(0, fd.end);
+        fileSize = fd.tellg();
+        fd.close(); 
+        // compress
+        int compressedSize = compress(file);
+        // stats
+        cout << "Size of original file:\t" << fileSize << "bytes\n";
+        cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
+        cout << "Compression rate:\t" << (1 - ((double) compressedSize/(double) fileSize))*100 << "%\n";
     }
-    // size of original file
-    int fileSize;
-    fd.seekg(0, fd.end);
-    fileSize = fd.tellg();
-    fd.close(); 
-
-    int compressedSize = compress(file);
-
-    cout << "Size of original file:\t" << fileSize << "bytes\n";
-    cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
-    cout << "Compression rate:\t" << (1 - ((double) compressedSize/(double) fileSize))*100 << "%\n";
-    file += ".hfm";
-
-    decompress(file);
+    else{
+        file += ".hfm";
+        decompress(file);
+        cout << endl; // end of file doesnt have \n
+    }
 }
