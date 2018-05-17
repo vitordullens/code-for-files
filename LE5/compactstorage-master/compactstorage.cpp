@@ -129,7 +129,7 @@ void CompactStorage::writeInt(int value, int bits)
 
 		// Create bitmask for the correspondent bit of the integer to store here
 		int mask = 1 << (bits - i - 1);
-
+		m_bytes[byte] &= ~mask; // erase that bit from byte
 		// Whether to set the current bit or not
 		bool set = (bool) (value & mask);
 		m_bytes[byte] |= (char) set << (7 - bit);
@@ -171,7 +171,6 @@ int CompactStorage::readInt(int bits)
 		value |= (int) set << (bits - i - 1);
 		m_curPos++;
 	}
-
 	return value;
 }
 

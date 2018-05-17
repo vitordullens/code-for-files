@@ -37,6 +37,7 @@ string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
     CompactStorage storage;
     // first thing in file needs to be the trie
     addTrieToFile(storage, hft::getRoot());
+    // storage.dump(); // DEBUG
     char ch;
     while(in.get(ch)){      // hft::Huffnode*    code
         vector<bool> code = ref[ch]->getCode();
@@ -98,10 +99,26 @@ int compress(string fileName){
 
 /* ================================ COMPRESSING FILE END =================================*/
 /* ================================ DECOMPRESSING FILE =================================*/
+void reWrite(CompactStorage& storage){
+    int byte = storage.curByte();
+    storage.reset();
+    vector<char> content;
+    while(byte >= 0){
+        content.push_back(storage.readInt(8));
+        byte--;
+    }
+    byte = storage.curByte();
+    byte--;
+    int i = 0;
+    while(i < byte){
+        storage.writeInt(content[i], 8);
+        i++;
+    }
+}
 
 CompactStorage readTrie(fstream& fd){
     bool done = false;
-    static CompactStorage storage(1);
+    static CompactStorage storage(5);
     char ch;
     hft::Huffnode* curr = NULL;
     while(!done){
@@ -112,21 +129,23 @@ CompactStorage readTrie(fstream& fd){
         // reading that char bit by bit
         storage.reset();
         for(int i = 0; i < 8; i++){
+            cout << "Curr Bit " << storage.curBit() << " Curr Byte " << storage.curByte() << endl; // DEBUG
+            storage.dump(); // DEBUG
             bool b = storage.readBool();
             if(b){
+                cout << "Leaf node\n" << endl; // DEBUG
                 // rewrite storage
-                storage.reset();
-                storage.writeInt(ch, 8);
+                reWrite(storage);
                 // expand with new char
-                char v = fd.get();
-                storage.writeInt(v, 8);
-                storage.readInt(i); // forward to curr position
-                v = storage.readInt(8);
-                storage.dump();
-                cout << v << endl;
+                ch = fd.get();
+                storage.writeInt(ch, 8);
+                storage.reset(); // back to start
+                storage.readInt(i+1); // forward to curr position
+                char v = storage.readInt(8);
+                cout << "v = " << (int) v << endl;
                 hft::Huffnode* n = new hft::Huffnode(v, 0, curr);
 
-                cout << "Found char: " << v << endl;
+                cout << "Found char: " << v << endl; // DEBUG
                 if(curr->getLeft() == NULL)
                     curr->setLeft(n);
                 else{
@@ -135,7 +154,7 @@ CompactStorage readTrie(fstream& fd){
                 }
             }
             else{
-                cout << "found internal node\n";
+                cout << "found internal node\n"; // DEBUG
                 hft::Huffnode* now = new hft::Huffnode(curr);
                 if(curr != NULL){
                     if(curr->getLeft() == NULL)
@@ -150,6 +169,7 @@ CompactStorage readTrie(fstream& fd){
                 break;
             }
         }
+        cout << "Sai do for aqui\n";
         // next byte to process
         if(!done){
             ch = fd.get();
@@ -273,8 +293,8 @@ int main(){
     if (file == ""){
         file = "sample.txt";
     }
-
-    /*ifstream fd (file);
+    /*
+    ifstream fd (file);
     if(!fd){
         cout << "Arquivo " << file << " inexistente\n";
         return 1;
@@ -289,7 +309,7 @@ int main(){
 
     cout << "Size of original file:\t" << fileSize << "bytes\n";
     cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
-    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n";*/
+    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n"; */
     file += ".hfm";
 
     decompress(file);

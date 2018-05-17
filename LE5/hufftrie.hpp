@@ -136,9 +136,12 @@ namespace hufftrie {
         // initial nodes
         for (auto key: freq){
             char k = key.first;
-            Huffnode* pt = new Huffnode(k, freq[k]);
-            // DEBUG std::cout << "Creating initial Huffnode - " << *pt << endl;
-            trie.push(pt);
+            // has to happen
+            if(freq[k] > 0){
+                Huffnode* pt = new Huffnode(k, freq[k]);
+                // DEBUG std::cout << "Creating initial Huffnode - " << *pt << endl;
+                trie.push(pt);
+            }
         }
         // creating the bloddy trie
         while(trie.size() > 1){
