@@ -42,6 +42,7 @@ class CompactStorage
 
 		char* getContent(int & length);
 		void reset();
+		void resetHard();
 
 		int curByte();
 		int curBit();
