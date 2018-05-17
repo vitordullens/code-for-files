@@ -13,10 +13,18 @@
 using namespace std;
 namespace hft = hufftrie;
 
+// DEBUG
+void showTrie(hft::Huffnode* root){
+    cout << *root << " " << root->getLeft() << " " << root->getRight() << endl;
+    if(root->getLeft() != NULL)
+        showTrie(root->getLeft());
+    if(root->getRight() != NULL)
+        showTrie(root->getRight());
+}
 /* ================================ COMPRESSING FILE =================================*/
 // writes trie has a stream of bits
 void addTrieToFile(CompactStorage& storage, hft::Huffnode* root){
-    cout << "Node: " << *root << endl;
+    // cout << "Node: " << *root << endl; // DEBUG
     if(root->getChar() != INTERNAL_CHAR){
         storage.writeBool(1);
         storage.writeInt(root->getChar(), 8);
@@ -24,15 +32,15 @@ void addTrieToFile(CompactStorage& storage, hft::Huffnode* root){
     }
     // write internal node
     storage.writeBool(0);
-    cout << "The trie: " << endl;
-    storage.dump();
+    // cout << "The trie: " << endl; // DEBUG
+    // storage.dump(); // DEBUG
     // explore left
     addTrieToFile(storage, root->getLeft());
     // explore Right
     addTrieToFile(storage, root->getRight());
 
-    cout << "The trie: " << endl;
-    storage.dump();
+    // cout << "The trie: " << endl; // DEBUG
+    // storage.dump(); // DEBUG
 }
 
 string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
@@ -89,6 +97,7 @@ int compress(string fileName){
         cout << "Char: " << x.first << " Value: " << x.second->getCode() << endl;
     }
 
+    // showTrie(root); // DEBUG
     cout << "creating new file...\n";
     // created the compressed file
     fileName = shrinkFile(refTable, fileName);
@@ -138,7 +147,7 @@ CompactStorage& readTrie(fstream& fd){
             storage.writeInt(ch, 8);
         }
         storage.reset();
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 8 && !done; i++){
             // cout << "Curr Bit " << storage.curBit() << " Curr Byte " << storage.curByte() << endl; // DEBUG
             // storage.dump(); // DEBUG
             bool b = storage.readBool();
@@ -159,10 +168,8 @@ CompactStorage& readTrie(fstream& fd){
                 // cout << "Found char: " << v << endl; // DEBUG
                 if(curr->getLeft() == NULL)
                     curr->setLeft(n);
-                else{
+                else
                     curr->setRight(n);
-                    curr = curr->getParent(); // this node is done
-                }
             }
             else{
                 // cout << "found internal node\n"; // DEBUG
@@ -175,9 +182,21 @@ CompactStorage& readTrie(fstream& fd){
                 }
                 curr = now;
             }
-            if(curr->getLeft() != NULL && curr->getRight() != NULL){
-                done = true;
-                break;
+
+            while(curr->getLeft() != NULL && curr->getRight() != NULL){
+                // cout << "Curr " << curr << " Parent "<<  curr->getParent() << endl; // DEBUG
+                if(curr->getParent() != NULL){
+                    curr = curr->getParent();
+                    // extra safety
+                    if(curr == NULL){
+                        done = true;
+                        break;
+                    }
+                }
+                else{
+                    done = true;
+                    break;
+                }
             }
         }
     }
@@ -191,14 +210,6 @@ CompactStorage& readTrie(fstream& fd){
     return storage;
 }
 
-// DEBUG
-void showTrie(hft::Huffnode* root){
-    cout << *root << " " << root->getLeft() << " " << root->getRight() << endl;
-    if(root->getLeft() != NULL)
-        showTrie(root->getLeft());
-    if(root->getRight() != NULL)
-        showTrie(root->getRight());
-}
 // write to stdout
 void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage){
     int i = storage.curBit();
@@ -329,16 +340,16 @@ int main(){
         return 1;
     }
     // size of original file
-    /* int fileSize;
+    int fileSize;
     fd.seekg(0, fd.end);
     fileSize = fd.tellg();
-    fd.close(); */
+    fd.close(); 
 
-    /*int compressedSize = compress(file);
+    int compressedSize = compress(file);
 
     cout << "Size of original file:\t" << fileSize << "bytes\n";
     cout << "Size of compressed file:\t" << compressedSize << "bytes\n";
-    cout << "Compression rate:\t" << 1 - ((double) compressedSize/(double) fileSize) << "%\n"; */
+    cout << "Compression rate:\t" << (1 - ((double) compressedSize/(double) fileSize))*100 << "%\n";
     file += ".hfm";
 
     decompress(file);

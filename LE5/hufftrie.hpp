@@ -209,7 +209,13 @@ using namespace hufftrie;
 std::ostream& operator<<(std::ostream& os, Huffnode& n){  
     char out = n.getChar();
     if(out == '\n'){
-        out = 1;
+        out = '1';
+    }
+    else if(out == ' '){
+        out = '#';
+    }
+    else if(out == 2){
+        out = '2';
     }
     os << "char: " << out << " freq: " << n.getFreq();  
     return os;  
