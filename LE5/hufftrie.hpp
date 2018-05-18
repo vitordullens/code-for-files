@@ -32,6 +32,7 @@ namespace hufftrie {
         Huffnode* getParent();
         void setLeft(Huffnode* l);
         void setRight(Huffnode* r);
+        bool isLeaf();
         std::vector<bool> getCode();
         void setCode(std::vector<bool> Code);
     };
@@ -117,6 +118,10 @@ namespace hufftrie {
             right = r;
         }
 
+        bool Huffnode::isLeaf(){
+            return (left == NULL && right == NULL);
+        }
+
 /* ----------------------------- END OF HUFFNODE CLASS DEFINITION ------------------------------ */
     // to be updated once trie is created (variable of namespace)
     Huffnode* TrieRoot = NULL;
@@ -183,8 +188,8 @@ namespace hufftrie {
 
     // add codes to nodes and create map of chars to nodes
     void renderCodes(Huffnode* root, std::vector<bool> cd, std::map<char,Huffnode*>& codes){
-        // DEBUG cout << "Im in " << *root << " with code " << cd << endl;
-        if(root->getChar() != 2){
+        // std::cout << "Im in " << root << endl; // DEBUG
+        if(root->getChar() != INTERNAL_CHAR || root->isLeaf()){
             root->setCode(cd);
             codes[root->getChar()] = root;
             return;

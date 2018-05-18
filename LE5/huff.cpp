@@ -25,7 +25,7 @@ void showTrie(hft::Huffnode* root){
 // writes trie has a stream of bits
 void addTrieToFile(CompactStorage& storage, hft::Huffnode* root){
     // cout << "Node: " << *root << endl; // DEBUG
-    if(root->getChar() != INTERNAL_CHAR){
+    if(root->getChar() != INTERNAL_CHAR || root->isLeaf()){
         storage.writeBool(1);
         storage.writeInt(root->getChar(), 8);
         return;
@@ -50,7 +50,9 @@ string shrinkFile(map<char, hft::Huffnode*>& ref, string fileName){
     fstream fd (fileName, ios::out | ios::binary); // file to write into
     CompactStorage storage;
     // first thing in file needs to be the trie
+    cout << "Shrinking file\n"; // DEBUG
     addTrieToFile(storage, hft::getRoot());
+    cout << "Trie in storage\n"; // DEBUG
     // storage.dump(); // DEBUG
     char ch;
     while(in.get(ch)){      // hft::Huffnode*    code
@@ -96,7 +98,7 @@ int compress(string fileName){
     for(auto x: refTable){
         cout << "Char: " << x.first << " Value: " << x.second->getCode() << endl;
     }
-
+    cout << "END OF REF TABLE\n";
     // showTrie(root); // DEBUG
     cout << "creating new file...";
     // created the compressed file
@@ -235,7 +237,7 @@ void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage){
                 it = it->getLeft();
             }
             out = it->getChar();
-            if(out != INTERNAL_CHAR){
+            if(it->isLeaf()){
                 if (out == EOT)
                     break;
                 cout << out;
@@ -260,10 +262,16 @@ void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage, fstream
     char read;
     // file to be read
     while(out != EOT){
+        // storage.dump(); // DEBUG
+        // getchar(); // DEBUG
         // next byte to read
         while(i < 8){
+            // cout << "Curr Bit " << storage.curBit() << " Curr Byte " << storage.curByte() << endl; // DEBUG
             i++;
             bool b = storage.readBool();
+            // cout << b << endl; // DEBUG
+            // cout << *it << endl; // DEBUG
+            // getchar(); // DEBUG
             if(b){
                 it = it->getRight();
             }
@@ -271,15 +279,16 @@ void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage, fstream
                 it = it->getLeft();
             }
             out = it->getChar();
-            if(out != INTERNAL_CHAR){
+            if(it->isLeaf()){
                 ou.write(&out, 1);
             }
         }
-        if(out != EOF){
-            i = 0;
-            storage.reset();
+        if(out != EOT){
+            storage.resetHard();
             read = in.get();
             storage.writeInt(read, 8);
+            i = 0;
+            storage.reset();
         }
     }
 }
@@ -290,7 +299,7 @@ void decompress(string file, string  outFile = ""){
     fstream fd (file, ios::in);
     // check for file
     if(!fd){
-        cout << "File not found\n";
+        cout << "Compressed file not found. Compress first\n";
         exit(1);
     }
     // cout << "reading trie now\n"; // DEBUG
@@ -364,7 +373,14 @@ int main(){
     }
     else{
         file += ".hfm";
-        decompress(file);
+        int op = 0;
+        cout << "Decompress into another file?:\n(1) NO - STDOUT\n(2) YES - OUT_FILE\n";
+        while (op != 1 && op != 2)
+            cin >> op;
+        if(op == 1)
+            decompress(file);
+        else
+            decompress(file, "OUT_FILE");
         cout << endl; // end of file doesnt have \n
     }
 }
