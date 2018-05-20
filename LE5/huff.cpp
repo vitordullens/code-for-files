@@ -280,7 +280,10 @@ void readFile(fstream& in, hft::Huffnode* root, CompactStorage& storage, fstream
             }
             out = it->getChar();
             if(it->isLeaf()){
+                if (out == EOT)
+                    break;
                 ou.write(&out, 1);
+                it = root;
             }
         }
         if(out != EOT){
