@@ -1,4 +1,6 @@
 # OA
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/vitordullens/OA/blob/master/LICENSE)
+
 Projects made for the discipline Archives Organization
 
 - **LE1:** A program that read text files, one or more, and concatenates them into another file.
