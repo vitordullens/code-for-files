@@ -9,6 +9,7 @@
 using namespace std;
 
 void menu(){
+    system(CLEAR);
     printf("#################################\n");
     printf("#         LE6 Exercise 4        #\n");
     printf("#################################\n");
