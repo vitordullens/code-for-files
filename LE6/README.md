@@ -4,8 +4,7 @@
 3. Por que é possível eliminar um registro apenas do índice primário, e não
 do secundário?
 4. Faça um programa que faça os seguintes procedimentos:
-    - Peça para o usuário preencher um arquivo o qual vai conter no mínimo 20 registros e cada registro deve ser composto no mínimo
-de 10 campos.
+    - Peça para o usuário preencher um arquivo o qual vai conter no mínimo 20 registros e cada registro deve ser composto no mínimo de 10 campos.
     - A partir desse arquivo criado e usando dois desses campos crie a chave primaria.
     - Crie um índice simples com essa chave primaria.
     - Faça a busca de um registro nesse arquivo de índices simples.
