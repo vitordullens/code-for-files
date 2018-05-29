@@ -1,7 +1,12 @@
-6-2018-05-24.21:01:45
+11-2018-05-29.12:27:19
 1|a|b|c|d|e|f|h|i|j|k|
 2|sdas|sad|asd|asd|asd|asd|asd|as|ddasd|dsa|
 3|tyyt|ytyuyut|ytu|tu|tutu|tuu|utu|tu|tu|utu|
-4|ghg|hg|hg|hg|hgh|g|hg|h|gh|gh|
-5|dsd|sd|sd|sd|sd|s|ds|d|sd|sd|
-6|hjh|gjg|hj|ghj|gh|jg|hj|ghj|ghj|ghj|
+4|sds|ds|d|sd|s|d|sd|sd|ds|sd|
+5|ds|d|sd|s|ds|d|s|ds|d|sd|
+6|sd|sd|as|sad|sa|sad|asdd|sda|sd|sd|
+7|sd|sd|sd|sd|sd|f|s|fd|fdf|df|
+8|asd|as|das|d|asd|asds|sad|asd|sad|asd|
+9|saddgdg|fg|fg|fg|f|h|g|ht|y|ty|
+10|tr|t|rt|rt|rt||fg|fg|vb|bv|
+11|dfd|f|df|df|df|df|ddf|df|fdf|df|
