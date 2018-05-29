@@ -98,12 +98,13 @@ void search( ifstream& fd, vector<pair<int, int>>* idx = NULL){
         cout << "Registro nao existe\n";
     }
     else{
-        char enter;
         fd.seekg(off);
         string content;
         getline(fd, content);
         cout << content << endl;
-        cin >> enter;
+        cin.clear(); cin.ignore(INT_MAX, '\n');
+        cout << "----press ENTER to continue----" << endl;
+        getchar();
     }
     return;
 }
