@@ -77,23 +77,23 @@ int binSearch(vector<pair<int,int>>& idx, int low, int high, int target){
         return binSearch(idx, low, mid-1, target);
     }
 }
-void search( ifstream& fd, vector<pair<int, int>>* idx = NULL){
+void search( ifstream& fd, vector<pair<int, int>>& idx, bool flag = false){
     int pk;
-    if (idx==NULL){
-        ifstream index("index.txt");
+    if (flag){
+        ifstream index(".index.txt");
         string trash;
         int num, offset;
         getline(index, trash);
         while(!index.eof()){
             index >> num;
             index >> offset;
-            idx->push_back(make_pair(num, offset));
+            idx.push_back(make_pair(num, offset));
         }
     }
     cout << "Informe o indice do arquivo que deseja buscar: ";
     cin >> pk;
     
-    int off = binSearch(*idx, 0, idx->size()-1, pk);
+    int off = binSearch(idx, 0, idx.size()-1, pk);
     if(off == -1){
         cout << "Registro nao existe\n";
     }
@@ -112,7 +112,7 @@ vector<pair<int, int>> index(){
     ifstream arquivo;
     arquivo.open("computer.txt");
     fstream index;
-    index.open("index.txt", ios::in);
+    index.open(".index.txt", ios::in);
     string header, indexHeader;
     vector<pair<int, int>> idx;
     int offset, num;
@@ -120,7 +120,9 @@ vector<pair<int, int>> index(){
     getline(arquivo, header);
     getline(index, indexHeader);
     
-    if(header == indexHeader) search(arquivo);
+    index.close();
+    
+    if(header == indexHeader) search(arquivo, idx, true);
     else
         while(!arquivo.eof()){
             offset = arquivo.tellg();
@@ -128,9 +130,8 @@ vector<pair<int, int>> index(){
             idx.push_back(make_pair(num, offset));
             getline(arquivo, indexHeader);            
         }
-    index.close();
 
-    index.open("index.txt", ios::out);
+    index.open(".index.txt", ios::out);
     index << header << endl;
     for(auto q : idx) {
         index << q.first << " " << q.second << " ";
@@ -206,7 +207,7 @@ int main(){
         if(opc == 2){
             idx = index();
             ifstream file ("computer.txt");
-            search(file , &idx);
+            search(file , idx);
         }
     opc = menu();
 
