@@ -36,34 +36,6 @@ const string currentDateTime()
     return buf;
 }
 
-void copy(fstream& file1, fstream& file2, bool aux){
-    string content = "";
-    while(file1.eof()!=true)
-        content += file1.get();
-    content.erase(content.end()-1);
-    int i=0;
-    if(aux)
-        content.erase(0,content.find("\n"));
-    file2 << content;
-}
-void tratamento(fstream& arquivo, fstream& arquivo2, int header, char traco, string time){
-    arquivo.open("computer.txt", ios::in);
-    arquivo2.open("header.txt", ios::out);
-
-    arquivo2 << header << traco << time;
-    copy(arquivo, arquivo2, true);
-    arquivo.close();
-    arquivo2.close();
-
-    arquivo.open("computer.txt", ios::out);
-    arquivo2.open("header.txt", ios::in);
-
-    copy(arquivo2, arquivo, false);
-
-    arquivo.close();
-    arquivo2.close();
-    system("rm header.txt");
-}
 int binSearch(vector<pair<int,int>>& idx, int low, int high, int target){
     if(low > high) return -1;
     int mid = (low+high)/2;
@@ -175,18 +147,17 @@ int main(){
     char traco;
     string op;
     bool go = true;
-    fstream arquivo, arquivo2;
+    fstream arquivo;
     vector<pair<int, int>> idx;
     
-    arquivo.open("computer.txt", ios::in);
+    arquivo.open("computer.txt", ios::in | ios::out);
     arquivo >> header >> traco >> time;
-    arquivo.close();
-    
-    arquivo.open("computer.txt", ios::app);
+    getline(arquivo, op); // chew trailing spaces
     int opc;
     opc = menu();
     while(opc != 3){
         if(opc == 1){
+            arquivo.seekp(0, arquivo.end);
             while(go){
                 read(++header, arquivo);
                 cout << "quer digitar outro computador? [y/n]  ";
@@ -200,9 +171,9 @@ int main(){
                     cout << "## digite y ou n apenas:  ";
                 }
             }
-            arquivo.close();
             time = currentDateTime();
-            tratamento(arquivo, arquivo2, header, traco, time);
+            arquivo.seekp(0, arquivo.beg);
+            arquivo << header << "-" << time << "          \n"; // extra espaces to manage growing headers
         }
         if(opc == 2){
             idx = index();
