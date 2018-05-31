@@ -87,8 +87,9 @@ vector<pair<int, int>> index(){
     index.open(".index.txt", ios::in);
     string header, indexHeader;
     vector<pair<int, int>> idx;
-    int offset, num;
-
+    int offset, num, total;
+    arquivo >> total;
+    arquivo.seekg(0);
     getline(arquivo, header);
     getline(index, indexHeader);
     
@@ -96,7 +97,7 @@ vector<pair<int, int>> index(){
     
     if(header == indexHeader) search(arquivo, idx, true);
     else
-        while(!arquivo.eof()){
+        while(!arquivo.eof() && num < total){
             offset = arquivo.tellg();
             arquivo >> num;
             idx.push_back(make_pair(num, offset));
@@ -174,6 +175,7 @@ int main(){
             time = currentDateTime();
             arquivo.seekp(0, arquivo.beg);
             arquivo << header << "-" << time << "          \n"; // extra espaces to manage growing headers
+            arquivo.close(); // flush changes
         }
         if(opc == 2){
             idx = index();
