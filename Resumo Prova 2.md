@@ -39,5 +39,6 @@
 		- Permite o uso de programas genéricos: um programa genérico pode ler ou escrever "qualquer" arquivo deste tipo.
 	- Desvantagem:
 		- Os programas precisam ser mais sofisticados;
-![](https://i.imgur.com/XaB4bYF.png)
+
+<img src="https://i.imgur.com/XaB4bYF.png" width="50%" height="50%" >
 		
