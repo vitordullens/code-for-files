@@ -38,5 +38,6 @@
 	- Vantagem:
 		- Permite o uso de programas genéricos: um programa genérico pode ler ou escrever "qualquer" arquivo deste tipo.
 	- Desvantagem:
-		- Os programas precisam ser mais sofisticados;![](https://picasaweb.google.com/108530487111855138967/6561810839969888433#6561810843451850002 "Exemplo - Metadados")
-		- 
+		- Os programas precisam ser mais sofisticados;
+![](https://i.imgur.com/XaB4bYF.png)
+		
