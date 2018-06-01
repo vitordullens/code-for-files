@@ -117,9 +117,12 @@ tempo de acesso a memória é:
 				- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
 				- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
 				- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
-	- Observação nota :
+	- Observação:
+		- Note que cada um dos objetivos normalmente possuem requisitos opostos uns aos outros, como por exemplo:
+			- O algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
+		
 		- 
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM0Mjg1MTAsLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTg0Njg5NTg3MiwtMTA2NjI5MDk1OF19
 -->
