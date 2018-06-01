@@ -179,8 +179,11 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: 
 
 		*ENTENDI NADA DESSA PARTE (SLIDE 9 PÁGINA 29)*	
-- 
+- Códigos de comprimento variável
+	- Os códigos de comprimento variável são aqueles que os simbolos codigicados podem ter tamanho diferente (em bits)
+	- É possível comprimí-los sem perda
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzg3MDEyOTksMjEyOTQ0MzUwMiw4OT
-U0MzM5MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbLTE5MzAzNzgyOCwyMTI5NDQzNTAyLDg5NT
+QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
