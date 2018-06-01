@@ -138,15 +138,15 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		
 - Existem 2 tipos de compressão:
 	- Sem perdas (Lossless)
-		- É a compressão que foca em apenas tirar a dedundância de dados
+		- É a compressão que foca em apenas retirar a redundância de dados
 	- Com perdas(Lossy)
-		- Sei la
+		- Além de tirar a redundância, também retira dados irrelevâ/ncia para u
 	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
 	-	
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwODUwOTg2LDg5NTQzMzkyLC0xMDY2Mj
-kwOTU4XX0=
+eyJoaXN0b3J5IjpbLTEyNjAxODE5MDcsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
