@@ -109,15 +109,16 @@ tempo de acesso a memória é:
 	- Sendo assim, existe um controlador de dispositivos inteligente que organiza uma série de transferências de tal forma que consegue minimizar a perda de tempo recorrente ao movimento do braço (seeking)
 - Codificação de dados
 	- A transformação (codificação) é feita para atingir um certo objetivo (*Compressão*)
-		- Suas características:
-			- Seguro em relação a proteção e autenticação (criptografia)
-			- Robusto
-				- Possui detecção e correção de erros, pois a naturea física do armazenameto pode ocasionar a corrupção de dados
-				- Para realizar a detecção de erros, deve-se incluir redundância na informação:
-					- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
-					- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
-					- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
-				
+	- Suas características:
+		- Seguro em relação a proteção e autenticação (criptografia)
+		- Robusto
+			- Possui detecção e correção de erros, pois a naturea física do armazenameto pode ocasionar a corrupção de dados
+			- Para realizar a detecção de erros, deve-se incluir redundância na informação:
+				- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
+				- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
+				- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
+			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDQ4MjE3MSwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbLTE1OTk3MjA0ODMsLTEwNjYyOTA5NThdfQ
+==
 -->
