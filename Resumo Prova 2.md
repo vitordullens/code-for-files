@@ -56,8 +56,12 @@
 	- Ajuda a geenciar suas imagens
 	- Gerencia as imagens não justo a pixels -> metadados significativos (??)
 	- Contém a identificação do paciente e demografia
-	- 
+- Outras funções:
+	- Armazenamento de imagens:
+		- Crescimento fetal, saída cardíaca, tamanho do tumor...
+		- Gerenciamento do fluxo de trabalho (??)
+		- Apresentação de imagens com calibraçao 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NTg1ODUxOSwxNjE0MDQ5NzA2LC0yNz
-I2NzM0MzVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTg5NzcyNzEsMTYxNDA0OTcwNiwtMj
+cyNjczNDM1XX0=
 -->
