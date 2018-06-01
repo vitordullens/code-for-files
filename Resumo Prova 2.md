@@ -109,7 +109,9 @@ tempo de acesso a memória é:
 	- Sendo assim, existe um controlador de dispositivos inteligente que organiza uma série de transferências de tal forma que consegue minimizar a perda de tempo recorrente ao movimento do braço (seeking)
 - Codificação de dados
 	- A transformação (codificação) é feita para atingir um certo objetivo (*Compressão*)
-	-
+		- Suas características:
+			- Seguro em relação a proteção e autenticação (criptografia)
+			- Robusto
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTM2MDI4OCwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbMjQyOTczNDc1LC0xMDY2MjkwOTU4XX0=
 -->
