@@ -134,11 +134,11 @@ ocupa menos espaço”.
 comprimidas antes de serem transmitidas de um módulo para outro.
 “Um sinal comprimido requer menor largura de banda”.
 
-* PERGUNTAR SE CAI ENTROPIA DE SHANNON
+* PERGUNTAR SE CAI ENTROPIA DE SHANNON (CTZ QUE ELE N SABE)*
 		
-		
+- Existem 2 tipos de compress		
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDc3MDY4OTEsODk1NDMzOTIsLTEwNj
+eyJoaXN0b3J5IjpbLTE5NTYyMDU4MzksODk1NDMzOTIsLTEwNj
 YyOTA5NThdfQ==
 -->
