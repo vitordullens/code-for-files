@@ -96,8 +96,8 @@
 		- Combinar memórias mais baratas com umas caras (tendo mais baratas do que caras nessa junção)
 		- A RAM é feita com tecnologia mais barata em conjunto com a memória cache que é feita com uma tecnologia mais cara.
 		
-	- A
+	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ele pode ser acessada diretamente da cacha, que por sua vez é mais rápido
+	- Se uma palavra é requerida k vezes, entao ela é acessada 1 vez na r
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjg1NTI2MjQsLTEwNjYyOTA5NThdfQ
-==
+eyJoaXN0b3J5IjpbLTY1MTE2MzEwNiwtMTA2NjI5MDk1OF19
 -->
