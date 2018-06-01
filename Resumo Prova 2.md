@@ -74,9 +74,12 @@
 
 ## Compressão de dados
 
-- Sistema operacional
+- Sistema operacional:
+	- Uma de suas funções é formar uma interface entre os usuários e os dispositivos da memória secundária
+	- Já em relação aos meios de armazenameto, as funções do SO podem ser de baixo nível oou de alto nível
+	- Bai
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDY3MTgwNDQsLTEwMjY0OTYyOTUsLT
-IxNDEwOTYwMSwxNjE0MDQ5NzA2LC0yNzI2NzM0MzVdfQ==
+eyJoaXN0b3J5IjpbLTk1NDQ2NzUwOCwtMTAyNjQ5NjI5NSwtMj
+E0MTA5NjAxLDE2MTQwNDk3MDYsLTI3MjY3MzQzNV19
 -->
