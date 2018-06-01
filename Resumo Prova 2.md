@@ -163,12 +163,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 - Quando NÃO usar a compressão
 	- Arquivos pequenos (certos scasos)
 	- Arquivos com muitos programas tendo acesso a ele (pq ?)
-	- Aplicação sem capacidade de lidar com binários Ex: 
+	- Aplicação sem capacidade de lidar com binários Ex: Editor de texto 
 	
+- Supress
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMzI4MjEwMCw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTEyOTE3NzY1NDIsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
