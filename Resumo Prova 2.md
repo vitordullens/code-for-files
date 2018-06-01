@@ -93,8 +93,11 @@
 	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
 		- Fazer memórias mais rápidas:	
 			- São mais caras
-		- Combinar memórias mais baratas com umas caras (tendo mais barat		
-	 
+		- Combinar memórias mais baratas com umas caras (tendo mais baratas do que caras nessa junção)
+		- A RAM é feita com tecnologia mais barata em conjunto com a memória cache que é feita com uma tecnologia mais cara.
+		
+	- A
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxNzkzMzExLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTEzMjg1NTI2MjQsLTEwNjYyOTA5NThdfQ
+==
 -->
