@@ -172,10 +172,10 @@ comprimidas antes de serem transmitidas de um módulo para outro.
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```<Código de escape><N><K>```
 		
 	- Exemplo:
-		- &nbsp;
+		&nbsp; ```PEEEEEEEEEEEEEEEEEEEEEEEENIS -> P$24NIS
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0OTY3ODI4Myw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTE5NTE5NDc2NzcsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
