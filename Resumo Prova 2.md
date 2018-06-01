@@ -76,16 +76,16 @@
 
 - Sistema operacional:
 	- Uma de suas funções é formar uma interface entre os usuários e os dispositivos da memória secundária
-	- Já em relação aos meios de armazenameto, as funções do SO podem ser de baixo nível oou de alto nível
-	- As funções de baixo nível referem-se à transferência de blocos de bytes entre a memória princial e a secundária, comreendendo:
+	- Já em relação aos meios de armazenameto, as funções do SO podem ser de baixo nível ou de alto nível
+	- As funções de baixo nível referem-se à transferência de blocos de bytes entre a memória princial e a secundária, compreendendo:
 		- Gerenciamento da memória cache;
 		- Programação de transferência de dados;
 		- Codificação e decodificação dos dados ( detecção e correção de erros, criptografia, compressão de dados..)
-- Já as funções de alto nível devem operar na:
-	- Estrutura do sistema de arquivos
-	- Segurança (gereciamento de usuários)
-	- Integridade
-	- Alocação de espaço
+	- Já as funções de alto nível devem operar na:
+		- Estrutura do sistema de arquivos
+		- Segurança (gereciamento de usuários)
+		- Integridade
+		- Alocação de espaço
 
 ## Funções de baixo nível
 
@@ -190,6 +190,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTczOTA3NCwyMTI5NDQzNTAyLDg5NT
+eyJoaXN0b3J5IjpbMTMzNDY4MzMwNywyMTI5NDQzNTAyLDg5NT
 QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
