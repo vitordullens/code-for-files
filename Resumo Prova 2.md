@@ -136,9 +136,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 
 * PERGUNTAR SE CAI ENTROPIA DE SHANNON (CTZ QUE ELE N SABE)*
 		
-- Existem 2 tipos de compress		
+- Existem 2 tipos de compressão:
+	- Sem perdas (Lossless)
+		- É a compressão que foca em apenas tirar a dedundância de dados
+	- Com perdas(Lossy)
+			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYyMDU4MzksODk1NDMzOTIsLTEwNj
-YyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbMTcyMDI2NTgsODk1NDMzOTIsLTEwNjYyOT
+A5NThdfQ==
 -->
