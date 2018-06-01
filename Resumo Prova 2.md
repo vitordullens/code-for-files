@@ -133,10 +133,12 @@ ocupa menos espaço”.
 	- Transmissão de dados crescente: informações digitais podem ser
 comprimidas antes de serem transmitidas de um módulo para outro.
 “Um sinal comprimido requer menor largura de banda”.
+
+* PERGUNTAR SE CAI ENTROPIA DE SHANNON
 		
 		
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NTEzNzIyNiw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTE4MDc3MDY4OTEsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
