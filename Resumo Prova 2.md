@@ -54,8 +54,10 @@
 - Funcionamento:
 	- Armazena todas as classes de imagens, CT, MR, Raio-X, Ultrassom...
 	- Ajuda a geenciar suas imagens
-	- Não  
+	- Gerencia as imagens não justo a pixels -> metadados significativos (??)
+	- Contém a identificação do paciente e demografia
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1MzAxMjA4LDE2MTQwNDk3MDYsLTI3Mj
-Y3MzQzNV19
+eyJoaXN0b3J5IjpbMTQ0NTg1ODUxOSwxNjE0MDQ5NzA2LC0yNz
+I2NzM0MzVdfQ==
 -->
