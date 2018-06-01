@@ -77,9 +77,13 @@
 - Sistema operacional:
 	- Uma de suas funções é formar uma interface entre os usuários e os dispositivos da memória secundária
 	- Já em relação aos meios de armazenameto, as funções do SO podem ser de baixo nível oou de alto nível
-	- Bai
+	- As funções de baixo nível referem-se à transferência de blocos de bytes entre a memória princial e a secundária, comreendendo:
+		- Gerenciamento da memória cache;
+		- Programação de transferência de dados;
+		- Codificação e decodificação dos dados ( detecção e correção de erros, criptografia, compressão de dados..)
+
+			
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NDQ2NzUwOCwtMTAyNjQ5NjI5NSwtMj
-E0MTA5NjAxLDE2MTQwNDk3MDYsLTI3MjY3MzQzNV19
+eyJoaXN0b3J5IjpbLTI2NzUyNjc3NF19
 -->
