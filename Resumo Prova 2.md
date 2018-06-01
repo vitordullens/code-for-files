@@ -81,9 +81,13 @@
 		- Gerenciamento da memória cache;
 		- Programação de transferência de dados;
 		- Codificação e decodificação dos dados ( detecção e correção de erros, criptografia, compressão de dados..)
-
+- Já as funções de alto nível devem operar na:
+	- Estrutura do sistema de arquivos
+	- Segurança (gereciamento de usuários)
+	- Integridade
+	- Alocação de espaço
 			
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzUyNjc3NF19
+eyJoaXN0b3J5IjpbLTEwNjYyOTA5NThdfQ==
 -->
