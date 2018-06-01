@@ -174,8 +174,10 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Exemplo:
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```PEEEEEEENIS -> P$7NIS```
 			
-			
+	- Pode-se também definir um número mínimo de repetições.
+
+	- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: Sequencia de bytes (em hexadecimal):
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyOTQ0MzUwMiw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTExMzQxMzgzODEsMjEyOTQ0MzUwMiw4OT
+U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
