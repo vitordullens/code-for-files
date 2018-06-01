@@ -186,8 +186,8 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Podem ser ou não instaneamente codificável, ou seja, as vezes a mensagem precisa se totalmente codificada para poder decodificar
 	-  O princípio de sua codificação vem com a ideía de que alguns valores ocorrem mais do que outros, ou seja, valores que mais repetem são codificados com símbolos menores e símbolos maiores para valores com uma menor frequência
 	- Exemplos:
-		- Código Morse: 
+		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA4NDEyMjYsMjEyOTQ0MzUwMiw4OTU0Mz
-M5MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbLTU4NjY1ODg4NywyMTI5NDQzNTAyLDg5NT
+QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
