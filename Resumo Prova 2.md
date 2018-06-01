@@ -113,8 +113,11 @@ tempo de acesso a memória é:
 			- Seguro em relação a proteção e autenticação (criptografia)
 			- Robusto
 				- Possui detecção e correção de erros, pois a naturea física do armazenameto pode ocasionar a corrupção de dados
-				- Para realizar a detecção de erros, deve-se incluir redundância na informação
+				- Para realizar a detecção de erros, deve-se incluir redundância na informação:
+					- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
+					- Os bits de controle devem ser gerados a partir dos bits que representam a informção e 
 				
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzOTExMTIyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTEwOTAyMjkxMzQsLTEwNjYyOTA5NThdfQ
+==
 -->
