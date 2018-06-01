@@ -156,13 +156,15 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Aumenta a complexidade do software (ai nós ganahamos mamis) 
 	- Demanda tempo para codificar e decodificar (?)
 	-  Torna o processo mais lento
-- Quando usar a compressão
+- Quando usar a compressão     (Economia de acesso compensa
 	- Arquivos grandes (milhares de registros)
-	- 
+	- Em arquivos cujo poucos programas tenham acesso
+	- Se a conversão for simples
+	
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzcwOTUzMiw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTEwNDczNDc5NDMsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
