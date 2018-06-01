@@ -87,9 +87,12 @@
 	- Integridade
 	- Alocação de espaço
 
-## 
-			
+## Funções de baixox nível
+
+- Caching
+	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória.		
 	 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDk0ODA3LC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTE1NzI0MjE3MTIsLTEwNjYyOTA5NThdfQ
+==
 -->
