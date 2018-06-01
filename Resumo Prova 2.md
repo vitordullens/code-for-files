@@ -50,8 +50,10 @@
 		-Com a qualidade de matadados (visto aqui em cima) necessários para o uso clínico
 	- Gerenciador do fluxo de trabalho 
 	- Intercambio de Mídia e Impressão
-	-  
+	- Serviço de protocolos de rede sobre TPC/IP e HTTP (wtf)
+- Funcionamento:
+	- Armazena suas
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODgyMTU4MzEsMTYxNDA0OTcwNiwtMj
+eyJoaXN0b3J5IjpbLTEwNDI4NDAxMjgsMTYxNDA0OTcwNiwtMj
 cyNjczNDM1XX0=
 -->
