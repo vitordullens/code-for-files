@@ -106,7 +106,7 @@ tempo de acesso a memória é:
 	
 - Programação de Transferência
 	- Nas operaçãos de leitura e gravação, o que mais demora nessas operaçoẽs é o movimento do braço das cabeças
-	- Sendo assim, existe um controlador de dispositivos inteligente que organiza
+	- Sendo assim, existe um controlador de dispositivos inteligente que organiza uma série de transferências de tarl forma de minimizar a perda de tempo recorrente ao movimento do braço (seeking)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk2ODAyOTg4LC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbOTQ3MDg1MzEyLC0xMDY2MjkwOTU4XX0=
 -->
