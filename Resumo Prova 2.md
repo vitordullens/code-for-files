@@ -105,7 +105,8 @@ tempo de acesso a memória é:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` Tempo médio de acesso = c + (1-h) * m```
 	
 - Programação de Transferência
-	- Nas operaçãos d
+	- Nas operaçãos de leitura e gravação, o que mais demora nessas operaçoẽs é o movimento do braço das cabeças
+	- Sendo assim, existe um controlador de dispositivos inteligente que organiza
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODU4NDM3LC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbOTk2ODAyOTg4LC0xMDY2MjkwOTU4XX0=
 -->
