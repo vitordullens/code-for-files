@@ -122,10 +122,21 @@ tempo de acesso a memória é:
 			- Os algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
 			- Os algoritmos de controle de erros implicam, muitas vezes, o aumento do comprimento da mensagem
 
+##  Compressão de dados
+- Compressão de dados é o processo de codificar uma determinada
+informação utilizando uma menor representação. Os dois principais
+benefícios trazidos pela compressão de dados são:
+	- Capacidade de armazenamento das informações crescente: o uso de
+compressão de dados pode aumentar significativamente a
+capacidade de armazenamento do sistema. “um sinal comprimido
+ocupa menos espaço”.
+	- Transmissão de dados crescente: informações digitais podem ser
+comprimidas antes de serem transmitidas de um módulo para outro.
+“Um sinal comprimido requer menor largura de banda”.
 		
-		- 
+		
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyMDIxNTgyLDg5NTQzMzkyLC0xMDY2Mj
-kwOTU4XX0=
+eyJoaXN0b3J5IjpbLTM1NTEzNzIyNiw4OTU0MzM5MiwtMTA2Nj
+I5MDk1OF19
 -->
