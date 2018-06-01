@@ -44,7 +44,7 @@
 
 ## DICOM ( Digital Imaging and Communications in Medicine)
 
-- Comunicação de imagens digitais e medicina, é o padra internacional para imagens médias e informação relacionada
+- Comunicação de imagens digitais e medicina, é o padrão internacional para imagens médias e informação relacionada
 - Define:
 	- Formato para imagens, formas de onda, estrutura de dados...
 		-Com a qualidade de matadados (visto aqui em cima) necessários para o uso clínico
@@ -186,8 +186,10 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Podem ser ou não instaneamente codificável, ou seja, as vezes a mensagem precisa se totalmente codificada para poder decodificar
 	-  O princípio de sua codificação vem com a ideía de que alguns valores ocorrem mais do que outros, ou seja, valores que mais repetem são codificados com símbolos menores e símbolos maiores para valores com uma menor frequência
 	- Exemplos:
-		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem ( *E* e *T* ) são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem  
+		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem ( *E* e *T* ) são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
+		- Código de Huffman: Putaria louca
+		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDQ5ODA5NSwyMTI5NDQzNTAyLDg5NT
+eyJoaXN0b3J5IjpbLTkyMDYxNzQ0NCwyMTI5NDQzNTAyLDg5NT
 QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
