@@ -185,13 +185,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Os códigos de comprimento variável são aqueles que os simbolos codificados podem ter tamanhos diferentes (em bits)
 	- É possível comprimi-los sem perda
 	- Cada símbolo deve ser unicamente codificável, ou se ja, nenhum símbolo codificado pode ser prefixo de outro
-	- Podem ser ou não instanteamente codificável, ou seja, as vezes a mensagem precisa se totalmente codificada para poder decodificar
+	- Podem ser ou não instantaneamente codificável, ou seja, as vezes a mensagem precisa ser totalmente codificada para poder decodificar
 	-  O princípio de sua codificação vem com a ideía de que alguns valores ocorrem mais do que outros, ou seja, valores que mais repetem são codificados com símbolos menores e símbolos maiores para valores com uma menor frequência
 	- Exemplos:
-		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem ( *E* e *T* ) são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
+		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem são  *E* e *T*, entao elas são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzA3OTA2NSwyMTI5NDQzNTAyLDg5NT
+eyJoaXN0b3J5IjpbMTU2NjAxOTEzNCwyMTI5NDQzNTAyLDg5NT
 QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
