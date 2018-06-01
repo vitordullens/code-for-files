@@ -112,6 +112,8 @@ tempo de acesso a memória é:
 		- Suas características:
 			- Seguro em relação a proteção e autenticação (criptografia)
 			- Robusto
+				- Possui detecção e correção de erros, pois a naturea física do armaze
+				
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyOTczNDc1LC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbMTc4OTM3Mjk2OCwtMTA2NjI5MDk1OF19
 -->
