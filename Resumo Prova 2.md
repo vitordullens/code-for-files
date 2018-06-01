@@ -47,13 +47,13 @@
 - Comunicação de imagens digitais e medicina, é o padrão internacional para imagens médias e informação relacionada
 - Define:
 	- Formato para imagens, formas de onda, estrutura de dados...
-		-Com a qualidade de matadados (visto aqui em cima) necessários para o uso clínico
+		- Com a qualidade de metadados (visto aqui em cima) necessários para o uso clínico
 	- Gerenciador do fluxo de trabalho 
 	- Intercambio de Mídia e Impressão
 	- Serviço de protocolos de rede sobre TPC/IP e HTTP (wtf)
 - Funcionamento:
 	- Armazena todas as classes de imagens, CT, MR, Raio-X, Ultrassom...
-	- Ajuda a geenciar suas imagens
+	- Ajuda a gerenciar suas imagens
 	- Gerencia as imagens não justo a pixels -> metadados significativos (??)
 	- Contém a identificação do paciente e demografia
 - Outras funções:
@@ -190,6 +190,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMDYxNzQ0NCwyMTI5NDQzNTAyLDg5NT
+eyJoaXN0b3J5IjpbMTIzMTczOTA3NCwyMTI5NDQzNTAyLDg5NT
 QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
