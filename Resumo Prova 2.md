@@ -166,11 +166,12 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Aplicação sem capacidade de lidar com binários Ex: Editor de texto
 	
 - Supressão de Sequências repetidas - Run lenght Coding
-	- Indicado quando a sequência 
+	- Indicado quando arquivos possuem uma sequência do mesmo byte frequente
+	- Utiliza-se código de escape, se um caracter K aparece N vezes, se  
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcyMjI3MDYyLDg5NTQzMzkyLC0xMDY2Mj
-kwOTU4XX0=
+eyJoaXN0b3J5IjpbLTE3NTcyNjkyNiw4OTU0MzM5MiwtMTA2Nj
+I5MDk1OF19
 -->
