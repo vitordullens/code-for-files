@@ -99,7 +99,7 @@
 		- A RAM é feita com tecnologia mais barata em conjunto com a memória cache que é feita com uma tecnologia mais cara.
 		
 	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ela pode ser acessada diretamente da cache, que por sua vez é mais rápido
-	- Se uma palavra é requerida k vezes, entao ela é acessada 1 vez na RAM e jogada pra cache, acessando todas as outras vezes lá mesmo ( k - 1)
+	- Se uma palavra é requerida k vezes, entao ela é acessada 1 vez na RAM e jogada pra cache, acessando todas as outras vezes lá mesmo ( k - 1 )
 	- Se ‘c’ é o tempo médio de acesso a cache, ‘m’ é o tempo médio de acesso a
 RAM, e ‘h’ é a taxa de acerto (no exemplo anterior seria (k-1)/k. Então o
 tempo de acesso a memória é:
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA2NTc4MTgsMjEyOTQ0MzUwMiw4OT
-U0MzM5MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbLTExMzEzMDA4NCwyMTI5NDQzNTAyLDg5NT
+QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
