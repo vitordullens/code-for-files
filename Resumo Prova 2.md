@@ -119,10 +119,11 @@ tempo de acesso a memória é:
 				- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
 	- Observação:
 		- Note que cada um dos objetivos normalmente possuem requisitos opostos uns aos outros, como por exemplo:
-			- O algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
+			- Os algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
+			- Os algoritmos de controle de erros implicam, muitas vezes, o aumento do comprimento da mensagem
 		
 		- 
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0Njg5NTg3MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbODk1NDMzOTIsLTEwNjYyOTA5NThdfQ==
 -->
