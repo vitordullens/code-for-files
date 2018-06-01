@@ -90,9 +90,11 @@
 ## Funções de baixox nível
 
 - Caching
-	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória.		
+	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
+		- Fazer memórias mais rápidas:	
+			- São mais caras
+		- Combinar memórias mais baratas com umas caras (tendo mais barat		
 	 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzI0MjE3MTIsLTEwNjYyOTA5NThdfQ
-==
+eyJoaXN0b3J5IjpbMzkxNzkzMzExLC0xMDY2MjkwOTU4XX0=
 -->
