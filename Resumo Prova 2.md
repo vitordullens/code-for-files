@@ -66,8 +66,11 @@
 		- Segmentações
 		- Modelos de implantes
 	- É seguro pois possui esquemas de identificação, encriptação (mas a gente nao conseguiu acessar ?)
-*FALA COMO FUNCIONA O DICOM GIOVANNI PLS*
+
+*FALA COMO FUNCIONA O DICOM, GIOVANNI (PLS)*
+
+*Se cair FITS eu quito*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDEwOTYwMSwxNjE0MDQ5NzA2LC0yNz
-I2NzM0MzVdfQ==
+eyJoaXN0b3J5IjpbNjUwNDk2MzM3LC0yMTQxMDk2MDEsMTYxND
+A0OTcwNiwtMjcyNjczNDM1XX0=
 -->
