@@ -74,6 +74,8 @@
 
 ## Compressão de dados
 
+### Introdução
+
 - Sistema operacional:
 	- Uma de suas funções é formar uma interface entre os usuários e os dispositivos da memória secundária
 	- Já em relação aos meios de armazenameto, as funções do SO podem ser de baixo nível ou de alto nível
@@ -87,7 +89,7 @@
 		- Integridade
 		- Alocação de espaço
 
-## Funções de baixo nível
+
 
 - Caching
 	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
@@ -190,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNDY4MzMwNywyMTI5NDQzNTAyLDg5NT
-QzMzkyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTExNzg2NzMzNjUsMjEyOTQ0MzUwMiw4OT
+U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
