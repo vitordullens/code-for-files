@@ -41,7 +41,8 @@
 		- Os programas precisam ser mais sofisticados;
 
 <img src="https://i.imgur.com/XaB4bYF.png" width="50%" height="50%" >
-		
+
+## DICOM ( Digital Imaging and Communications in Medicine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MjY3MzQzNV19
+eyJoaXN0b3J5IjpbMTYxNDA0OTcwNiwtMjcyNjczNDM1XX0=
 -->
