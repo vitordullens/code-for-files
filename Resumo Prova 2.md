@@ -87,7 +87,7 @@
 	- Integridade
 	- Alocação de espaço
 
-## Funções de baixox nível
+## Funções de baixo nível
 
 - Caching
 	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
@@ -106,7 +106,8 @@ tempo de acesso a memória é:
 	
 - Programação de Transferência
 	- Nas operaçãos de leitura e gravação, o que mais demora nessas operaçoẽs é o movimento do braço das cabeças
-	- Sendo assim, existe um controlador de dispositivos inteligente que organiza uma série de transferências de tarl forma de minimizar a perda de tempo recorrente ao movimento do braço (seeking)
+	- Sendo assim, existe um controlador de dispositivos inteligente que organiza uma série de transferências de tal forma que consegue minimizar a perda de tempo recorrente ao movimento do braço (seeking)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ3MDg1MzEyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTE4NTM3NTI2MDUsLTEwNjYyOTA5NThdfQ
+==
 -->
