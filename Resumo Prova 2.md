@@ -152,11 +152,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 
 - Desvantagens
 	- O uso de código em binário torna o arquivo menos legível para humanos (nós somos super-humanos então)
-	- Há um costo para codificar e decodificar das entidades 
+	- Há um costo para codificar e decodificar das entidades
+	- Aumenta a complexidade do software (ai nós ganahamos mamis) 
+	- Demanda tempo para 
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3ODc4MTgyMSw4OTU0MzM5MiwtMTA2Nj
+eyJoaXN0b3J5IjpbLTQ4NjMyODMzNCw4OTU0MzM5MiwtMTA2Nj
 I5MDk1OF19
 -->
