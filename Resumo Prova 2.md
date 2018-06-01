@@ -140,9 +140,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Sem perdas (Lossless)
 		- É a compressão que foca em apenas tirar a dedundância de dados
 	- Com perdas(Lossy)
+		- Sei la
+	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
+	-	
+		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDI2NTgsODk1NDMzOTIsLTEwNjYyOT
-A5NThdfQ==
+eyJoaXN0b3J5IjpbMTgwODUwOTg2LDg5NTQzMzkyLC0xMDY2Mj
+kwOTU4XX0=
 -->
