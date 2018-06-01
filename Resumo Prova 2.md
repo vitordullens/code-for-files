@@ -163,13 +163,14 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 - Quando NÃO usar a compressão
 	- Arquivos pequenos (certos scasos)
 	- Arquivos com muitos programas tendo acesso a ele (pq ?)
-	- Aplicação sem capacidade de lidar com binários Ex: Editor de texto 
+	- Aplicação sem capacidade de lidar com binários Ex: Editor de texto
 	
-- Supress
+- Supressão de Sequências repetidas - Run lenght Coding
+	- Indicado quando a sequência 
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTE3NzY1NDIsODk1NDMzOTIsLTEwNj
-YyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbODcyMjI3MDYyLDg5NTQzMzkyLC0xMDY2Mj
+kwOTU4XX0=
 -->
