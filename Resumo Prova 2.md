@@ -92,13 +92,13 @@
 
 
 - Caching
-	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquant o pdado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
+	- Processadores são mais rápidos que as memórias, então pode acontecer de um processador ficar esperando alguns ciclos enquanto o dado é lido da memória. Sendo assim, existem alguns métodos para resolver este problema:
 		- Fazer memórias mais rápidas:	
 			- São mais caras
 		- Combinar memórias mais baratas com umas caras (tendo mais baratas do que caras nessa junção)
 		- A RAM é feita com tecnologia mais barata em conjunto com a memória cache que é feita com uma tecnologia mais cara.
 		
-	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ele pode ser acessada diretamente da cacha, que por sua vez é mais rápido
+	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ela pode ser acessada diretamente da cache, que por sua vez é mais rápido
 	- Se uma palavra é requerida k vezes, entao ela é acessada 1 vez na RAM e jogada pra cache, acessando todas as outras vezes lá mesmo ( k - 1)
 	- Se ‘c’ é o tempo médio de acesso a cache, ‘m’ é o tempo médio de acesso a
 RAM, e ‘h’ é a taxa de acerto (no exemplo anterior seria (k-1)/k. Então o
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzg2NzMzNjUsMjEyOTQ0MzUwMiw4OT
+eyJoaXN0b3J5IjpbLTIwNDA2NTc4MTgsMjEyOTQ0MzUwMiw4OT
 U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
