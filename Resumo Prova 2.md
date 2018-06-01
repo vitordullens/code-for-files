@@ -124,7 +124,7 @@ tempo de acesso a memória é:
 			- Os algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
 			- Os algoritmos de controle de erros implicam, muitas vezes, o aumento do comprimento da mensagem
 
-##  Compressão de dados
+###  Comprimindo  dados
 - Compressão de dados é o processo de codificar uma determinada
 informação utilizando uma menor representação. Os dois principais
 benefícios trazidos pela compressão de dados são:
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzEzMDA4NCwyMTI5NDQzNTAyLDg5NT
-QzMzkyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbMzk0MDkzMDc3LDIxMjk0NDM1MDIsODk1ND
+MzOTIsLTEwNjYyOTA5NThdfQ==
 -->
