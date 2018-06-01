@@ -42,7 +42,12 @@
 
 <img src="https://i.imgur.com/XaB4bYF.png" width="50%" height="50%" >
 
-## DICOM ( Digital Imaging and Communications in Medicine
+## DICOM ( Digital Imaging and Communications in Medicine)
+
+- Comunicação de imagens digitais e medicina, é o padra internacional para imagens médias e informação relacionada
+- Define:
+	- -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDA0OTcwNiwtMjcyNjczNDM1XX0=
+eyJoaXN0b3J5IjpbLTgzMDYzNDQwOSwxNjE0MDQ5NzA2LC0yNz
+I2NzM0MzVdfQ==
 -->
