@@ -121,9 +121,11 @@ tempo de acesso a memória é:
 		- Note que cada um dos objetivos normalmente possuem requisitos opostos uns aos outros, como por exemplo:
 			- Os algoritmos de compressão tem como objetivo reduzir o comprimento da mensagem
 			- Os algoritmos de controle de erros implicam, muitas vezes, o aumento do comprimento da mensagem
+
 		
 		- 
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk1NDMzOTIsLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbNjMyMDIxNTgyLDg5NTQzMzkyLC0xMDY2Mj
+kwOTU4XX0=
 -->
