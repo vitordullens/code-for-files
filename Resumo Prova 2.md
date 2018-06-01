@@ -73,8 +73,10 @@
 
 
 ## Compressão de dados
-	
+
+- Sistema operacional
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNzYzNzMxNywtMTAyNjQ5NjI5NSwtMj
-E0MTA5NjAxLDE2MTQwNDk3MDYsLTI3MjY3MzQzNV19
+eyJoaXN0b3J5IjpbLTIxNDY3MTgwNDQsLTEwMjY0OTYyOTUsLT
+IxNDEwOTYwMSwxNjE0MDQ5NzA2LC0yNzI2NzM0MzVdfQ==
 -->
