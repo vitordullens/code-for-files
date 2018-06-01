@@ -179,7 +179,8 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: 
 
 		*ENTENDI NADA DESSA PARTE (SLIDE 9 PÁGINA 29)*	
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDExNzM5NCwyMTI5NDQzNTAyLDg5NT
-QzMzkyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbLTIwMzg3MDEyOTksMjEyOTQ0MzUwMiw4OT
+U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
