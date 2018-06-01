@@ -52,8 +52,10 @@
 	- Intercambio de Mídia e Impressão
 	- Serviço de protocolos de rede sobre TPC/IP e HTTP (wtf)
 - Funcionamento:
-	- Armazena suas
+	- Armazena todas as classes de imagens, CT, MR, Raio-X, Ultrassom...
+	- Ajuda a geenciar suas imagens
+	- Não  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDI4NDAxMjgsMTYxNDA0OTcwNiwtMj
-cyNjczNDM1XX0=
+eyJoaXN0b3J5IjpbMjI1MzAxMjA4LDE2MTQwNDk3MDYsLTI3Mj
+Y3MzQzNV19
 -->
