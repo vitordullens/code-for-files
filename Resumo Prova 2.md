@@ -101,8 +101,10 @@
 	- Se ‘c’ é o tempo médio de acesso a cache, ‘m’ é o tempo médio de acesso a
 RAM, e ‘h’ é a taxa de acerto (no exemplo anterior seria (k-1)/k. Então o
 tempo de acesso a memória é:
-	``` Tempo médio de acesso = c + (1-h) * m```
+	``````
+&nbsp;
+``` Tempo médio de acesso = c + (1-h) * m```
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODMyMjI1MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbLTI4NDk0MjY1MiwtMTA2NjI5MDk1OF19
 -->
