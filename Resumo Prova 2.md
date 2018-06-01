@@ -167,7 +167,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	
 - Supressão de Sequências repetidas - Run lenght Coding
 	- Indicado quando arquivos possuem uma sequência do mesmo byte frequente
-	- Utiliza-se código de escape, se um caracter K aparece N vezes, se ele aparecer mais que 3 vezes (eu que to deduzindo isso, porque é muito burro se for 3 pra baixo), então pode substituir   essa sequência por 3 bytes da seguinte forma:
+	- Utiliza-se código de escape, se um caracter K aparece N vezes, então pode substituir   essa sequência por este modelo (No slide fala por 3 bytes mas n faz sentido se o negócio aparece mais de 9 vezes):
 		
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```<Código de escape><N><K>```
 		
@@ -176,6 +176,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTE5NDc2NzcsODk1NDMzOTIsLTEwNj
-YyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTIwNTY1NjQ3NSw4OTU0MzM5MiwtMTA2Nj
+I5MDk1OF19
 -->
