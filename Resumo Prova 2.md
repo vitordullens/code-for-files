@@ -154,8 +154,8 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 
 - Desvantagens
 	- O uso de código em binário torna o arquivo menos legível para humanos (nós somos super-humanos então)
-	- Há um custo para codificar e decodificar das entidades
-	- Aumenta a complexidade do software (ai nós ganahamos mamis) 
+	- Há um custo para codificar e decodificar as entidades
+	- Aumenta a complexidade do software (ai nós ganahamos mais) 
 	- Demanda tempo para codificar e decodificar (?)
 	-  Torna o processo mais lento
 - Quando usar a compressão     (Economia de acesso compensa o custo de compressão)
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDgzNDg4MiwyMTI5NDQzNTAyLDg5NT
-QzMzkyLC0xMDY2MjkwOTU4XX0=
+eyJoaXN0b3J5IjpbOTIyMDU0MzE5LDIxMjk0NDM1MDIsODk1ND
+MzOTIsLTEwNjYyOTA5NThdfQ==
 -->
