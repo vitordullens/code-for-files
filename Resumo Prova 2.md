@@ -182,8 +182,9 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 - Códigos de comprimento variável
 	- Os códigos de comprimento variável são aqueles que os simbolos codigicados podem ter tamanho diferente (em bits)
 	- É possível comprimi-los sem perda
-	- Cada símbolo deve ser unicamente codificável, ou se ja, nenhum
+	- Cada símbolo deve ser unicamente codificável, ou se ja, nenhum símbolo codificade pode ser prefixo de outro
+	- Podem ser ou não instaneamente codificável, ou seja, as vezes a mensagem precisa se total
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQzNjg4OTc4LDIxMjk0NDM1MDIsODk1ND
-MzOTIsLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTE4ODAxNzI2NzEsMjEyOTQ0MzUwMiw4OT
+U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
