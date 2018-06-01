@@ -86,8 +86,10 @@
 	- Segurança (gereciamento de usuários)
 	- Integridade
 	- Alocação de espaço
+
+## 
 			
-	- 
+	 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTk3MDk0ODA3LC0xMDY2MjkwOTU4XX0=
 -->
