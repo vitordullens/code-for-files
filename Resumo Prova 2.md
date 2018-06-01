@@ -146,11 +146,11 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Pegando o exemplo de sala com um registro com os seguintes campos
 		```<matrícula><nome><endereço><uf><curso><opção><departamento>```
 	 
-	- O campo de uf por exemplo é 	
+	- O campo de uf por exemplo é representado por 2 bytes (DF, MG, SP..), este campo pode ser reduzido a 1 byte em binário para representar os 26 estados do país	
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDM0ODI4NTMsODk1NDMzOTIsLTEwNj
-YyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbODg1OTYwMzU2LDg5NTQzMzkyLC0xMDY2Mj
+kwOTU4XX0=
 -->
