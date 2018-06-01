@@ -60,8 +60,13 @@
 	- Armazenamento de imagens:
 		- Crescimento fetal, saída cardíaca, tamanho do tumor...
 		- Gerenciamento do fluxo de trabalho (??)
-		- Apresentação de imagens com calibraçao 
+		- Apresentação de imagens com calibração de tela, anotações, layouts....
+		- Armazenameto de Anáise de resultados:
+			- Cadastros
+			- Segmentações
+			- Modelos de implantes
+		=
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTg5NzcyNzEsMTYxNDA0OTcwNiwtMj
-cyNjczNDM1XX0=
+eyJoaXN0b3J5IjpbMjAxODE5MTMzMSwxNjE0MDQ5NzA2LC0yNz
+I2NzM0MzVdfQ==
 -->
