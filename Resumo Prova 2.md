@@ -148,12 +148,12 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	 
 	- O campo de uf por exemplo é representado por 2 bytes (DF, MG, SP..), este campo pode ser reduzido a 1 byte em binário para representar os 26 estados do país (pode representar até 256 estados se tiver achando pouco hehe)
 	- Já pro curso, opção e departamento, pode-se usar códigos correspondentes a essas entidades, em binário (mais econômico) ou uma string numérica.
-	- Todos esses ajustes reduzem a redundãncia Essa notação mais compacta, economiza bytes que eram redundantes
-para representar a mesma informação.
+	- Todos esses ajustes reduzem a redundãncia, deixando mais compacto, ecnomizando bytes e representando a mesma informação.
+- Desvantage
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTYyMzMyOCw4OTU0MzM5MiwtMTA2Nj
-I5MDk1OF19
+eyJoaXN0b3J5IjpbLTE0NTEwNzkyMjMsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
