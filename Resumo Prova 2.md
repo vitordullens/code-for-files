@@ -115,9 +115,9 @@ tempo de acesso a memória é:
 				- Possui detecção e correção de erros, pois a naturea física do armazenameto pode ocasionar a corrupção de dados
 				- Para realizar a detecção de erros, deve-se incluir redundância na informação:
 					- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
-					- Os bits de controle devem ser gerados a partir dos bits que representam a informção e 
+					- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
+					- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
 				
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTAyMjkxMzQsLTEwNjYyOTA5NThdfQ
-==
+eyJoaXN0b3J5IjpbLTY4MDQ4MjE3MSwtMTA2NjI5MDk1OF19
 -->
