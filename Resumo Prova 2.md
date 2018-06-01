@@ -102,8 +102,10 @@
 RAM, e ‘h’ é a taxa de acerto (no exemplo anterior seria (k-1)/k. Então o
 tempo de acesso a memória é:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` Tempo médio de acesso = c + (1-h) * m```
-	- 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` Tempo médio de acesso = c + (1-h) * m```
+	
+- Programação de Transferência
+	- Nas operaçãos d
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzMxNTg1OCwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbMTg5ODU4NDM3LC0xMDY2MjkwOTU4XX0=
 -->
