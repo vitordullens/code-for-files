@@ -136,7 +136,7 @@ ocupa menos espaço”.
 comprimidas antes de serem transmitidas de um módulo para outro.
 “Um sinal comprimido requer menor largura de banda”.
 
-* PERGUNTAR SE CAI ENTROPIA DE SHANNON (CTZ QUE ELE N SABE)*
+*PERGUNTAR SE CAI ENTROPIA DE SHANNON (CTZ QUE ELE N SABE)*
 		
 - Existem 2 tipos de compressão:
 	- Sem perdas (Lossless)
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0MDkzMDc3LDIxMjk0NDM1MDIsODk1ND
-MzOTIsLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTE1OTUxNTQzMzksMjEyOTQ0MzUwMiw4OT
+U0MzM5MiwtMTA2NjI5MDk1OF19
 -->
