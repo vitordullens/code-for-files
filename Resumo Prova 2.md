@@ -57,16 +57,16 @@
 	- Gerencia as imagens não justo a pixels -> metadados significativos (??)
 	- Contém a identificação do paciente e demografia
 - Outras funções:
-- Armazenamento de imagens:
-	- Crescimento fetal, saída cardíaca, tamanho do tumor...
-	- Gerenciamento do fluxo de trabalho (??)
-	- Apresentação de imagens com calibração de tela, anotações, layouts....
-- Armazenameto de Anáise de resultados:
+	- Armazenamento de imagens:
+		- Crescimento fetal, saída cardíaca, tamanho do tumor...
+		- Gerenciamento do fluxo de trabalho (??)
+		- Apresentação de imagens com calibração de tela, anotações, layouts....
+	- Armazenameto de Anáise de resultados:
 		- Cadastros
 		- Segmentações
 		- Modelos de implantes
 	- É seguro pois possui esquemas de identificação, encriptação (mas a gente nao conseguiu acessar ?)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDAwNDM3MTksMTYxNDA0OTcwNiwtMj
+eyJoaXN0b3J5IjpbLTE1OTM4NzI5NDMsMTYxNDA0OTcwNiwtMj
 cyNjczNDM1XX0=
 -->
