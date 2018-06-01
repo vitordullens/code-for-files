@@ -154,11 +154,15 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- O uso de código em binário torna o arquivo menos legível para humanos (nós somos super-humanos então)
 	- Há um costo para codificar e decodificar das entidades
 	- Aumenta a complexidade do software (ai nós ganahamos mamis) 
-	- Demanda tempo para 
+	- Demanda tempo para codificar e decodificar (?)
+	-  Torna o processo mais lento
+- Quando usar a compressão
+	- Arquivos grandes (milhares de registros)
+	- 
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NjMyODMzNCw4OTU0MzM5MiwtMTA2Nj
+eyJoaXN0b3J5IjpbMTgzMzcwOTUzMiw4OTU0MzM5MiwtMTA2Nj
 I5MDk1OF19
 -->
