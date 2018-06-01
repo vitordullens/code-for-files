@@ -142,12 +142,15 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Com perdas(Lossy)
 		- Além de tirar a redundância, também retira dados irrelevantes para uma determinada aplicação. Esse sinal recontruído após a compressão nao é exatamente o mesmo (obviamente), sua distorção é *D*, que é tolerada para um determinada aplicação
 	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
-- Compressão de dados por Notação difer
-	-	
+- Compressão de dados por Notação diferente
+	- Pegando o exemplo de sala com um registro com os seguintes campos
+		```<matrícula><nome><endereço><uf><curso><opção><departamento>```
+	 
+	- O campo de uf por exemplo é 	
 		
 			
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIxNDQ0NjQwLDg5NTQzMzkyLC0xMDY2Mj
-kwOTU4XX0=
+eyJoaXN0b3J5IjpbLTIwNDM0ODI4NTMsODk1NDMzOTIsLTEwNj
+YyOTA5NThdfQ==
 -->
