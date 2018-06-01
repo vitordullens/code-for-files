@@ -117,8 +117,8 @@ tempo de acesso a memória é:
 				- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
 				- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
 				- Quando for ler a informação, gera-se novamente os bits de controle (ta aí a redundância), se não der match nos 2 então a informação foi corrompida
+	- Observação 
 			
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTk3MjA0ODMsLTEwNjYyOTA5NThdfQ
-==
+eyJoaXN0b3J5IjpbLTc1Nzg0NzkwOSwtMTA2NjI5MDk1OF19
 -->
