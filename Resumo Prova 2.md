@@ -178,20 +178,20 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 			
 	- Pode-se também definir um número mínimo de repetições.
 
-	- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: 
+		- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: 
 
-		*ENTENDI NADA DESSA PARTE (SLIDE 9 PÁGINA 29)*	
+		*ENTENDI NADA DESSA PARTE (SLIDE 9 PÁGINA 29), LOGO ESCREVI NADA SOBRE*	
 - Códigos de comprimento variável
-	- Os códigos de comprimento variável são aqueles que os simbolos codigicados podem ter tamanho diferente (em bits)
+	- Os códigos de comprimento variável são aqueles que os simbolos codificados podem ter tamanhos diferentes (em bits)
 	- É possível comprimi-los sem perda
-	- Cada símbolo deve ser unicamente codificável, ou se ja, nenhum símbolo codificade pode ser prefixo de outro
-	- Podem ser ou não instaneamente codificável, ou seja, as vezes a mensagem precisa se totalmente codificada para poder decodificar
+	- Cada símbolo deve ser unicamente codificável, ou se ja, nenhum símbolo codificado pode ser prefixo de outro
+	- Podem ser ou não instanteamente codificável, ou seja, as vezes a mensagem precisa se totalmente codificada para poder decodificar
 	-  O princípio de sua codificação vem com a ideía de que alguns valores ocorrem mais do que outros, ou seja, valores que mais repetem são codificados com símbolos menores e símbolos maiores para valores com uma menor frequência
 	- Exemplos:
 		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem ( *E* e *T* ) são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMDU0MzE5LDIxMjk0NDM1MDIsODk1ND
-MzOTIsLTEwNjYyOTA5NThdfQ==
+eyJoaXN0b3J5IjpbLTY4MzA3OTA2NSwyMTI5NDQzNTAyLDg5NT
+QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
