@@ -145,16 +145,16 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Além de tirar a redundância, também retira dados irrelevantes para uma determinada aplicação. Esse sinal recontruído após a compressão nao é exatamente o mesmo (obviamente), sua distorção é *D*, que é tolerada para um determinada aplicação
 	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
 - Compressão de dados por Notação diferente
-	- Pegando o exemplo de sala com um registro com os seguintes campos
+	- Pegando o exemplo de sala, temos um registro com os seguintes campos
 		```<matrícula><nome><endereço><uf><curso><opção><departamento>```
 	 
 	- O campo de uf por exemplo é representado por 2 bytes (DF, MG, SP..), este campo pode ser reduzido a 1 byte em binário para representar os 26 estados do país (pode representar até 256 estados se tiver achando pouco hehe)
 	- Já pro curso, opção e departamento, pode-se usar códigos correspondentes a essas entidades, em binário (mais econômico) ou uma string numérica.
-	- Todos esses ajustes reduzem a redundãncia, deixando mais compacto, ecnomizando bytes e representando a mesma informação.
+	- Todos esses ajustes reduzem a redundância, deixando mais compacto, economizando bytes e representando a mesma informação.
 
 - Desvantagens
 	- O uso de código em binário torna o arquivo menos legível para humanos (nós somos super-humanos então)
-	- Há um costo para codificar e decodificar das entidades
+	- Há um custo para codificar e decodificar das entidades
 	- Aumenta a complexidade do software (ai nós ganahamos mamis) 
 	- Demanda tempo para codificar e decodificar (?)
 	-  Torna o processo mais lento
@@ -192,6 +192,6 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 		- Código de Huffman: Putaria louca
 		 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTUxNTQzMzksMjEyOTQ0MzUwMiw4OT
-U0MzM5MiwtMTA2NjI5MDk1OF19
+eyJoaXN0b3J5IjpbMTYxMDgzNDg4MiwyMTI5NDQzNTAyLDg5NT
+QzMzkyLC0xMDY2MjkwOTU4XX0=
 -->
