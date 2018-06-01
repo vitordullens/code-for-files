@@ -46,8 +46,12 @@
 
 - Comunicação de imagens digitais e medicina, é o padra internacional para imagens médias e informação relacionada
 - Define:
-	- -
+	- Formato para imagens, formas de onda, estrutura de dados...
+		-Com a qualidade de matadados (visto aqui em cima) necessários para o uso clínico
+	- Gerenciador do fluxo de trabalho 
+	- Intercambio de Mídia e Impressão
+	-  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMDYzNDQwOSwxNjE0MDQ5NzA2LC0yNz
-I2NzM0MzVdfQ==
+eyJoaXN0b3J5IjpbLTE3ODgyMTU4MzEsMTYxNDA0OTcwNiwtMj
+cyNjczNDM1XX0=
 -->
