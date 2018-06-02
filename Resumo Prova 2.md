@@ -11,7 +11,10 @@
 	- Arquivos de tamanho fixo:
 		- É imediato e utiliza a função ```fseek()```;
 	- Arquivos de tamanho variável:
-		- Precisa-se conhecer a PRR em bytes (?);
+		- Precisa-se conhecer a PRR em bytes;
+			```
+			A Posição Relativa do Registro (PRR) é o offset, em bytes, do começo do arquivo até o primeiro byte do registro.
+			```
 		- Implementado via estrutura de índice (Lista 6);
 		- Em C/C++ pode se acessar qualquer byte, sendo assim, o programador pode implementar um acesso direto a um determinado registro;
 
@@ -21,16 +24,16 @@
 	- Seus objetos;
 	- Suas propriedades;
 	- Operações a ser realizado com esses objetos;
-	- Sem se preocupar em como esses objetos estão armazenados fisicamente;
+	- Não se preocupar em como esses objetos estão armazenados fisicamente;
 - Permite:
-	- Descrever objetos, suas propriedades;
+	- Descrever objetos e suas propriedades;
 	- Organização e acesso de acordo com a aplicação, e não como foram armazenados fisicamente;
 - Implementação:
 	- Os detalhes da implementação são encapsulados;
 	- Na visão do programador, apenas o nome do tipo e lista de operações estão disponíveis;
 	- Algumas informações são usadas pelo software de acesso para entender esses objetos;
 - Arquivo Auto-Descritivo:
-	- É um arquivo com registro cabeçalho, no qual possuii as informações que o descreve:
+	- É um arquivo com registro cabeçalho, no qual possui as informações que o descreve:
 		- Número de campos por registro;
 		- Nome de cada campo;
 		- Tipo de cada campo;
@@ -50,7 +53,7 @@
 		- Com a qualidade de metadados (visto aqui em cima) necessários para o uso clínico
 	- Gerenciador do fluxo de trabalho 
 	- Intercambio de Mídia e Impressão
-	- Serviço de protocolos de rede sobre TPC/IP e HTTP (wtf)
+	- Serviço de protocolos de rede sobre TPC/IP e HTTP (transmissão de dados entre equipamentos médicos e computadores por rede sem fio)
 - Funcionamento:
 	- Armazena todas as classes de imagens, CT, MR, Raio-X, Ultrassom...
 	- Ajuda a gerenciar suas imagens
@@ -67,7 +70,50 @@
 		- Modelos de implantes
 	- É seguro pois possui esquemas de identificação, encriptação (mas a gente nao conseguiu acessar ?)
 
-*FALA COMO FUNCIONA O DICOM, GIOVANNI (PLS)*
+## Padrão DICOM (simplificado)
+#### Por que utilizar?
+
+- Padronizar armazenamento e transmissão de imagens entre sistemas diferentes.      
+	Existem muitas máquinas e equipamentos diferentes que têm que mexer com imagens médicas. Sem contar que a quantidade de exames é muito vasta. Por isso, estabelecer um padrão para todas facilita a implementação de um sistema eficiente para utilizá-las.
+- Armazenar informações sobre as imagens junto delas
+	O padrão DICOM faz uso intensivo de metadados para manter as informações pertinentes de uma imagem junto com ela.
+
+#### Como funciona?
+	[Estrutura Básica](https://www.leadtools.com/help/leadtools/v19/dicom/api/overviewbasicdicomfilestructure.html) bem completa. Vamos ver um resumo aqui.
+	
+#### Partes do arquivo DICOM
+	![DICOM Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/dicom.gif)
+
+	1. **Preamble** - Informações específicas para aplicação. Tamanho fixo de 128 bytes. Deve ser incluído por causa do padrão, mas se não for utilizado os bytes têm valor 0x00.
+
+	2. **Prefix** - Valor fixo de 4 bytes : 'D', 'I', 'C', 'M'.
+
+	3. **Data Set** - Aqui é a parte do arquivo em que os metadados e os dados são incluídos. Um data set é uma coleção de Data Elements. Pode ter tamanho variável.
+
+	4. **Data Element** - Parte mais importante do arquivo, que contém os dados ou metadados. Os data elements são formados por `<tag><vr><length><value>`, em geral.
+
+		1. TAG - Definida como uma tupla de 2 valores: ( Group Number, Element Number). Cada TAG é utilizada como identificador único de um tipo de metadado (ou dado, existe a TAG da imagem também). OS Group Numbers pares são públicos e os ímpares são privados (informações criptografadas).
+
+		2. VR - Reference Value, é o "tipo" de valor daquele elemento.
+
+		3. LENGTH - O tamanho do campo de valor. Pode ser indeterminado para alguns tipos de valores
+
+		4. VALUE - O valor em si.
+
+		Existem 3 estruturas aceitáveis para os Data Elements. Elas são mostradas abaixo e discutidas em seguida.
+
+		1. Explicit VR for special fields (OB, OW, SQ, or UN)
+		![First DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr.gif)
+
+		2. Explicir VR for normal fields
+		![Second DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr2.gif)
+
+		3. Implicit VR
+		![Thrid DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deivr.gif)
+	
+Os Data Elements iniciais de um arquivo (logo após o prefixo) especificam a sintaxe utilizada pelo arquivo (qual das três estruturas de Data Element foi utilizada), além da Endianess do arquivo (Little Endian, Big Endian) e algumas outras informações necessárias para a leitura correta do arquivo.
+
+Os Data Elements seguintes trazem informações relacionadas à(s) imagem(s) que se segue(m). 
 
 *FALAR SOBRE FITS*
 
@@ -98,13 +144,13 @@
 		- Combinar memórias mais baratas com umas caras (tendo mais baratas do que caras nessa junção)
 		- A RAM é feita com tecnologia mais barata em conjunto com a memória cache que é feita com uma tecnologia mais cara.
 		
-	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ela pode ser acessada diretamente da cache, que por sua vez é mais rápido
+	- A ideia geral do caching é que quando uma palavra é referenciadas ela é trazida da RAM para a chache, fazendo com que na próxima vez que for utilizada ela pode ser acessada diretamente da cache, que por sua vez tem acesso mais rápido.
 	- Se uma palavra é requerida k vezes, entao ela é acessada 1 vez na RAM e jogada pra cache, acessando todas as outras vezes lá mesmo ( k - 1 )
 	- Se ‘c’ é o tempo médio de acesso a cache, ‘m’ é o tempo médio de acesso a
 RAM, e ‘h’ é a taxa de acerto (no exemplo anterior seria (k-1)/k. Então o
 tempo de acesso a memória é:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` Tempo médio de acesso = c + (1-h) * m```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` Tempo médio de acesso = c + (1-h) * m```  (ta certo isso? não deveria ser c\*h + (1-h)\*m ?)
 	
 - Programação de Transferência
 	- Nas operaçãos de leitura e gravação, o que mais demora nessas operaçoẽs é o movimento do braço das cabeças
@@ -114,7 +160,7 @@ tempo de acesso a memória é:
 	- Suas características:
 		- Seguro em relação a proteção e autenticação (criptografia)
 		- Robusto
-			- Possui detecção e correção de erros, pois a naturea física do armazenameto pode ocasionar a corrupção de dados
+			- Possui detecção e correção de erros, pois a natureza física do armazenameto pode ocasionar a corrupção de dados
 			- Para realizar a detecção de erros, deve-se incluir redundância na informação:
 				- Utilizar uma certa quantidade de bits de controle para um determinado bloco de informação
 				- Os bits de controle devem ser gerados a partir dos bits que representam a informção e gravá-los junto com o bloco
@@ -137,6 +183,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 “Um sinal comprimido requer menor largura de banda”.
 
 *PERGUNTAR SE CAI ENTROPIA DE SHANNON (CTZ QUE ELE N SABE)*
+[É possível que a entropia seja a probabilidade de cada caractere ocorrer na mensagem... só um chute]
 		
 - Existem 2 tipos de compressão:
 	- Sem perdas (Lossless)
@@ -156,7 +203,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- O uso de código em binário torna o arquivo menos legível para humanos (nós somos super-humanos então)
 	- Há um custo para codificar e decodificar as entidades
 	- Aumenta a complexidade do software (ai nós ganahamos mais) 
-	- Demanda tempo para codificar e decodificar (?)
+	- Demanda tempo para codificar e decodificar (Qualquer operação de codificar um mensagem, por exemplo, é no mínimo O(n), com n sendo o tamanho da mensagem)
 	-  Torna o processo mais lento
 - Quando usar a compressão     (Economia de acesso compensa o custo de compressão)
 	- Arquivos grandes (milhares de registros)
@@ -164,7 +211,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Se a conversão for simples
 - Quando NÃO usar a compressão
 	- Arquivos pequenos (certos scasos)
-	- Arquivos com muitos programas tendo acesso a ele (pq ?)
+	- Arquivos com muitos programas tendo acesso a ele (pq ? Talvez o custo de ficar comprimindo e descomprimindo para cada programa não compense, e pode gerar mais erros, já que as operações são repetidas muitas vezes)
 	- Aplicação sem capacidade de lidar com binários Ex: Editor de texto
 	
 - Supressão de Sequências repetidas - Run lenght Coding
@@ -174,7 +221,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```<Código de escape><N><K>```
 		
 	- Exemplo:
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```PEEEEEEENIS -> P$7NIS```
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```PEEEEEEENIS -> P$7ENIS```
 			
 	- Pode-se também definir um número mínimo de repetições.
 
