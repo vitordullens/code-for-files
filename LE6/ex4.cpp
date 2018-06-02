@@ -35,7 +35,21 @@ const string currentDateTime()
 
     return buf;
 }
-
+void showResult(string str){
+    string now;
+    vector<string> parts = {"Registro", "Modelo", "Marca", "Placa mae", "CPU", "GPU", "Resolucao", "RAM", "Ano de lancamento", "Tamanho do HD", "Preco"};
+    int count = 0, it = 0;
+    while(count < 11){
+        now = "";
+        while(str[it] != '|'){
+            now += str[it];
+            it++;
+        }
+        cout << parts[count] << ": " << now << endl;
+        count++;
+        it++;
+    }
+}
 int binSearch(vector<pair<int,int>>& idx, int low, int high, int target){
     if(low > high) return -1;
     int mid = (low+high)/2;
@@ -73,14 +87,14 @@ void search( ifstream& fd, vector<pair<int, int>>& idx, bool flag = false){
         fd.seekg(off);
         string content;
         getline(fd, content);
-        cout << content << endl;
+        showResult(content);
         cin.clear(); cin.ignore(INT_MAX, '\n');
         cout << "----press ENTER to continue----" << endl;
         getchar();
     }
     return;
 }
-vector<pair<int, int>> index(){
+void index(){
     ifstream arquivo;
     arquivo.open("computer.txt");
     fstream index;
@@ -95,7 +109,10 @@ vector<pair<int, int>> index(){
     
     index.close();
     
-    if(header == indexHeader) search(arquivo, idx, true);
+    if(header == indexHeader){
+        search(arquivo, idx, true);
+        return;
+    }
     else
         while(!arquivo.eof() && num < total){
             offset = arquivo.tellg();
@@ -110,9 +127,8 @@ vector<pair<int, int>> index(){
         index << q.first << " " << q.second << " ";
     }
     index.close();
-
-    return idx;
-    
+    arquivo.seekg(0);
+    search(arquivo, idx);
 }
 void intro(){
     system(CLEAR);
@@ -177,10 +193,8 @@ int main(){
             arquivo << header << "-" << time << "          \n"; // extra espaces to manage growing headers
             arquivo.close(); // flush changes
         }
-        if(opc == 2){
-            idx = index();
-            ifstream file ("computer.txt");
-            search(file , idx);
+        else if(opc == 2){
+            index();
         }
     opc = menu();
 

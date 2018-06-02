@@ -1,8 +1,5 @@
-7-2018-05-31.20:46:16          
-1|a|b|c|d|e|f|h|i|j|k|
-2|Inspiron|Dell|deLL|i5|940mx|fullhd|8|2017|1tb|3000|
-3|blah|bleh|blih|bloh|bluh|tada|tada|tada|tada|tada|
-4|tuts|tuts|tuts|tuts|tuts|tuts|tuts|tuts|tuts|tuts|
-5|oi|como|vai|voce|meu|amigo|eu|estou|bem|obrigado|
-6|mais|um|pc|legal|nesse|arquivo|de|muitos|pcs|yay :D|
-7|Sitting|quietly|doing|nothing|Spring|comes|grass|grows|by|itself|
+4-2018-06-02.16:12:00         
+1|Aspire v3|Acer|Intel|Intel Core i7-3537U|Mesa DRI Intel(R) Ivybridge Mobile|1366x768|6Gb|2013|500Gb|1500$|
+2|Icore7|Acer|Acer|Intel® Core™ i5-5200U|NVIDIA® GeForce® 820M|1366 x 768|4 GB|2016|1 TB|1950$|
+3|Inspiron|Dell|Dell|Intel Core i3 6006U|On-board|HD|4 GB|2017|1 TB|2082$|
+4|IdeiaPad|Lenovo|Intel|Intel Core i3 6006U|On-board|Full HD|4 GB|2017|1 TB|1708$|
