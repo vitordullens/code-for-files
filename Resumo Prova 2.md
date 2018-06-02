@@ -79,7 +79,7 @@
 	O padrão DICOM faz uso intensivo de metadados para manter as informações pertinentes de uma imagem junto com ela.
 
 #### Como funciona?
-	[Estrutura Básica](https://www.leadtools.com/help/leadtools/v19/dicom/api/overviewbasicdicomfilestructure.html) bem completa. Vamos ver um resumo aqui.
+[Estrutura Básica](https://www.leadtools.com/help/leadtools/v19/dicom/api/overviewbasicdicomfilestructure.html) bem completa. Vamos ver um resumo aqui.
 	
 #### Partes do arquivo DICOM
 ![DICOM Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/dicom.gif)
@@ -102,13 +102,19 @@
 
 Existem 3 estruturas aceitáveis para os Data Elements. Elas são mostradas abaixo e discutidas em seguida.
 
-1. Explicit VR for special fields (OB, OW, SQ, or UN)
+1. Explicit VR for special fields (OB, OW, SQ, or UN) 
+
+
 	![First DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr.gif)
 
-2. Explicir VR for normal fields
+2. Explicir VR for normal fields        
+
+
 	![Second DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr2.gif)
 
-	3. Implicit VR
+3. Implicit VR             
+
+
 	![Thrid DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deivr.gif)
 	
 Os Data Elements iniciais de um arquivo (logo após o prefixo) especificam a sintaxe utilizada pelo arquivo (qual das três estruturas de Data Element foi utilizada), além da Endianess do arquivo (Little Endian, Big Endian) e algumas outras informações necessárias para a leitura correta do arquivo.
