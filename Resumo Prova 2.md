@@ -82,34 +82,34 @@
 	[Estrutura Básica](https://www.leadtools.com/help/leadtools/v19/dicom/api/overviewbasicdicomfilestructure.html) bem completa. Vamos ver um resumo aqui.
 	
 #### Partes do arquivo DICOM
-	![DICOM Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/dicom.gif)
+![DICOM Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/dicom.gif)
 
-	1. **Preamble** - Informações específicas para aplicação. Tamanho fixo de 128 bytes. Deve ser incluído por causa do padrão, mas se não for utilizado os bytes têm valor 0x00.
+1. **Preamble** - Informações específicas para aplicação. Tamanho fixo de 128 bytes. Deve ser incluído por causa do padrão, mas se não for utilizado os bytes têm valor 0x00.
 
-	2. **Prefix** - Valor fixo de 4 bytes : 'D', 'I', 'C', 'M'.
+2. **Prefix** - Valor fixo de 4 bytes : 'D', 'I', 'C', 'M'.
 
-	3. **Data Set** - Aqui é a parte do arquivo em que os metadados e os dados são incluídos. Um data set é uma coleção de Data Elements. Pode ter tamanho variável.
+3. **Data Set** - Aqui é a parte do arquivo em que os metadados e os dados são incluídos. Um data set é uma coleção de Data Elements. Pode ter tamanho variável.
 
-	4. **Data Element** - Parte mais importante do arquivo, que contém os dados ou metadados. Os data elements são formados por `<tag><vr><length><value>`, em geral.
+4. **Data Element** - Parte mais importante do arquivo, que contém os dados ou metadados. Os data elements são formados por `<tag><vr><length><value>`, em geral.
 
-		1. TAG - Definida como uma tupla de 2 valores: ( Group Number, Element Number). Cada TAG é utilizada como identificador único de um tipo de metadado (ou dado, existe a TAG da imagem também). OS Group Numbers pares são públicos e os ímpares são privados (informações criptografadas).
+	1. TAG - Definida como uma tupla de 2 valores: ( Group Number, Element Number). Cada TAG é utilizada como identificador único de um tipo de metadado (ou dado, existe a TAG da imagem também). OS Group Numbers pares são públicos e os ímpares são privados (informações criptografadas).
 
-		2. VR - Reference Value, é o "tipo" de valor daquele elemento.
+	2. VR - Reference Value, é o "tipo" de valor daquele elemento.
 
-		3. LENGTH - O tamanho do campo de valor. Pode ser indeterminado para alguns tipos de valores
+	3. LENGTH - O tamanho do campo de valor. Pode ser indeterminado para alguns tipos de valores
 
-		4. VALUE - O valor em si.
+	4. VALUE - O valor em si.
 
-		Existem 3 estruturas aceitáveis para os Data Elements. Elas são mostradas abaixo e discutidas em seguida.
+Existem 3 estruturas aceitáveis para os Data Elements. Elas são mostradas abaixo e discutidas em seguida.
 
-		1. Explicit VR for special fields (OB, OW, SQ, or UN)
-		![First DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr.gif)
+1. Explicit VR for special fields (OB, OW, SQ, or UN)
+	![First DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr.gif)
 
-		2. Explicir VR for normal fields
-		![Second DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr2.gif)
+2. Explicir VR for normal fields
+	![Second DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deevr2.gif)
 
-		3. Implicit VR
-		![Thrid DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deivr.gif)
+	3. Implicit VR
+	![Thrid DICOM Data Element Structure](https://www.leadtools.com/help/leadtools/v19/resources/images/cppltdicdlln/deivr.gif)
 	
 Os Data Elements iniciais de um arquivo (logo após o prefixo) especificam a sintaxe utilizada pelo arquivo (qual das três estruturas de Data Element foi utilizada), além da Endianess do arquivo (Little Endian, Big Endian) e algumas outras informações necessárias para a leitura correta do arquivo.
 
