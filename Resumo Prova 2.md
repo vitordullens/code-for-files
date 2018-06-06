@@ -32,6 +32,10 @@
 	- Os detalhes da implementação são encapsulados;
 	- Na visão do programador, apenas o nome do tipo e lista de operações estão disponíveis;
 	- Algumas informações são usadas pelo software de acesso para entender esses objetos;
+
+**Usamos TADs para representar estruturas de arquivos, como os registros.**
+
+
 - Arquivo Auto-Descritivo:
 	- É um arquivo com registro cabeçalho, no qual possui as informações que o descreve:
 		- Número de campos por registro;
@@ -197,6 +201,8 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Com perdas(Lossy)
 		- Além de tirar a redundância, também retira dados irrelevantes para uma determinada aplicação. Esse sinal recontruído após a compressão nao é exatamente o mesmo (obviamente), sua distorção é *D*, que é tolerada para um determinada aplicação
 	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
+
+## LossLess Compression   
 - Compressão de dados por Notação diferente
 	- Pegando o exemplo de sala, temos um registro com os seguintes campos
 		```<matrícula><nome><endereço><uf><curso><opção><departamento>```
@@ -229,11 +235,13 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Exemplo:
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```PEEEEEEENIS -> P$7ENIS```
 			
-	- Pode-se também definir um número mínimo de repetições.
+	- Pode-se também definir um número mínimo de repetições, nesse caso, a técnica só será utilizada se N &ge; M, onde M é o número mínimo de repetições.
 
-		- Exemplo: Utilizando repetição mínima de 3 em um arquivo binário: 
+	- Exemplo: 	  
+		Vamos assumir M = 3, Código de escape = '$'.     
+		`Baataaaaaaattttttttaaaaaaaaaaaaaa -> Baat$7a$8t$14a`
 
-		*ENTENDI NADA DESSA PARTE (SLIDE 9 PÁGINA 29), LOGO ESCREVI NADA SOBRE*	
+		
 - Códigos de comprimento variável
 	- Os códigos de comprimento variável são aqueles que os simbolos codificados podem ter tamanhos diferentes (em bits)
 	- É possível comprimi-los sem perda
@@ -242,7 +250,21 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	-  O princípio de sua codificação vem com a ideía de que alguns valores ocorrem mais do que outros, ou seja, valores que mais repetem são codificados com símbolos menores e símbolos maiores para valores com uma menor frequência
 	- Exemplos:
 		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem são  *E* e *T*, entao elas são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
-		- Código de Huffman: Putaria louca
+		- Código de Huffman: Utiliza a frequência de cada símbolo na mensagem para criar um código para cada símbolo. Símbolos mais frequentes possuem códigos menores, ocupando assim menos espaço na mensagem codificada.
+
+FALAR DOS CÓDIGOS DE COMPRESSÃO DINÂMICOS ?...
+
+## Funções de Alto Nível do SO
+
+Entre elas temos:
+
+- Estrutura do sistema de arquivos
+- Segurança
+- Integridade
+- Alocação de Espaco
+
+Vamos focar na Alocação de Espaço.
+	
 		 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTU2NjAxOTEzNF19
