@@ -251,27 +251,40 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 	- Exemplos:
 		- Código Morse:  Utiliza-se apenas 2 símbolos para codificação (ponto e traço), como no alfabeto inglês as 2 letras que mais se repetem são  *E* e *T*, entao elas são codificadas com apenas 1 ponto para o *E* e 1 traço para o *T*, ou seja, valores que mais se repetem recebem símbolos menores
 		- Código de Huffman: Utiliza a frequência de cada símbolo na mensagem para criar um código para cada símbolo. Símbolos mais frequentes possuem códigos menores, ocupando assim menos espaço na mensagem codificada.
+		- Código de LZ78: cada simbolo é codificado por um par <i,c>, onde i é o índice correspondente a letra (ou conjunto de letras) que ja existe no dicionario e c é a letra seguinte. 
+	- Analise:
+		- Na maioria dos casos o Huffman é mais eficiente na compressão de arquivos.
 
-FALAR DOS CÓDIGOS DE COMPRESSÃO DINÂMICOS ?...
 
 ## Funções de Alto Nível do S.O
 
 Entre elas temos:
 
-- Estrutura do sistema de arquivos
-- Segurança
-- Integridade
-- Alocação de Espaco
+- Estrutura do sistema de arquivos:
+	- Arquivos sao armazenados em diretorios;
+	- Cada arquivo é indentificado pelo seu nome e caminho;
+	-ex: `/home/usr/a.cpp`.
+- Segurança:
+	- Um usuario deve poder controlar o acesso a seus dados;
+	- O S.O deve conceder diferentes permissoes de leitura e escrita, dependendo do usuario.
+- Integridade:
+	- Realização de Backups;
+	- Manual ou Automaticamente dependendo da configuração e do S.O.
+- Alocação de Espaco na memoria secundaria:
+	- Adicionar, atualizar e remover registros.
 
 ## Funções de Baixo Nível do S.O
 - Transmissao do bloco de bytes entre a memoria principal e a secundaria, usando o método chamado `caching`, onde pega o arquivo que foi colocado na RAM e passa ele para a memoria Cache, afim de diminuir o tempo de acesso.
-	
+
+
 ## Operações basicas de indexação
+
 ### Criar arquivo de indices e de dados:
 - Arquivos de indices sao iniciados como vazios;
 - Serão posteriormente carregados com seus dados.
+
 ### Carregar arquivo de indices para a memoria:
-- Leia o arquivo de indice e o cabeçalho;
+- Leia o arquivo de indice e o cabeçalho (chave primaria);
 - Verificar se a data do cabeçalho é compativel com a do arquivo de dados;
 - Se não: gerar um arquivo de indices válido.
 - Leia os registros do arquivo de indice e os coloque em um vetor;
@@ -279,12 +292,34 @@ Entre elas temos:
 	- Registros sao pequenos;
 	- No mesmo bloco;
 	- Leitura sequencial, pouco `seeking`
+	
 ### Regravar arquivo de indice depois de usa-lo
-- 
-### Incluir registros
--
-### Excluir registros
--
+- Checa pra ver integridade dos dados a partir do cabeçalho
+- Antes de qualquer acesso ao arquivo de indice deve estar atualizado o cabeçalho.
+
+### Incluir registros:
+- No arquivo de dados:
+	- Atraves do PRR do registro
+	- Insere ao final ou em algum espaço nao utilizado
+- No arquivo de indices:
+	- Incluir a chave primaria na ordem certa
+	- Atualizar o cabeçalho
+	- Reorganizar o INDEX[]
+	
+### Excluir registros:
+- Eliminar do arquivo de dados:
+	- Atualizar LED para reaproveitar espaço
+- Eliminar do arquivo de indices:
+	- Reorganização do INDEX[]
+	- Atualizar cabeçalho
+	
+### Atualizar registros:
+- Com mudança na chave primaria:
+	- Atualizar INDEX[]
+	- Alterar o registro correspondente
+- Sem mudanças na chave primaria:
+	- Se a mudança couber no registro, não precisa atualizar o INDEX[]
+
 		 
 
 ## FIM :+1:
