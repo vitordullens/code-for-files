@@ -198,8 +198,10 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 - Existem 2 tipos de compressão:
 	- Sem perdas (Lossless)
 		- É a compressão que foca em apenas retirar a redundância de dados
+		- Exemplo: GIF, ZIP, 7z, RAR
 	- Com perdas(Lossy)
 		- Além de tirar a redundância, também retira dados irrelevantes para uma determinada aplicação. Esse sinal recontruído após a compressão nao é exatamente o mesmo (obviamente), sua distorção é *D*, que é tolerada para um determinada aplicação
+		- Exemplo: JPEG, Flash, MPEG-1, MP2, MP3. 
 	-	Obs: É possivel comprimir um sinal sem perdas numa taxa NÃO inferior a entropia do sinal (wtf)
 
 ## LossLess Compression   
