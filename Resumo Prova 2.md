@@ -254,7 +254,7 @@ comprimidas antes de serem transmitidas de um módulo para outro.
 
 FALAR DOS CÓDIGOS DE COMPRESSÃO DINÂMICOS ?...
 
-## Funções de Alto Nível do SO
+## Funções de Alto Nível do S.O
 
 Entre elas temos:
 
@@ -263,9 +263,32 @@ Entre elas temos:
 - Integridade
 - Alocação de Espaco
 
-Vamos focar na Alocação de Espaço.
+## Funções de Baixo Nível do S.O
+- Transmissao do bloco de bytes entre a memoria principal e a secundaria, usando o método chamado `caching`, onde pega o arquivo que foi colocado na RAM e passa ele para a memoria Cache, afim de diminuir o tempo de acesso.
 	
+## Operações basicas de indexação
+### Criar arquivo de indices e de dados:
+- Arquivos de indices sao iniciados como vazios;
+- Serão posteriormente carregados com seus dados.
+### Carregar arquivo de indices para a memoria:
+- Leia o arquivo de indice e o cabeçalho;
+- Verificar se a data do cabeçalho é compativel com a do arquivo de dados;
+- Se não: gerar um arquivo de indices válido.
+- Leia os registros do arquivo de indice e os coloque em um vetor;
+- Leitura é rapida:
+	- Registros sao pequenos;
+	- No mesmo bloco;
+	- Leitura sequencial, pouco `seeking`
+### Regravar arquivo de indice depois de usa-lo
+- 
+### Incluir registros
+-
+### Excluir registros
+-
 		 
+
+## FIM :+1:
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTU2NjAxOTEzNF19
 -->
