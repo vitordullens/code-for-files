@@ -43,6 +43,7 @@ Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado q
 
 
 
+
 ## *Análise e Conclusões:*
 
 
@@ -69,7 +70,7 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMTIwNjU4OCwtNjYzMjEyNDI1LDE2OD
-Q3NTkyOTMsMTM4NDUzMTI0MywxNDEyNDEwNTk3LDY2NDE4MDUx
-MF19
+eyJoaXN0b3J5IjpbLTE4MzM0MzgwMzgsLTY2MzIxMjQyNSwxNj
+g0NzU5MjkzLDEzODQ1MzEyNDMsMTQxMjQxMDU5Nyw2NjQxODA1
+MTBdfQ==
 -->
