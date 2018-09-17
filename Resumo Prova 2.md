@@ -33,7 +33,7 @@ Comentários: Junto com as definições apresentadas por Prakken e Fernandes, po
 
 De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fosse capaz de simplificar o processo de fabricação do clipping e boletim informativo, pois a   banco de dados 
 
-Clipping é o processo contínuo de monitoramento, análise e arquivamento de menções feitas na mídia a uma determinada marca, como empresa ou celebridade. E pode se estender também a verbetes, como nomes e expressões utilizados numa campanha de comunicação.
+Clipping é o processo contínuo de monitoramento, análise e arquivamento de menções feitas na mídia a uma determinada marca, como empresa ou celebridade. E pode se estender também a verbetes, como nomes e expressões utilizados numa campanha de comunicação[3].
 
 O grupo encontrou o artefato através de experiências em outros projetos
 
@@ -77,5 +77,5 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY0MTgwNTEwXX0=
+eyJoaXN0b3J5IjpbMTQxMjQxMDU5Nyw2NjQxODA1MTBdfQ==
 -->
