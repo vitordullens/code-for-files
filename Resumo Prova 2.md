@@ -35,18 +35,11 @@ De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fos
 
 O grupo encontrou o artefato através de experiências em outros projetos em que se foi necessário à utilização de um sistema que utilizasse Bancos  de Dados para salvar determinados dados.[4]. 
 
-Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado que o grupo não conseguiu concluir/finalizar o trabalho, pois o que seria mais importante seria a extração dos dados e informações coletadas, mas o grupo não 
-
-
-
-
-
-
-
+Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado que o grupo não conseguiu concluir/finalizar o trabalho, pois o que seria mais importante seria a extração dos dados e informações coletadas, pois assim a elaboração do clipping e demais meios de publicação da informação seria facilitado, mas o grupo falhou nesta etapa do projeto. 
 
 ## *Análise e Conclusões:*
 
-
+Para finalizar a análise no fenômeno em estudo, podemos concluir que a
 
 Para finalizar a análise no fenômeno em estudo, podemos concluir que a solução abordada pela SDS com as informações armazenadas foi na publicação desta informação, através de alguns meios, como mencionado no sítio web da sala de situação (FSUnB, 2018) : “produz como resultados boletins, documentos técnicos, clipping, entre outros” e novamente esse método bate exatamente como descrito por FERNANDES (p. 10) : “a melhor estratégia é a simples publicação das mesmas em veículos de comunicação (interfaces) de grande circulação junto aos usuários potenciais”, no qual se dividem em boletins, clippings entre outros. 
 
@@ -70,7 +63,7 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzM0MzgwMzgsLTY2MzIxMjQyNSwxNj
+eyJoaXN0b3J5IjpbLTEzMTI5Mjg2NTAsLTY2MzIxMjQyNSwxNj
 g0NzU5MjkzLDEzODQ1MzEyNDMsMTQxMjQxMDU5Nyw2NjQxODA1
 MTBdfQ==
 -->
