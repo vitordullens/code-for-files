@@ -48,15 +48,14 @@ Concluo assim meus argumentos de que a análise do fenômeno “Falha de projeto
 
 [1] Prakken, Bart. Information, Organization and Information Systems Design: An Integrated Approach to Information Problems. Springer Science+Business Media Dordrecht. 2000.
 
-[3]Clipping: O que é? Disponível em : https://www.comunique-se.com.br/blog/clipping-o-que-e/
- 
-
 [2]FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Sistemas de Informação, Infraestrutura, Organização e Serviços. In: SIMEÃO, Elmira; RONCAGLIO, Cynthia (Orgs.). Gestão da memória:  Diálogos sobre políticas de informação, documentação e comunicação para a Universidade de Brasília. Brasília - DF: Universidade de Brasília, 2016, p. 213–258. 
 
- 4 relatorio
+[3]Clipping: O que é? Disponível em : https://www.comunique-se.com.br/blog/clipping-o-que-e/
+
+[4] Feitosa, Saulo Mendes, Adelson Jhonata Silva de Sousa, José Fortes Neto, e Diego Vaz Fernandes. “Sistema de Base de Dados para controle de noticias epidemilogicas (Design Science)”.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMTc2ODQyLDE5NjYxNDgxMTMsLTY2Mz
+eyJoaXN0b3J5IjpbMjA4MzIyMDQ2LDE5NjYxNDgxMTMsLTY2Mz
 IxMjQyNSwxNjg0NzU5MjkzLDEzODQ1MzEyNDMsMTQxMjQxMDU5
 Nyw2NjQxODA1MTBdfQ==
 -->
