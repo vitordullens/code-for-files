@@ -39,7 +39,7 @@ Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado q
 
 ## *Análise e Conclusões:*
 
-Para finalizar a análise no fenômeno em estudo, podemos concluir que a
+Para finalizar a análise no fenômeno em estudo, podemos concluir que a finalidade do grupo na teoria não foi de encontro com a prática pois o artefado desenvolvido acabou entrando em desuso pois a falha na conclusão final acarretou na sua não utilização.
 
 Para finalizar a análise no fenômeno em estudo, podemos concluir que a solução abordada pela SDS com as informações armazenadas foi na publicação desta informação, através de alguns meios, como mencionado no sítio web da sala de situação (FSUnB, 2018) : “produz como resultados boletins, documentos técnicos, clipping, entre outros” e novamente esse método bate exatamente como descrito por FERNANDES (p. 10) : “a melhor estratégia é a simples publicação das mesmas em veículos de comunicação (interfaces) de grande circulação junto aos usuários potenciais”, no qual se dividem em boletins, clippings entre outros. 
 
@@ -63,7 +63,7 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTI5Mjg2NTAsLTY2MzIxMjQyNSwxNj
-g0NzU5MjkzLDEzODQ1MzEyNDMsMTQxMjQxMDU5Nyw2NjQxODA1
-MTBdfQ==
+eyJoaXN0b3J5IjpbMTk2NjE0ODExMywtNjYzMjEyNDI1LDE2OD
+Q3NTkyOTMsMTM4NDUzMTI0MywxNDEyNDEwNTk3LDY2NDE4MDUx
+MF19
 -->
