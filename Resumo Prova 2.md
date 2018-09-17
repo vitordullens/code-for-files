@@ -41,29 +41,24 @@ Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado q
 
 Para finalizar a análise no fenômeno em estudo, podemos concluir que a finalidade do grupo na teoria não foi de encontro com a prática pois o artefado desenvolvido acabou entrando em desuso pois a falha na conclusão final acarretou na sua não utilização.
 
-Para finalizar a análise no fenômeno em estudo, podemos concluir que a solução abordada pela SDS com as informações armazenadas foi na publicação desta informação, através de alguns meios, como mencionado no sítio web da sala de situação (FSUnB, 2018) : “produz como resultados boletins, documentos técnicos, clipping, entre outros” e novamente esse método bate exatamente como descrito por FERNANDES (p. 10) : “a melhor estratégia é a simples publicação das mesmas em veículos de comunicação (interfaces) de grande circulação junto aos usuários potenciais”, no qual se dividem em boletins, clippings entre outros. 
-
-Concluo assim meus argumentos de que a análise do fenômeno “Publicação da informação” se concretizou com total sucesso a partir das evidências encontradas. 
-
-
-
-
+Concluo assim meus argumentos de que a análise do fenômeno “Falha de projeto" se concretizou com total sucesso a partir das evidências encontradas.
 
 ## *Referências usadas:*
 
 
 
-Clipping: O que é? Disponível em : https://www.comunique-se.com.br/blog/clipping-o-que-e/
+[1]Clipping: O que é? Disponível em : https://www.comunique-se.com.br/blog/clipping-o-que-e/
 
- FS/UNB (2018a). Sala de Situação: Universidade de Brasília. Disponível em: https://fs.unb.br/saladesituacao/ . 
+ [2]FS/UNB (2018a). Sala de Situação: Universidade de Brasília. Disponível em: https://fs.unb.br/saladesituacao/ . 
  
-MARCELA, Apresentação Aula Marcela. Disponível em : 
+[3]MARCELA, Apresentação Aula Marcela. Disponível em : 
 
-FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Sistemas de Informação, Infraestrutura, Organização e Serviços. In: SIMEÃO, Elmira; RONCAGLIO, Cynthia (Orgs.). Gestão da memória:  Diálogos sobre políticas de informação, documentação e comunicação para a Universidade de Brasília. Brasília - DF: Universidade de Brasília, 2016, p. 213–258. 
+[2]FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Sistemas de Informação, Infraestrutura, Organização e Serviços. In: SIMEÃO, Elmira; RONCAGLIO, Cynthia (Orgs.). Gestão da memória:  Diálogos sobre políticas de informação, documentação e comunicação para a Universidade de Brasília. Brasília - DF: Universidade de Brasília, 2016, p. 213–258. 
 
- 
+ 3 relatorio
+3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NjE0ODExMywtNjYzMjEyNDI1LDE2OD
-Q3NTkyOTMsMTM4NDUzMTI0MywxNDEyNDEwNTk3LDY2NDE4MDUx
-MF19
+eyJoaXN0b3J5IjpbMTYyMzAzODkxLDE5NjYxNDgxMTMsLTY2Mz
+IxMjQyNSwxNjg0NzU5MjkzLDEzODQ1MzEyNDMsMTQxMjQxMDU5
+Nyw2NjQxODA1MTBdfQ==
 -->
