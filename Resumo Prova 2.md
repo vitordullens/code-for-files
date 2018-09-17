@@ -31,9 +31,7 @@ Comentários: Junto com as definições apresentadas por Prakken e Fernandes, po
 
  Com a finalidade de associar a teoria e prática em sistemas de informação e assim identificar evidências de que houve falhas de projetos no relatório do grupo 7 (2018),  foi necessário que tivesse algum contato ou estudo com o ambiente analisado. Para investigar e identificar essas evidências utilizarei o relatório disponibilizado no ambiente moodle e relatos dos próprios integrantes do grupo e de Fernandes e algumas informações distribuídas pelo sítio web da sala de situação (FSUnB, 2018).
 
-De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fosse capaz de simplificar o processo de fabricação do clipping e boletim informativo, pois a   banco de dados 
-
-Clipping é o processo contínuo de monitoramento, análise e arquivamento de menções feitas na mídia a uma determinada marca, como empresa ou celebridade. E pode se estender também a verbetes, como nomes e expressões utilizados numa campanha de comunicação[3].
+De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fosse capaz de simplificar o processo de fabricação do clipping e outros materiais. Clipping é o processo contínuo de monitoramento, análise e arquivamento de menções feitas na mídia a uma determinada marca, como empresa ou celebridade. E pode se estender também a verbetes, como nomes e expressões utilizados numa campanha de comunicação[3].
 
 O grupo encontrou o artefato através de experiências em outros projetos
 
@@ -77,5 +75,6 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjQxMDU5Nyw2NjQxODA1MTBdfQ==
+eyJoaXN0b3J5IjpbNDQyNzk2MzUxLDE0MTI0MTA1OTcsNjY0MT
+gwNTEwXX0=
 -->
