@@ -35,7 +35,7 @@ De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fos
 
 O grupo encontrou o artefato através de experiências em outros projetos em que se foi necessário à utilização de um sistema que utilizasse Bancos  de Dados para salvar determinados dados.[4]. 
 
-Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado grupo não conseguiu concluir o 
+Porém, de acordo com algumas aulas ministradas por Fernandes, foi evidenciado que o grupo não conseguiu concluir/finalizar o trabalho, pois o que seria mais importante seria a extração dos dados que
 
 
 
@@ -69,7 +69,7 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzUwNzM3LC02NjMyMTI0MjUsMTY4ND
+eyJoaXN0b3J5IjpbMzg5ODEzMTE1LC02NjMyMTI0MjUsMTY4ND
 c1OTI5MywxMzg0NTMxMjQzLDE0MTI0MTA1OTcsNjY0MTgwNTEw
 XX0=
 -->
