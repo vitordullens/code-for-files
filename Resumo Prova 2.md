@@ -33,8 +33,9 @@ Comentários: Junto com as definições apresentadas por Prakken e Fernandes, po
 
 De acordo com o grupo, o objetivo do projeto seria utilizar um artefato que  fosse capaz de simplificar o processo de fabricação do clipping e outros materiais. Clipping é o processo contínuo de monitoramento, análise e arquivamento de menções feitas na mídia a uma determinada marca, como empresa ou celebridade. E pode se estender também a verbetes, como nomes e expressões utilizados numa campanha de comunicação[3].
 
-O grupo encontrou o artefato através de experiências em outros projetos em que se foi necessário à utilização de um sistema que utilizasse Bancos  de Dados para salvar determinados dados e por isso a busca foi bem simplificada e teve um resultado imediato já que buscamos a solução em nossas próprias experiências passadas[4]. 
+O grupo encontrou o artefato através de experiências em outros projetos em que se foi necessário à utilização de um sistema que utilizasse Bancos  de Dados para salvar determinados dados. e por isso a busca foi bem simplificada e teve um resultado imediato já que buscamos a solução em nossas próprias experiências passadas[4]. 
 
+Porém, de acordo com algumas aulas ministradas por Fernandes, o grupo não
 
 
 
@@ -68,6 +69,7 @@ FERNANDES, Jorge H C. A Organização e a Tecnologia da Informação - TI: Siste
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MzIxMjQyNSwxNjg0NzU5MjkzLDEzOD
-Q1MzEyNDMsMTQxMjQxMDU5Nyw2NjQxODA1MTBdfQ==
+eyJoaXN0b3J5IjpbLTgxNDc2Mjg2OCwtNjYzMjEyNDI1LDE2OD
+Q3NTkyOTMsMTM4NDUzMTI0MywxNDEyNDEwNTk3LDY2NDE4MDUx
+MF19
 -->
